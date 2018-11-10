@@ -1,0 +1,35 @@
+{% extends 'FrontendBundle:Layout:frontend.html.twig' %}
+
+{% if app.session.flashBag.has('success') is empty and app.session.flashBag.has('danger') is empty %}
+    {% set emptyMessages = true %}
+{% else %}
+    {% set emptyMessages = false %}
+{% endif %}
+
+{% block wrapper %}
+    <section class="content">
+        <div class="container">
+            <div class="row mt-6 mh-6">
+                <div class="col-md-12 mb-2">
+                    {% include 'FrontendBundle:Include:_flash-messages.html.twig' %}
+                </div>
+                <div class="col-md-12 mb-2">
+                    {% if emptyMessages is defined and emptyMessages is not empty %}
+                        no messages
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+
+    {% if emptyMessages is defined and emptyMessages is not empty %}
+        <script>
+          window.location.href = Routing.generate(`frontend_index`, {'_locale': _locale_});
+        </script>
+    {% endif %}
+
+{% endblock %}

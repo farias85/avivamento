@@ -2,7 +2,7 @@
 
 {% block nav %}
 
-    <header id="header">
+    <header id="header" {% if isIndex is not defined %} class="header-fixed" {% endif %}>
         <div class="container">
 
             <div id="logo" class="pull-left">
