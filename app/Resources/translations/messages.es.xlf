@@ -132,11 +132,11 @@
             </trans-unit>
             <trans-unit id="1" resname="meta.description">
                 <source>meta.description</source>
-                <target>SeniorsFirst, la forma más cómoda y directa de encontrar tus cuidadores.  Encuentra la mejor compañía para tus más preciados.</target>
+                <target>meta.description</target>
             </trans-unit>
             <trans-unit id="2" resname="meta.keywords">
                 <source>meta.keywords</source>
-                <target>cuidado a mayores, encontrar cuidador, buscar asistente, asistentes serios, trabajo en el hogar, empleados domesticos</target>
+                <target>meta.keywords</target>
             </trans-unit>
             <trans-unit id="OYmRAJ212" resname="entrevistass">
         <source>entrevistass</source>

@@ -1,5 +1,75 @@
-{% extends ':frontend:base.html.twig' %}
+<!DOCTYPE html>
+<html ng-app="AV" lang="es">
 
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>{% block title %} Avivamento! {% endblock %}</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <meta name="autor" content="BNF">
+    <meta name="copyrigth" content="Copyright © Avivamento.">
+
+    {% set locale = app.request.get('_locale') %}
+    {% if locale is defined and locale is not empty %}
+        <script type="text/javascript">
+          window._locale_ = '{{ locale }}';
+          console.log('baseUrl -> ', '{{ app.request.baseUrl }}');
+          console.log('host -> ', '{{ app.request.schemeAndHttpHost }}');
+          console.log('env -> ', '{{ app.environment }}');
+        </script>
+    {% else %}
+        <script type="text/javascript">
+          window._locale_ = 'es';
+        </script>
+    {% endif %}
+
+    {#<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>#}
+    {#<meta http-equiv="Pragma" content="no-cache"/>#}
+    {#<meta http-equiv="Expires" content="0"/>#}
+
+    {% block seo %}
+        <meta name="description" content="{{ 'meta.description'|trans }}">
+        <meta name="keywords" content="{{ 'meta.keywords'|trans }}">
+        <link rel="canonical" href="{{ app.request.schemeAndHttpHost }}{{ app.request.baseUrl }}">
+        <!-- Open Graph protocol -->
+        <meta property="og:locale" content="es">
+        <meta property="og:type" content="website"/>
+        <meta property="og:title" content="Avivamento">
+        <meta property="og:description" content="{{ 'meta.description'|trans }}">
+        <meta property="og:keywords" content="{{ 'meta.keywords'|trans }}">
+        <meta property="og:url" content="{{ app.request.schemeAndHttpHost }}{{ app.request.baseUrl }}">
+        <meta property="og:site_name" content="Seniors First">
+    {% endblock %}
+
+    {% block stylesheets %}
+
+        <!-- Google Fonts -->
+        {#<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">#}
+
+        <!-- Bootstrap CSS File -->
+        <link href="{{ asset('bundles/frontend/event/lib/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+
+        <!-- Libraries CSS Files -->
+        <link href="{{ asset('bundles/frontend/event/lib/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
+        <link href="{{ asset('bundles/frontend/event/lib/animate/animate.min.css') }}" rel="stylesheet">
+        <link href="{{ asset('bundles/frontend/event/lib/venobox/venobox.css') }}" rel="stylesheet">
+        <link href="{{ asset('bundles/frontend/event/lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
+
+        <!-- Main Stylesheet File -->
+        <link href="{{ asset('bundles/frontend/event/css/style.css') }}" rel="stylesheet">
+
+        {% include ':common:_block-stylesheets.html.twig' %}
+
+    {% endblock %}
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="{{ asset('bundles/frontend/event/img/favicon.png') }}"/>
+    <link href="{{ asset('bundles/frontend/event/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
+</head>
+
+<body ng-controller="BaseController" ng-init="init()" ng-cloak>
+<growl-notifications></growl-notifications>
 {% block body %}
 
     {% block nav %} {% endblock %}
@@ -11,3 +81,39 @@
     {% block footer %} {% endblock %}
 
 {% endblock %}
+
+{% block javascripts %}
+
+    <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="{{ asset('bundles/frontend/event/lib/jquery/jquery.min.js') }}"></script>
+    <script src="{{ asset('bundles/frontend/event/lib/jquery/jquery-migrate.min.js') }}"></script>
+    <script src="{{ asset('bundles/frontend/event/lib/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('bundles/frontend/event/lib/easing/easing.min.js') }}"></script>
+    <script src="{{ asset('bundles/frontend/event/lib/superfish/hoverIntent.js') }}"></script>
+    <script src="{{ asset('bundles/frontend/event/lib/superfish/superfish.min.js') }}"></script>
+    <script src="{{ asset('bundles/frontend/event/lib/wow/wow.min.js') }}"></script>
+    <script src="{{ asset('bundles/frontend/event/lib/venobox/venobox.min.js') }}"></script>
+    <script src="{{ asset('bundles/frontend/event/lib/owlcarousel/owl.carousel.min.js') }}"></script>
+
+    <!-- Contact Form JavaScript File -->
+    <script src="{{ asset('bundles/frontend/event/contactform/contactform.js') }}"></script>
+
+    <!-- Template Main Javascript File -->
+    <script src="{{ asset('bundles/frontend/event/js/main.js') }}"></script>
+
+    <script language="JavaScript" type="text/javascript">
+      $('#intro').css("background", "url({{ asset('bundles/frontend/event/img/intro-bg.jpg') }}) top center");
+      $('#about').css("background", "url({{ asset('bundles/frontend/event/img/about-bg.jpg') }})");
+      $('#venue .venue-info').css("background", "url({{ asset('bundles/frontend/event/img/venue-info-bg.jpg') }}) top center no-repeat");
+      {#$('#subscribe').css("background", "url({{ asset('bundles/frontend/event/img/subscribe-bg.jpg') }}) center center no-repeat");#}
+      {#$('#preloader').css("background", "#fff url({{ asset('preloader.svg') }}) center center no-repeat");#}
+    </script>
+
+    {% include ':common:_block-javascripts.html.twig' %}
+
+{% endblock %}
+
+</body>
+</html>
