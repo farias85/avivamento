@@ -25,7 +25,6 @@
 /bin/*
 !bin/console
 !bin/symfony_requirements
-/vendor/
 
 # Assets and user uploads
 /web/bundles/
@@ -38,11 +37,28 @@
 # Build data
 /build/
 
-# Composer PHAR
-/composer.phar
+#vendor
+/vendor
+
+# IDEs
+/nbproject/
 
 # Backup entities generated with doctrine:generate:entities command
 **/Entity/*~
 
 # Embedded web-server pid file
 /.web-server-pid
+
+# Config
+/app/config/parameters.yml
+
+#Vendors
+/vendor/
+
+# git.rar
+.git.rar
+.DS_Store
+
+# JetBrains PhpStorm
+/.idea
+/.scannerwork

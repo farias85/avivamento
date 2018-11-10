@@ -1,0 +1,26 @@
+services:
+#    media.example:
+#        class: BC\MediaBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]
+
+    bc.media.file.uploader:
+        class: BC\MediaBundle\Service\FileUploader
+
+    bc.media.media.upload.listener:
+        class: BC\MediaBundle\EventListener\MediaUploadListener
+        tags:
+            - { name: doctrine.event_listener, event: prePersist }
+            - { name: doctrine.event_listener, event: preUpdate }
+        arguments: ['@bc.media.file.uploader']
+
+    bc.media.manager:
+        parent: bc.manager
+        class: BC\MediaBundle\Manager\MediaManager
+
+    bc.tipo.media.manager:
+        parent: bc.manager
+        class: BC\MediaBundle\Manager\TipoMediaManager
+
+    bc.documento.manager:
+        parent: bc.manager
+        class: BC\MediaBundle\Manager\DocumentoManager

@@ -1,0 +1,504 @@
+{% block subject %}
+    Seniors First {% block sub_subject %} {% endblock %}
+{% endblock %}
+
+{% block body_text %}
+
+{% endblock %}
+
+{% block body_html %}
+    {% autoescape false %}
+        <html>
+        <head>
+            {% block css %}
+                <style>
+                    /* What it does: Remove spaces around the email design added by some email clients. */
+                    /* Beware: It can remove the padding / margin and add a background color to the compose a reply window. */
+                    html,
+                    body {
+                        margin: 0 auto !important;
+                        padding: 0 !important;
+                        height: 100% !important;
+                        width: 100% !important;
+                    }
+
+                    /* What it does: Stops email clients resizing small text. */
+                    * {
+                        -ms-text-size-adjust: 100%;
+                        -webkit-text-size-adjust: 100%;
+                    }
+
+                    /* What it does: Centers email on Android 4.4 */
+                    div[style*="margin: 16px 0"] {
+                        margin: 0 !important;
+                    }
+
+                    /* What it does: Stops Outlook from adding extra spacing to tables. */
+                    table,
+                    td {
+                        mso-table-lspace: 0pt !important;
+                        mso-table-rspace: 0pt !important;
+                    }
+
+                    /* What it does: Fixes webkit padding issue. Fix for Yahoo mail table alignment bug. Applies table-layout to the first 2 tables then removes for anything nested deeper. */
+                    table {
+                        border-spacing: 0 !important;
+                        border-collapse: collapse !important;
+                        table-layout: fixed !important;
+                        margin: 1 auto !important;
+                    }
+
+                    table table table {
+                        table-layout: auto;
+                    }
+
+                    /* What it does: Uses a better rendering method when resizing images in IE. */
+                    img {
+                        -ms-interpolation-mode: bicubic;
+                    }
+
+                    /* What it does: Prevents Windows 10 Mail from underlining links despite inline CSS. Styles for underlined links should be inline. */
+                    a {
+                        text-decoration: none;
+                    }
+
+                    /* What it does: A work-around for email clients meddling in triggered links. */
+                    *[x-apple-data-detectors], /* iOS */
+                    .unstyle-auto-detected-links *,
+                    .aBn {
+                        border-bottom: 0 !important;
+                        cursor: default !important;
+                        color: inherit !important;
+                        text-decoration: none !important;
+                        font-size: inherit !important;
+                        font-family: inherit !important;
+                        font-weight: inherit !important;
+                        line-height: inherit !important;
+                    }
+
+                    /* What it does: Prevents Gmail from displaying a download button on large, non-linked images. */
+                    .a6S {
+                        display: none !important;
+                        opacity: 0.01 !important;
+                    }
+
+                    /* If the above doesn't work, add a .g-img class to any image in question. */
+                    img.g-img + div {
+                        display: none !important;
+                    }
+
+                    /* What it does: Removes right gutter in Gmail iOS app: https://github.com/TedGoas/Cerberus/issues/89  */
+                    /* Create one of these media queries for each additional viewport size you'd like to fix */
+                    /* iPhone 4, 4S, 5, 5S, 5C, and 5SE */
+                    @media only screen and (min-device-width: 320px) and (max-device-width: 374px) {
+                        .email-container {
+                            min-width: 320px !important;
+                        }
+                    }
+
+                    /* iPhone 6, 6S, 7, 8, and X */
+                    @media only screen and (min-device-width: 375px) and (max-device-width: 413px) {
+                        .email-container {
+                            min-width: 375px !important;
+                        }
+                    }
+
+                    /* iPhone 6+, 7+, and 8+ */
+                    @media only screen and (min-device-width: 414px) {
+                        .email-container {
+                            min-width: 414px !important;
+                        }
+                    }
+                </style>
+
+                <style>
+                    /* What it does: Hover styles for buttons */
+                    .button-td,
+                    .button-a {
+                        transition: all 100ms ease-in;
+                    }
+
+                    .button-td-primary:hover,
+                    .button-a-primary:hover {
+                        background: #555555 !important;
+                        border-color: #555555 !important;
+                    }
+
+                    /* Media Queries */
+                    @media screen and (max-width: 600px) {
+                        /* What it does: Adjust typography on small screens to improve readability */
+                        .email-container p {
+                            font-size: 17px !important;
+                        }
+                    }
+                </style>
+            {% endblock %}
+
+        </head>
+
+        <body>
+        <table bgcolor="#FFFFFF" border="0" cellpadding="0" cellspacing="0" width="100" height="50" id="emailBody">
+
+            <!-- MODULE ROW // -->
+            <!--
+            To move or duplicate any of the design patterns
+            in this email, simply move or copy the entire
+            MODULE ROW section for each content block.
+            -->
+            <tr>
+                <td align="center" valign="top">
+                    <!-- CENTERING TABLE // -->
+                    <!--
+                    The centering table keeps the content
+                    tables centered in the emailBody table,
+                    in case its width is set to 100%.
+                    -->
+                    <table width="100" height="50"
+                           style=" background-image:  url('https://54.152.202.228/bundles/frontend/img/2.png') no-repeat center center;">
+                        <tr>
+
+                            <td align="center" valign="top">
+                                <!-- FLEXIBLE CONTAINER // -->
+                                <!--
+                                The flexible container has a set width
+                                that gets overridden by the media query.
+                                Most content tables within can then be
+                                given 100% widths.
+                                -->
+                                <table width="100" height="50" class="flexibleContainer">
+                                    <tr>
+                                        <td align="center" valign="top" width="100" height="50" 
+                                            class="flexibleContainerCell">
+
+                                            <!-- CONTENT TABLE // -->
+                                            <!--
+                                            The content table is the first element
+                                                    that's entirely separate from the structural
+                                                    framework of the email.
+                                            -->
+                                            <table width="100" height="50" border="0" cellpadding="0" cellspacing="0">
+                                                <tr>
+                                                    <td align="right" valign="top" class="imgageContent" >
+                                                        <img src="http://businessinfact.com/Seniors/img/3.png" 
+                                                             alt="SeniorsFirst">
+                                                    </td>
+                                                </tr>
+                                                
+                                                <!--<tr>
+                                                    <td align="center" valign="top" class="textContent">
+                                                        <h1 style="color:#FFFFFF;line-height:100%;font-family:Helvetica,Arial,sans-serif;font-size:35px;font-weight:normal;margin-bottom:5px;text-align:center;">
+                                                            {% block h1 %} Seniors First {% endblock %}
+                                                        </h1>
+                                                        <!--<h2 style="text-align:center;font-weight:normal;font-family:Helvetica,Arial,sans-serif;font-size:23px;margin-bottom:10px;color:#256DB1;line-height:135%;">
+                                                            {% block h2 %} Notification {% endblock %}
+                                                        </h2>
+                                                            <label class="text-white" style="text-align:center;font-family:Helvetica,Arial,sans-serif;font-size:15px;margin-bottom:0;color:#ffffff;line-height:135%;">
+                                                            {% block sub %}
+                                                                Orgulloso de estar a tu lado.
+                                                            {% endblock %}
+                                                        </label>
+                                                    </td>
+                                                </tr>-->
+                                            </table>
+                                            <!-- // CONTENT TABLE -->
+                                        </td>
+                                    </tr>
+                                </table>
+                                <!-- // FLEXIBLE CONTAINER -->
+                            </td>
+                        </tr>
+                    </table>
+                    <!-- // CENTERING TABLE -->
+                </td>
+            </tr>
+            <!-- MODULE ROW // -->
+            <tr>
+                <td align="center" valign="top">
+                    <!-- CENTERING TABLE // -->
+                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                        <tr style="padding-top:0;">
+                            <td align="center" valign="top">
+
+                                <!-- // FLEXIBLE CONTAINER -->
+                            </td>
+                        </tr>
+                    </table>
+                    <!-- // CENTERING TABLE -->
+                </td>
+            </tr>
+            <!-- // MODULE ROW -->
+            <!-- MODULE ROW // -->
+            <tr>
+                <td align="center" valign="top">
+                    <!-- CENTERING TABLE // -->
+                    <table border="0" cellpadding="0" cellspacing="0" width="600" bgcolor="#F8F8F8">
+                        <tr>
+                            <td align="center" valign="top">
+                                <!-- FLEXIBLE CONTAINER // -->
+                                <table border="0" cellpadding="0" cellspacing="0" width="500" class="flexibleContainer">
+                                    <tr>
+                                        <td align="center" valign="top" width="400" class="flexibleContainerCell">
+                                            <table border="0" cellpadding="10" cellspacing="0" width="100%">
+                                                <tr>
+                                                    <td align="center" valign="top">
+
+                                                        <!-- CONTENT TABLE // -->
+                                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                            <tr>
+                                                                <td valign="top" class="textContent">
+                                                                    <!--
+                                                                            The "mc:edit" is a feature for MailChimp which allows
+                                                                            you to edit certain row. It makes it easy for you to quickly edit row sections.
+                                                                            http://kb.mailchimp.com/templates/code/create-editable-content-areas-with-mailchimps-template-language
+                                                                    -->
+                                                                    <h3 edit="header"
+                                                                        style="color:#5F5F5F;line-height:125%;font-family:Helvetica,Arial,sans-serif;font-size:20px;font-weight:normal;margin-top:0;margin-bottom:3px;text-align:left;">
+                                                                        {% block body_header %}
+                                                                            
+                                                                        {% endblock %}
+                                                                    </h3>
+                                                                    <div edit="body"
+                                                                         style="text-align:left;font-family:Helvetica,Arial,sans-serif;font-size:15px;margin-bottom:0;color:#5F5F5F;line-height:135%;">
+                                                                        {% block wrapper %}
+                                                                            <p>default body</p>
+                                                                        {% endblock %}
+                                                                        <p>
+                                                                            Orgullosos de estar a tu lado.
+                                                                            <br>
+                                                                            
+                                                                        </p>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                        <!-- // CONTENT TABLE -->
+
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <!-- // FLEXIBLE CONTAINER -->
+                            </td>
+                        </tr>
+                    </table>
+                    <!-- // CENTERING TABLE -->
+                </td>
+            </tr>
+            <!-- // MODULE ROW -->
+            <!-- MODULE ROW // -->
+            <tr>
+                <td align="center" valign="top">
+                    <!-- CENTERING TABLE // -->
+                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                        <tr>
+                            <td align="center" valign="top">
+                                <!-- FLEXIBLE CONTAINER // -->
+                                <table border="0" cellpadding="0" cellspacing="0" width="500" class="flexibleContainer">
+                                    <tr>
+                                        <td align="center" valign="top" width="500" class="flexibleContainerCell">
+                                            <table border="0" cellpadding="10" cellspacing="0" width="100%">
+                                                <tr>
+                                                    <td align="center" valign="top">
+                                                        <!-- CONTENT TABLE // -->
+                                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                            <tbody class="">
+                                                            <tr class="">
+                                                                <td valign="top" style="padding: 0cm;" class="">
+                                                                    <!--<p style="margin-right: 0cm; margin-left: 0cm; font-size: 12pt; font-family: 'Times New Roman', serif; line-height: 16.2pt;"
+                                                                       class="">
+                                                                        <span style="font-size: 7pt; font-family: Verdana, sans-serif; color: rgb(47, 47, 47);"
+                                                                              class="">ADVERTENCIA LEGAL
+                                                                        </span>
+                                                                    </p>
+                                                                    <p style="margin-right: 0cm; margin-left: 0cm; font-size: 12pt; font-family: 'Times New Roman', serif; line-height: 16.2pt;"
+                                                                       class="">
+                                                                        <span style="font-size: 7pt; font-family: Verdana, sans-serif; color: rgb(47, 47, 47);"
+                                                                              class="">
+                                                                            Le informamos, como destinatario de este mensaje, que el correo electrónico y las comunicaciones por medio de Internet no permiten asegurar ni garantizar la confidencialidad de los mensajes transmitidos, así como tampoco su integridad o su correcta recepción, por lo que el emisor no asume responsabilidad alguna por tales circunstancias. Si no consintiese en la utilización del correo electrónico o de las comunicaciones vía Internet le rogamos nos lo comunique y ponga en nuestro conocimiento de manera inmediata.
+                                                                        </span>
+                                                                    </p>
+                                                                    <p style="margin-right: 0cm; margin-left: 0cm; font-size: 12pt; font-family: 'Times New Roman', serif; line-height: 16.2pt;"
+                                                                       class="">
+                                                                        <span style="font-size: 7pt; font-family: Verdana, sans-serif; color: rgb(47, 47, 47);"
+                                                                              class="">Este mensaje va dirigido, de manera exclusiva, a su destinatario y contiene información confidencial y sujeta al secreto profesional, cuya divulgación no está permitida por la ley. En caso de haber recibido este mensaje por error, le rogamos que, de forma inmediata, nos lo comunique mediante correo electrónico remitido a nuestra atención y proceda a su eliminación, así como a la de cualquier documento adjunto al mismo. Asimismo, le comunicamos que la distribución, copia o utilización de este mensaje, o de cualquier documento adjunto al mismo, cualquiera que fuera su finalidad, están prohibidas por la ley.
+                                                                        </span>
+                                                                    </p>
+                                                                    <p style="margin-right: 0cm; margin-left: 0cm; font-size: 12pt; font-family: 'Times New Roman', serif; line-height: 16.2pt;"
+                                                                       class="">
+                                                                        <span style="font-size: 7pt; font-family: Verdana, sans-serif; color: rgb(47, 47, 47);"
+                                                                              class="">PRIVILEGED AND CONFIDENTIAL
+                                                                        </span>
+                                                                    </p>
+                                                                    <p style="margin-right: 0cm; margin-left: 0cm; font-size: 12pt; font-family: 'Times New Roman', serif; line-height: 16.2pt;"
+                                                                       class="">
+                                                                        <span style="font-size: 7pt; font-family: Verdana, sans-serif; color: rgb(47, 47, 47);"
+                                                                              class="">
+                                                                            We hereby inform you, as addressee of this message, that e-mail and Internet do not guarantee the confidentiality, nor the completeness or proper reception of the messages sent and, thus, the sender does not assume any liability for those circumstances. Should you not agree to the use of e-mail or to communications via Internet, you are kindly requested to notify us immediately.
+                                                                        </span></p>
+                                                                    <p style="margin-right: 0cm; margin-left: 0cm; font-size: 12pt; font-family: 'Times New Roman', serif; line-height: 16.2pt;"
+                                                                       class=""><span
+                                                                                style="font-size: 7pt; font-family: Verdana, sans-serif; color: rgb(47, 47, 47);"
+                                                                                class="">This message is intended exclusively for the person to whom it is addressed and contains privileged and confidential information protected from disclosure by law. If you are not the addressee indicated in this message, you should immediately delete it and any attachments and notify the sender by replying this email. In such case, you are hereby notified that any dissemination, distribution, copying or use of this message or any attachments, for any purpose, is strictly prohibited by law.</span>
+                                                                    </p>-->
+                                                                </td>
+                                                            </tr>
+                                                            
+                                                            <tr align="left">
+                                                                <td valign="top" class="textContent">
+                                                                    <div style="text-align:center;font-family:Helvetica,Arial,sans-serif;font-size:15px;margin-bottom:0;margin-top:3px;color:#5F5F5F;line-height:135%;">
+                                                                        Síguenos a través de...
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr align="right">
+                                                                <td valign="top" class="textContent">
+                                                                    <a href="https://54.152.202.228/">
+                                                                        <img width="" height="40"
+                                                                             src="http://businessinfact.com/Seniors/img/logo-nav.png"
+                                                                             alt="SeniorsFirst">
+                                                                    </a>
+                                                                </td>
+
+                                                                <td valign="top" class="textContent">
+                                                                    <a href="https://www.facebook.com/sfplacer/">
+                                                                        <img width="48" height="48"
+                                                                             src="http://businessinfact.com/Seniors/img/FB-icon.png"
+                                                                             alt="facebook">
+                                                                    </a>
+                                                                </td>
+                                                                <td valign="top" class="textContent">
+                                                                    <a href="https://www.linkedin.com/company/seniors-first-inc./">
+                                                                        <img width="48" height="48"
+                                                                             src="http://businessinfact.com/Seniors/img/LK-transp.png"
+                                                                             alt="linkedin">
+                                                                    </a>
+                                                                </td>
+                                                                <td class="">
+                                                                    <a href="#">
+                                                                        <img width="48" height="48"
+                                                                             src="http://businessinfact.com/Seniors/img/twitter.png"
+                                                                             alt="twitter">
+                                                                    </a>
+                                                                </td>
+                                                                <td valign="top" class="textContent">
+                                                                    <a href="#">
+                                                                        <img width="48" height="48"
+                                                                             src="http://businessinfact.com/Seniors/img/skype.png"
+                                                                             alt="skype">
+                                                                    </a>
+                                                                </td>
+                                                            </tr>
+                                                            
+                                                            </tbody>
+                                                        </table>
+                                                        <!-- // CONTENT TABLE -->
+
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <!-- // FLEXIBLE CONTAINER -->
+                            </td>
+                        </tr>
+                    </table>
+                    <!-- // CENTERING TABLE -->
+                </td>
+            </tr>
+            <!-- // MODULE ROW -->
+            <!-- MODULE ROW // -->
+            <tr>
+                <td align="center" valign="top">
+                    <!-- CENTERING TABLE // -->
+                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                        <tr>
+                            <td align="center" valign="top">
+                                <!-- FLEXIBLE CONTAINER // -->
+                                <table border="0" cellpadding="0" cellspacing="0" width="500" class="flexibleContainer">
+                                    <tr>
+                                        <td align="center" valign="top" width="500" class="flexibleContainerCell">
+                                            <table border="0" cellpadding="30" cellspacing="0" width="100%">
+                                                <tr>
+                                                    <td align="center" valign="top">
+
+                                                        <!-- CONTENT TABLE // -->
+                                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                            
+                                                            <tr>
+                                                            <hr class="section-heading-spacer-perfil">
+                                                            </tr>
+                                                            <tr class="">
+                                                                <td valign="top" style="padding: 0cm;" class="">
+                                                                    <p style="margin-right: 0cm; margin-left: 0cm; font-size: 12pt; font-family: 'Times New Roman', serif; line-height: 16.2pt;"
+                                                                       class="">
+                                                                        <span style="font-size: 7pt; font-family: Verdana, sans-serif; color: rgb(47, 47, 47);"
+                                                                              class="">ADVERTENCIA LEGAL
+                                                                        </span>
+                                                                    </p>
+                                                                    <p style="margin-right: 0cm; margin-left: 0cm; font-size: 12pt; font-family: 'Times New Roman', serif; line-height: 16.2pt;"
+                                                                       class="">
+                                                                        <span style="font-size: 7pt; font-family: Verdana, sans-serif; color: rgb(47, 47, 47);"
+                                                                              class="">
+                                                                            Le informamos, como destinatario de este mensaje, que el correo electrónico y las comunicaciones por medio de Internet no permiten asegurar ni garantizar la confidencialidad de los mensajes transmitidos, así como tampoco su integridad o su correcta recepción, por lo que el emisor no asume responsabilidad alguna por tales circunstancias. Si no consintiese en la utilización del correo electrónico o de las comunicaciones vía Internet le rogamos nos lo comunique y ponga en nuestro conocimiento de manera inmediata.
+                                                                        </span>
+                                                                    </p>
+                                                                    <p style="margin-right: 0cm; margin-left: 0cm; font-size: 12pt; font-family: 'Times New Roman', serif; line-height: 16.2pt;"
+                                                                       class="">
+                                                                        <span style="font-size: 7pt; font-family: Verdana, sans-serif; color: rgb(47, 47, 47);"
+                                                                              class="">Este mensaje va dirigido, de manera exclusiva, a su destinatario y contiene información confidencial y sujeta al secreto profesional, cuya divulgación no está permitida por la ley. En caso de haber recibido este mensaje por error, le rogamos que, de forma inmediata, nos lo comunique mediante correo electrónico remitido a nuestra atención y proceda a su eliminación, así como a la de cualquier documento adjunto al mismo. Asimismo, le comunicamos que la distribución, copia o utilización de este mensaje, o de cualquier documento adjunto al mismo, cualquiera que fuera su finalidad, están prohibidas por la ley.
+                                                                        </span>
+                                                                    </p>
+                                                                    <!--<p style="margin-right: 0cm; margin-left: 0cm; font-size: 12pt; font-family: 'Times New Roman', serif; line-height: 16.2pt;"
+                                                                       class="">
+                                                                        <span style="font-size: 7pt; font-family: Verdana, sans-serif; color: rgb(47, 47, 47);"
+                                                                              class="">PRIVILEGED AND CONFIDENTIAL
+                                                                        </span>
+                                                                    </p>
+                                                                    <p style="margin-right: 0cm; margin-left: 0cm; font-size: 12pt; font-family: 'Times New Roman', serif; line-height: 16.2pt;"
+                                                                       class="">
+                                                                        <span style="font-size: 7pt; font-family: Verdana, sans-serif; color: rgb(47, 47, 47);"
+                                                                              class="">
+                                                                            We hereby inform you, as addressee of this message, that e-mail and Internet do not guarantee the confidentiality, nor the completeness or proper reception of the messages sent and, thus, the sender does not assume any liability for those circumstances. Should you not agree to the use of e-mail or to communications via Internet, you are kindly requested to notify us immediately.
+                                                                        </span></p>
+                                                                    <p style="margin-right: 0cm; margin-left: 0cm; font-size: 12pt; font-family: 'Times New Roman', serif; line-height: 16.2pt;"
+                                                                       class=""><span
+                                                                                style="font-size: 7pt; font-family: Verdana, sans-serif; color: rgb(47, 47, 47);"
+                                                                                class="">This message is intended exclusively for the person to whom it is addressed and contains privileged and confidential information protected from disclosure by law. If you are not the addressee indicated in this message, you should immediately delete it and any attachments and notify the sender by replying this email. In such case, you are hereby notified that any dissemination, distribution, copying or use of this message or any attachments, for any purpose, is strictly prohibited by law.</span>
+                                                                    </p>-->
+                                                                </td>
+                                                            </tr>
+                                                            <!--<tr>
+                                                                <td valign="top" class="textContent">
+                                                                    <div style="text-align:center;font-family:Helvetica,Arial,sans-serif;font-size:15px;margin-bottom:0;margin-top:3px;color:#5F5F5F;line-height:135%;">
+                                                                        "Seniors First"
+                                                                    </div>
+                                                                </td>
+                                                            </tr>-->
+                                                        </table>
+                                                        <!-- // CONTENT TABLE -->
+
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <!-- // FLEXIBLE CONTAINER -->
+                            </td>
+                        </tr>
+                    </table>
+                    <!-- // CENTERING TABLE -->
+                </td>
+            </tr>
+            <!-- // MODULE ROW -->
+        </table>
+        </body>
+        </html>
+        <!-- // END -->
+    {% endautoescape %}
+{% endblock %}
+
+

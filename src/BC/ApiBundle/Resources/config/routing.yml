@@ -1,0 +1,21 @@
+api_homepage:
+    path:     /{_locale}/
+    defaults: { _controller: ApiBundle:Default:index, _locale: '%locale%' }
+    requirements:
+        _locale: '%locales_app%'
+
+api_frontend_login:
+    path:     /{_locale}/security-manual
+    defaults: { _controller: ApiBundle:Login:securityManual, _locale: '%locale%' }
+    requirements:
+        _locale: '%locales_app%'
+    methods:  [POST]
+    options:
+        expose: true
+
+#api_nacionalidad:
+#    resource: "@ApiBundle/Resources/config/routing/nacionalidad.yml"
+#    prefix:   /{_locale}/nacionalidad
+#    defaults: { _locale: '%locale%' }
+#    requirements:
+#        _locale: '%locales_app%'

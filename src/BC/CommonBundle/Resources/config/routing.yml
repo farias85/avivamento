@@ -1,0 +1,9 @@
+common_homepage:
+    path:     /
+    defaults: { _controller: CommonBundle:Default:index }
+
+dispatch:
+    path:     /dispatch/{template}
+    defaults: { _controller: CommonBundle:Default:dispatch }
+    options:
+        expose: true

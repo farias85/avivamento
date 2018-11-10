@@ -1,0 +1,112 @@
+{% extends 'BackendBundle:Layout:backend.html.twig' %}
+
+{% block wrapper %}
+
+    {% block wrapper_header %} {% endblock %}
+
+    <table class="table table-striped table-bordered dtable" cellspacing="0" width="100%">
+        <thead>
+        <tr>
+
+            {% for key, filter in viewParams.entityKeys %}
+                <th>{{ attribute(attribute(display, key), 'trans') }}</th>
+            {% endfor %}
+
+            {% for key, filter in viewParams.entityLangKeys %}
+                <th>{{ attribute(attribute(display, key), 'trans') }}</th>
+            {% endfor %}
+
+            {% if viewParams.hasTrans %}
+                <th>{{ 'crud.traducciones' | trans }}</th>
+            {% endif %}
+
+            {% block index_all_acciones_th %}
+                <th>{{ 'acciones' | trans }}</th>
+            {% endblock %}
+        </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            {% if viewParams.hasEl %}
+                {% set entityAny = entity.any %}
+            {% endif %}
+            <tr>
+                {% for key, filter in viewParams.entityKeys %}
+                    {% if util.equals(filter, 'date') %}
+                        <td>
+                            {% if attribute(entity, key) %}
+                                {{ attribute(entity, key) | date('Y-m-d') }}
+                            {% endif %}
+                        </td>
+                    {% elseif util.equals(filter, 'bool') %}
+                        <td>{% if attribute(entity, key) %} {{ 'si' | trans }} {% else %} {{ 'no' | trans }} {% endif %}</td>
+                    {% else %}
+                        <td>{{ attribute(entity, key) | default('Empty') }}</td>
+                    {% endif %}
+                {% endfor %}
+
+                {% for key, filter in viewParams.entityLangKeys %}
+                    {% if util.equals(filter, 'date') %}
+                        <td>
+                            {% if attribute(entity, key) %}
+                                {{ attribute(entity, key) | date('Y-m-d') }}
+                            {% endif %}
+                        </td>
+                    {% elseif util.equals(filter, 'bool') %}
+                        <td>{% if attribute(entityAny, key) %} {{ 'si' | trans }} {% else %} {{ 'no' | trans }} {% endif %}</td>
+                    {% else %}
+                        <td>{{ attribute(entityAny, key) | default('Empty') }}</td>
+                    {% endif %}
+                {% endfor %}
+
+                {% if viewParams.hasTrans %}
+                    <td>{{ attribute(entity, 'translates') }}</td>
+                {% endif %}
+
+                {% block index_all_acciones_td %}
+                    <td>
+                        <ul class="list-inline">
+                            {% block index_all_options %}
+                                {% block index_first_option %} {% endblock %}
+                                <li>
+                                    <a href="{{ path(router['show'], { 'id': attribute(entity, 'id') }) }}"
+                                       title="{{ 'crud.info' | trans }}">
+                                        <i class="glyphicon glyphicon-search"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{ path(router['edit'], { 'id': entity.id }) }}"
+                                       title="{{ 'crud.edit' | trans }}">
+                                        <i class="glyphicon glyphicon-edit"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{ path(router['delete'], { 'id': entity.id }) }}"
+                                       title="{{ 'crud.delete' | trans }}"
+                                       onclick="return confirm('¿{{ 'crud.delete' | trans }}?');">
+                                        <i class="glyphicon glyphicon-remove-circle"></i>
+                                    </a>
+                                </li>
+                            {% endblock %}
+                        </ul>
+                    </td>
+                {% endblock %}
+
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    {% block wrapper_footer %} {% endblock %}
+
+{% endblock %}
+
+{% block footer %}
+    <ul class="list-inline">
+        <li>
+            <a class="btn btn-primary" href="{{ path(router['new']) }}">
+                {{ 'crud.create' | trans }} {{ title }}
+            </a>
+        </li>
+    </ul>
+{% endblock %}

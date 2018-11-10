@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="es" target-language="en" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="h_gmfu9" resname="incidencias.pendientes">
+        <source>incidencias.pendientes</source>
+        <target>Pending issues</target>
+      </trans-unit>
+      <trans-unit id="h_gmfu933" resname="incidencias.pendientes">
+        <source>incidencias.pendientes</source>
+        <target>Pending issues</target>
+      </trans-unit>
+      <trans-unit id="agRRWpw" resname="todaslas.incidencias.resueltas">
+        <source>todaslas.incidencias.resueltas</source>
+        <target>All resolved incidents</target>
+      </trans-unit>
+      <trans-unit id="4dqAB03" resname="entrevistas.enproceso">
+        <source>entrevistas.enproceso</source>
+        <target>Interviews in process</target>
+      </trans-unit>
+      <trans-unit id="2RyiOti" resname="entrevistas.ennegociacion">
+        <source>entrevistas.ennegociacion</source>
+        <target>Interviews in negotiation</target>
+      </trans-unit>
+      <trans-unit id="7x8K5GP" resname="peticiones.deservicios">
+        <source>peticiones.deservicios</source>
+        <target>Requests for services</target>
+      </trans-unit>
+      <trans-unit id="bMOboNZ" resname="super.administrador">
+        <source>super.administrador</source>
+        <target>Super administrator</target>
+      </trans-unit>
+      <trans-unit id="sgsPY84" resname="administrador">
+        <source>administrador</source>
+        <target>Administrator</target>
+      </trans-unit>
+      <trans-unit id="GQImwRw" resname="editar.perfil">
+        <source>editar.perfil</source>
+        <target>Edit profile</target>
+      </trans-unit>
+      <trans-unit id="T8.zbao" resname="cerrar.sesion">
+        <source>cerrar.sesion</source>
+        <target>Sign off</target>
+      </trans-unit>
+      <trans-unit id="8WQbfvS" resname="administrar">
+        <source>administrar</source>
+        <target>Manage</target>
+      </trans-unit>
+      <trans-unit id="RYDvFXp" resname="cupon">
+        <source>cupon</source>
+        <target>Coupon</target>
+      </trans-unit>
+      <trans-unit id="7zUMbRY" resname="evaluaciones">
+        <source>evaluaciones</source>
+        <target>Evaluations</target>
+      </trans-unit>
+      <trans-unit id="raT3_.t" resname="aprobadas">
+        <source>aprobadas</source>
+        <target>Approved</target>
+      </trans-unit>
+      <trans-unit id="IVrDXwo" resname="por.aprobar">
+        <source>por.aprobar</source>
+        <target>To be approved</target>
+      </trans-unit>
+      <trans-unit id="Uw7UKup" resname="tipo.dehabilidad">
+        <source>tipo.dehabilidad</source>
+        <target>Type of skill</target>
+      </trans-unit>
+      <trans-unit id="ZIhMTHb" resname="todos.lostipos">
+        <source>todos.lostipos</source>
+        <target>All types</target>
+      </trans-unit>
+      <trans-unit id="OpVJYdW" resname="nuevo.tipo">
+        <source>nuevo.tipo</source>
+        <target>New kind</target>
+      </trans-unit>
+      <trans-unit id="pxevy7v" resname="habilidades">
+        <source>habilidades</source>
+        <target>Abilities</target>
+      </trans-unit>
+      <trans-unit id="DW3qWZd" resname="todas.lashabilidades">
+        <source>todas.lashabilidades</source>
+        <target>All the skills</target>
+      </trans-unit>
+      <trans-unit id="qqwLuPF" resname="nueva.habilidad">
+        <source>nueva.habilidad</source>
+        <target>New skill</target>
+      </trans-unit>
+      <trans-unit id="YFECRrC" resname="idiomas">
+        <source>idiomas</source>
+        <target>Languages</target>
+      </trans-unit>
+      <trans-unit id="Rbx6KGF" resname="todos.los idiomas">
+        <source>todos.los idiomas</source>
+        <target>All the languages</target>
+      </trans-unit>
+      <trans-unit id="xgGFI31" resname="nuevo.idioma">
+        <source>nuevo.idioma</source>
+        <target>New languages</target>
+      </trans-unit>
+      <trans-unit id="Kof1.QJ" resname="intereses">
+        <source>intereses</source>
+        <target>Interests</target>
+      </trans-unit>
+      <trans-unit id="0xVSQAQ" resname="todos.losintereses">
+        <source>todos.losintereses</source>
+        <target>All interests</target>
+      </trans-unit>
+      <trans-unit id="O_pFcN9" resname="nuevo.interes">
+        <source>nuevo.interes</source>
+        <target>New interest</target>
+      </trans-unit>
+      <trans-unit id="C_gv9Pr" resname="paises">
+        <source>paises</source>
+        <target>Countries</target>
+      </trans-unit>
+      <trans-unit id="fFML8d." resname="todos.lospaises">
+        <source>todos.lospaises</source>
+        <target>All the countries</target>
+      </trans-unit>
+      <trans-unit id="i3l2Vds" resname="nuevo.pais">
+        <source>nuevo.pais</source>
+        <target>New country</target>
+      </trans-unit>
+      <trans-unit id="LBHDD4U" resname="nacionalidades">
+        <source>nacionalidades</source>
+        <target>Nationalities</target>
+      </trans-unit>
+      <trans-unit id="4mbqD37" resname="todas">
+        <source>todas</source>
+        <target>All</target>
+      </trans-unit>
+      <trans-unit id="lq8_.fg" resname="nueva.nacionalidad">
+        <source>nueva.nacionalidad</source>
+        <target>New Nationality</target>
+      </trans-unit>
+      <trans-unit id="gK2eXM2" resname="provincias">
+        <source>provincias</source>
+        <target>Provinces</target>
+      </trans-unit>
+      <trans-unit id="1mOgRAN" resname="todas.lasprovincias">
+        <source>todas.lasprovincias</source>
+        <target>All the provinces</target>
+      </trans-unit>
+      <trans-unit id="MmSgZ3m" resname="nueva.provincia">
+        <source>nueva.provincia</source>
+        <target>New province</target>
+      </trans-unit>
+
+      <trans-unit id="gK2eXM21" resname="municipios">
+        <source>municipios</source>
+        <target>Township</target>
+      </trans-unit>
+      <trans-unit id="1mOgRAN1" resname="todos.losmunicipios">
+        <source>todos.losmunicipios</source>
+        <target>All the township</target>
+      </trans-unit>
+      <trans-unit id="MmSgZ3m1" resname="nuevo.municipio">
+        <source>nuevo.municipio</source>
+        <target>New township</target>
+      </trans-unit>
+
+      <trans-unit id="YsoqjSo" resname="tipo.decuidador">
+        <source>tipo.decuidador</source>
+        <target>Type of caregiver</target>
+      </trans-unit>
+      <trans-unit id="Odvuj2i" resname="mensajes">
+        <source>mensajes</source>
+        <target>Messages</target>
+      </trans-unit>
+      <trans-unit id="Odvuj2i321" resname="mensajess">
+        <source>mensajess</source>
+        <target>Messages</target>
+      </trans-unit>
+      <trans-unit id="x9OnUcp" resname="incidencias">
+        <source>incidencias</source>
+        <target>Incidents</target>
+      </trans-unit>
+      <trans-unit id="MHynpiR" resname="empresa">
+        <source>empresa</source>
+        <target>Company</target>
+      </trans-unit>
+      <trans-unit id="JhC29Dq" resname="cuidador">
+        <source>cuidador</source>
+        <target>Carer</target>
+      </trans-unit>
+      <trans-unit id="02jCrH." resname="familia">
+        <source>familia</source>
+        <target>Family</target>
+      </trans-unit>
+      <trans-unit id="3LgqxyK" resname="pendientes">
+        <source>pendientes</source>
+        <target>Pending</target>
+      </trans-unit>
+      <trans-unit id="azjiNTx" resname="resueltas">
+        <source>resueltas</source>
+        <target>Resolved</target>
+      </trans-unit>
+      <trans-unit id="A9YwpbB" resname="incidencias.graves">
+        <source>incidencias.graves</source>
+        <target>Serious incidents</target>
+      </trans-unit>
+      <trans-unit id="H0reRxY" resname="usuarios">
+        <source>usuarios</source>
+        <target>Users</target>
+      </trans-unit>
+      <trans-unit id="nuKR79S" resname="administradores">
+        <source>administradores</source>
+        <target>Administrators</target>
+      </trans-unit>
+      <trans-unit id="zZkLB_F" resname="cuidadores">
+        <source>cuidadores</source>
+        <target>Caregivers</target>
+      </trans-unit>
+      <trans-unit id="E4E0UCJ" resname="familias">
+        <source>familias</source>
+        <target>Families</target>
+      </trans-unit>
+      <trans-unit id="31GnMQR" resname="empresas">
+        <source>empresas</source>
+        <target>Company</target>
+      </trans-unit>
+      <trans-unit id="Hh7UiOD" resname="nomencladores">
+        <source>nomencladores</source>
+        <target>Nomenclators</target>
+      </trans-unit>
+      <trans-unit id="5Dik1Uj" resname="cuidador.estado.alta">
+        <source>cuidador.estado.alta</source>
+        <target>Carer high status</target>
+      </trans-unit>
+      <trans-unit id="IFMgHY8" resname="todos.losestados">
+        <source>todos.losestados</source>
+        <target>All the states</target>
+      </trans-unit>
+      <trans-unit id="XZO7MrK" resname="nuevo.estado">
+        <source>nuevo.estado</source>
+        <target>New state</target>
+      </trans-unit>
+      <trans-unit id="ZKcIKQn" resname="entrevista.estado">
+        <source>entrevista.estado</source>
+        <target>Interview state</target>
+      </trans-unit>
+      <trans-unit id="UOTjG3t" resname="incidencia.estado">
+        <source>incidencia.estado</source>
+        <target>Incidence state</target>
+      </trans-unit>
+      <trans-unit id="Ikr_LJr" resname="servicio.estado">
+        <source>servicio.estado</source>
+        <target>Service state</target>
+      </trans-unit>
+      <trans-unit id="a4nBga." resname="configuracion">
+        <source>configuracion</source>
+        <target>Configuration</target>
+      </trans-unit>
+      <trans-unit id="8CArQpM" resname="editar.imagen">
+        <source>editar.imagen</source>
+        <target>Edit image</target>
+      </trans-unit>
+      <trans-unit id="ruJEors" resname="editar.testimonios">
+        <source>editar.testimonios</source>
+        <target>Edit testimonials</target>
+      </trans-unit>
+      <trans-unit id="eVHqJO8" resname="editar.contactos">
+        <source>editar.contactos</source>
+        <target>Edit contacts</target>
+      </trans-unit>
+      <trans-unit id="P3UTBqR" resname="editar.quienessomos">
+        <source>editar.quienessomos</source>
+        <target>Edit who we are</target>
+      </trans-unit>
+      <trans-unit id="x4JQYQi" resname="editar.info">
+        <source>editar.info</source>
+        <target>Edit info</target>
+      </trans-unit>
+      <trans-unit id="RQ2NXNG" resname="modal.convenio">
+        <source>modal.convenio</source>
+        <target>Modal agreement</target>
+      </trans-unit>
+      <trans-unit id="QxHps4s" resname="modal.tipo.detrabajo">
+        <source>modal.tipo.detrabajo</source>
+        <target>Modal type of work</target>
+      </trans-unit>
+      <trans-unit id="fSo_Cvr" resname="modal.contrasenna.extranet">
+        <source>modal.contrasenna.extranet</source>
+        <target>Modal extranet password</target>
+      </trans-unit>
+      <trans-unit id="BMXNwAj" resname="modal.nombre.usuario">
+        <source>modal.nombre.usuario</source>
+        <target>Modal username</target>
+      </trans-unit>
+      <trans-unit id="tFaVFMy" resname="modal.horario.entrevista">
+        <source>modal.horario.entrevista</source>
+        <target>Modal schedule interview</target>
+      </trans-unit>
+      <trans-unit id="Q7UvOSS" resname="modal.tipocuidador">
+        <source>modal.tipocuidador</source>
+        <target>Modal carer type</target>
+      </trans-unit>
+      <trans-unit id="T5TxmwT" resname="modal.contrasenna.familia">
+        <source>modal.contrasenna.familia</source>
+        <target>Modal password family</target>
+      </trans-unit>
+      <trans-unit id="lllPWBB" resname="modal.contrasenna.empresa">
+        <source>modal.contrasenna.empresa</source>
+        <target>Modal password company</target>
+      </trans-unit>
+      <trans-unit id="XHAOAxw" resname="editar.logo">
+        <source>editar.logo</source>
+        <target>Edit logo</target>
+      </trans-unit>
+      <trans-unit id="fYojlEi" resname="editar.imagen.inferior">
+        <source>editar.imagen.inferior</source>
+        <target>Edit bottom image</target>
+      </trans-unit>
+      <trans-unit id="h127VYx" resname="editar.textoempresa">
+        <source>editar.textoempresa</source>
+        <target>Edit company text</target>
+      </trans-unit>
+      <trans-unit id="TN5k8bbmnn18" resname="editar.sobrenosotros">
+        <source>editar.sobrenosotros</source>
+        <target>Edit about us</target>
+      </trans-unit>
+      <trans-unit id="11W2iFE5454" resname="editar.terminosdeuso">
+        <source>editar.terminosdeuso</source>
+        <target>Edit terms of use</target>
+      </trans-unit>
+      <trans-unit id="G0Kznmo5555" resname="editar.politica.privacidad">
+        <source>editar.politica.privacidad</source>
+        <target>Edit privacy policy</target>
+      </trans-unit>
+      <trans-unit id="djwvrsO" resname="editar.politicas.decookies">
+        <source>editar.politicas.decookies</source>
+        <target>Edit cookies policies</target>
+      </trans-unit>
+      <trans-unit id="1CBi613" resname="editar.imagen.defondo">
+        <source>editar.imagen.defondo</source>
+        <target>Edit background image</target>
+      </trans-unit>
+      <trans-unit id="C0NDzTq" resname="deformulario.deregistro">
+        <source>deformulario.deregistro</source>
+        <target>of registration form</target>
+      </trans-unit>
+      <trans-unit id="OYmRAJ2" resname="menu">
+        <source>menu</source>
+        <target>Menu</target>
+      </trans-unit>
+      
+    </body>
+  </file>
+</xliff>

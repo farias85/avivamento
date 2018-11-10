@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="es" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="Y3Aa5f1" resname="notificacion">
+        <source>notificacion</source>
+        <target>Notificación</target>
+      </trans-unit>
+      <trans-unit id="nko5CbG" resname="quien.mejor.paraayudarte.conlosmayores">
+        <source>quien.mejor.paraayudarte.conlosmayores</source>
+        <target>Quién mejor para ayudarte con los mayores</target>
+      </trans-unit>
+      <trans-unit id="BvvwWD0" resname="confirmacion">
+        <source>confirmacion</source>
+        <target>Confirmación</target>
+      </trans-unit>
+      <trans-unit id="C.6Tkop" resname="nombre">
+        <source>nombre</source>
+        <target>Nombre</target>
+      </trans-unit>
+      <trans-unit id="n7x2OXn" resname="active.su.cuenta">
+        <source>active.su.cuenta</source>
+        <target>Active su cuenta</target>
+      </trans-unit>
+      <trans-unit id="fWpONUp" resname="aqui">
+        <source>aqui</source>
+        <target>AQUÍ</target>
+      </trans-unit>
+      <trans-unit id="EvpkbKi" resname="saludos.muy.cordiales">
+        <source>saludos.muy.cordiales</source>
+        <target>Saludos muy cordiales</target>
+      </trans-unit>
+      <trans-unit id="gk2Vzi3" resname="equipo">
+        <source>equipo</source>
+        <target>Equipo</target>
+      </trans-unit>
+      <trans-unit id="8enNTyw" resname="activacion">
+        <source>activacion</source>
+        <target>Activación</target>
+      </trans-unit>
+      <trans-unit id="AQTQJxi" resname="delete.forbiden">
+        <source>delete.forbiden</source>
+        <target>La eliminación de este elemento no se puede llevar a cabo debido a restrincciones de
+                    configuración de la aplicación
+                </target>
+      </trans-unit>
+      <trans-unit id="fuMk4qf" resname="detalles.entrevista">
+        <source>detalles.entrevista</source>
+        <target>Detalles de la entrevista</target>
+      </trans-unit>
+      <trans-unit id="AGaq4BU" resname="lugar">
+        <source>lugar</source>
+        <target>Lugar</target>
+      </trans-unit>
+      <trans-unit id="gvJv4MH" resname="direccion.completa">
+        <source>direccion.completa</source>
+        <target>Dirección completa</target>
+      </trans-unit>
+      <trans-unit id="LySfr1l" resname="fecha.hora">
+        <source>fecha.hora</source>
+        <target>Fecha/Hora</target>
+      </trans-unit>
+      <trans-unit id="nw8deJ8" resname="detalles.entrevista.usuario">
+        <source>detalles.entrevista.usuario</source>
+        <target>Para ver los detalles en su entorno de usuario, pinche</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

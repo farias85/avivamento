@@ -1,0 +1,11 @@
+{% extends "CommonBundle:Email:template.en.html.twig" %}
+ 
+{% block sub_subject %}
+    - Contact Message
+{% endblock %}
+
+{% block wrapper %}
+    <p>Name: {{ name }}</p>
+    <p>Email: {{ email }}</p>
+    <p>Message: {{ message }}</p>
+{% endblock %}

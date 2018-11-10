@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+    <file source-language="es" target-language="en" datatype="plaintext" original="file.ext">
+        <header>
+            <tool tool-id="symfony" tool-name="Symfony"/>
+        </header>
+        <body>
+            <trans-unit id="Y3Aa5f11" resname="ha.confirmado.su.cuenta">
+                <source>ha.confirmado.su.cuenta</source>
+                <target>Your email address is confirm, please continue with carer register form</target>
+            </trans-unit>
+            <trans-unit id="Y3Aa5f1111" resname="confirme.su.cuenta">
+                <source>confirme.su.cuenta</source>
+                <target>Please, confirm your email address to continue carer register form.</target>
+            </trans-unit>
+            <trans-unit id="Yax3Aa5f1111" resname="registro.cuidador.confirme.su.cuenta">
+                <source>registro.cuidador.confirme.su.cuenta</source>
+                <target>Welcome to the great family of Seniors First, hundreds of families and employer companies are
+                    waiting for you. Check your email to continue the registration process. Check the Unwanted or
+                    Promotions folder, you may receive it in one of these folders. We will wait for you!
+                </target>
+            </trans-unit>
+            <trans-unit id="Y3Aaaa5f1111" resname="activacion.expirada">
+                <source>activacion.expirada</source>
+                <target>Verification key expired</target>
+            </trans-unit>
+            <trans-unit id="aaY3Aaaa5f1111" resname="cuenta.deshabilitada">
+                <source>cuenta.deshabilitada</source>
+                <target>Your account is disabled</target>
+            </trans-unit>
+            <trans-unit id="44aaY3Aaaa5f1111" resname="usuario.no.valido.entorno">
+                <source>usuario.no.valido.entorno</source>
+                <target>Username or password invalid for the selected environment</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

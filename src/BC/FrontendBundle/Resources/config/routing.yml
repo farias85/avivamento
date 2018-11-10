@@ -1,0 +1,10 @@
+_frontend_homepage:
+    path:     /
+    defaults: { _controller: FrameworkBundle:Redirect:redirect, route: frontend_homepage }
+
+frontend_homepage:
+    path:     /{_locale}/
+    defaults: { _controller: FrontendBundle:Default:index }
+    defaults: { _locale: '%locale%' }
+    requirements:
+        _locale: '%locales_app%'

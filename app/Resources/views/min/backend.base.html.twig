@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{% block title %}Seniors First!{% endblock %}</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+    {% block stylesheets %}
+        <link rel="stylesheet"
+              href="{{ asset('bundles/common/sb-admin/vendor/bootstrap/css/bootstrap.min.css') }}">
+    {% endblock %}
+
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}"/>
+</head>
+
+<body class="hold-transition skin-blue sidebar-mini">
+    {% block body %} {% endblock %}
+
+    {% block javascripts %}
+        <script src="{{ asset('bundles/common/sb-admin/vendor/jquery/jquery.min.js') }}"
+                type="text/javascript"></script>
+    {% endblock %}
+</body>
+</html>

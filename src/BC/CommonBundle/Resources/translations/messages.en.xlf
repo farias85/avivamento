@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="en" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="Y3Aa5f1" resname="notificacion">
+        <source>notificacion</source>
+        <target>Notification</target>
+      </trans-unit>
+      <trans-unit id="nko5CbG" resname="quien.mejor.paraayudarte.conlosmayores">
+        <source>quien.mejor.paraayudarte.conlosmayores</source>
+        <target>Who better to help you with senior citizens?</target>
+      </trans-unit>
+      <trans-unit id="BvvwWD0" resname="confirmacion">
+        <source>confirmacion</source>
+        <target>Confirmation</target>
+      </trans-unit>
+      <trans-unit id="C.6Tkop" resname="nombre">
+        <source>nombre</source>
+        <target>Name</target>
+      </trans-unit>
+      <trans-unit id="n7x2OXn" resname="active.su.cuenta">
+        <source>active.su.cuenta</source>
+        <target>Activate your account</target>
+      </trans-unit>
+      <trans-unit id="fWpONUp" resname="aqui">
+        <source>aqui</source>
+        <target>HERE</target>
+      </trans-unit>
+      <trans-unit id="EvpkbKi" resname="saludos.muy.cordiales">
+        <source>saludos.muy.cordiales</source>
+        <target>Very best regards</target>
+      </trans-unit>
+      <trans-unit id="gk2Vzi3" resname="equipo">
+        <source>equipo</source>
+        <target>Team</target>
+      </trans-unit>
+      <trans-unit id="8enNTyw" resname="activacion">
+        <source>activacion</source>
+        <target>Activation</target>
+      </trans-unit>
+      <trans-unit id="AQTQJxi" resname="delete.forbiden">
+        <source>delete.forbiden</source>
+        <target>The deletion of this element can not be carried out due to restrictions of configuration of the
+                    application
+                </target>
+      </trans-unit>
+      <trans-unit id="fuMk4qf" resname="detalles.entrevista">
+        <source>detalles.entrevista</source>
+        <target>Details of the interview</target>
+      </trans-unit>
+      <trans-unit id="AGaq4BU" resname="lugar">
+        <source>lugar</source>
+        <target>Place</target>
+      </trans-unit>
+      <trans-unit id="gvJv4MH" resname="direccion.completa">
+        <source>direccion.completa</source>
+        <target>Full address</target>
+      </trans-unit>
+      <trans-unit id="LySfr1l" resname="fecha.hora">
+        <source>fecha.hora</source>
+        <target>Date/Hour</target>
+      </trans-unit>
+      <trans-unit id="nw8deJ8" resname="detalles.entrevista.usuario">
+        <source>detalles.entrevista.usuario</source>
+        <target>To see the details in your user environment, click</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

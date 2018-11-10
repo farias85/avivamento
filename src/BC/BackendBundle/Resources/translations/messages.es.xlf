@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+    <file source-language="es" target-language="es" datatype="plaintext" original="file.ext">
+        <header>
+            <tool tool-id="symfony" tool-name="Symfony"/>
+        </header>
+        <body>
+            <trans-unit id="DbHVTCr" resname="crud.edit">
+                <source>crud.edit</source>
+                <target>Editar</target>
+            </trans-unit>
+            <trans-unit id="hScmRG." resname="crud.list">
+                <source>crud.list</source>
+                <target>Listar</target>
+            </trans-unit>
+            <trans-unit id="Zfyf_TY" resname="crud.info">
+                <source>crud.info</source>
+                <target>Info</target>
+            </trans-unit>
+            <trans-unit id="dNc9S_1" resname="crud.delete">
+                <source>crud.delete</source>
+                <target>Eliminar</target>
+            </trans-unit>
+            <trans-unit id="gaj4nYd" resname="crud.create">
+                <source>crud.create</source>
+                <target>Crear</target>
+            </trans-unit>
+            <trans-unit id="dVphwBA" resname="crud.traducciones">
+                <source>crud.traducciones</source>
+                <target>Traducciones</target>
+            </trans-unit>
+            <trans-unit id="Q_1cRXt" resname="forbidden">
+                <source>forbidden</source>
+                <target>No está autorizado a acceder a este recurso</target>
+            </trans-unit>
+            <trans-unit id="7tq2jmx" resname="no.exist">
+                <source>no.exist</source>
+                <target>El elemento que desea obtener no existe</target>
+            </trans-unit>
+            <trans-unit id="azwjjrz" resname="404">
+                <source>404</source>
+                <target>No existe la ruta a la que quiere acceder</target>
+            </trans-unit>
+            <trans-unit id="hXxfWkX" resname="acciones">
+                <source>acciones</source>
+                <target>Acciones</target>
+            </trans-unit>
+            <trans-unit id="K_38KaS" resname="ver.detalles">
+                <source>ver.detalles</source>
+                <target>Ver detalles</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

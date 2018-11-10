@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+    <file source-language="es" target-language="en" datatype="plaintext" original="file.ext">
+        <header>
+            <tool tool-id="symfony" tool-name="Symfony"/>
+        </header>
+        <body>
+            <trans-unit id="5aa00007897e80c9b46379028b01c90dc" resname="si">
+                <source>si</source>
+                <target>Yes</target>
+            </trans-unit>
+            <trans-unit id="5aa000071897e80c9b46379028b01c90dc" resname="no">
+                <source>no</source>
+                <target>No</target>
+            </trans-unit>
+            <trans-unit id="5aa000071897e80c19b46379028b01c90dc" resname="cuidador">
+                <source>cuidador</source>
+                <target>Carer</target>
+            </trans-unit>
+            <trans-unit id="5a3000071897e80c19b46379028b01c90dc" resname="empresa">
+                <source>empresa</source>
+                <target>Business</target>
+            </trans-unit>
+            <trans-unit id="51a000071897e80c19b46379028b01c90dc" resname="familia">
+                <source>familia</source>
+                <target>Family</target>
+            </trans-unit>
+            <trans-unit id="51a000071897e80c19b46379128b01c90dc" resname="inicio">
+                <source>inicio</source>
+                <target>Index</target>
+            </trans-unit>
+            <trans-unit id="51a000071897e80c19b146379128b01c90dc" resname="mas.informacion">
+                <source>mas.informacion</source>
+                <target>More info</target>
+            </trans-unit>
+            <trans-unit id="52a000071897e80c19b146379128b01c90dc" resname="contacto">
+                <source>contacto</source>
+                <target>Contact</target>
+            </trans-unit>
+            <trans-unit id="53a000071897e80c19b146379128b01c90dc" resname="sobre.nosotros">
+                <source>sobre.nosotros</source>
+                <target>About us</target>
+            </trans-unit>
+            <trans-unit id="54a000071897e80c19b146379128b01c90dc" resname="subscribete.a.nuestras.newsletter">
+                <source>subscribete.a.nuestras.newsletter</source>
+                <target>Subscribe to our newsletter</target>
+            </trans-unit>
+            <trans-unit id="55a000071897e80c19b146379128b01c90dc" resname="suscribirse">
+                <source>suscribirse</source>
+                <target>Subscribe</target>
+            </trans-unit>
+            <trans-unit id="56a000071897e80c19b146379128b01c90dc" resname="software.desarrollado.y.diseñado.por">
+                <source>software.desarrollado.y.diseñado.por</source>
+                <target>Software developed and designed by</target>
+            </trans-unit>
+            <trans-unit id="57a000071897e80c19b146379128b01c90dc" resname="variables">
+                <source>variables</source>
+                <target>Variables</target>
+            </trans-unit>
+            <trans-unit id="58a000071897e80c19b146379128b01c90dc" resname="paginascms">
+                <source>paginascms</source>
+                <target>Pages cms</target>
+            </trans-unit>
+            <trans-unit id="59a000071897e80c19b146379128b01c90dc" resname="categoriascms">
+                <source>categoriascms</source>
+                <target>Categories cms</target>
+            </trans-unit>
+            <trans-unit id="60a000071897e80c19b146379128b01c90dc" resname="probar.correo">
+                <source>probar.correo</source>
+                <target>Test mail</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

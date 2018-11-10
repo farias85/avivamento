@@ -1,0 +1,150 @@
+{% extends ':frontend:frontend.header.html.twig' %}
+
+{% block footer %}
+
+    {% include 'FrontendBundle:Default:_modal-wrapper.html.twig' %}
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row ">
+                <div class="col-lg-2">
+                    <!--<h6 style="color:white"> Empresa </h6>-->
+                    <ul class="list-inline">
+                        <!--<li>
+                            <a href="{{ path("frontend_empresa_footer") }}" id="navbarButton" style="color:white">Empresa</a>
+                        </li>-->
+                        <li>
+                            <a href="{{ path("frontend_index") }}" id="navbarButton"
+                               style="color:white">{{ 'inicio'| trans }}</a>
+                        </li>
+                        <li>
+                            <a href="{{ path("frontend_sobre_nosotros") }}" id="navbarButton"
+                               style="color:white">{{ 'sobre.nosotros'| trans }}</a>
+                        </li>
+                        {#<li>#}
+                        {#<a href="{{ path("frontend_comprar_servicios") }}" id="navbarButton" style="color:white">Servicios</a>#}
+                        {#</li>#}
+                        <li>
+                            <a href="{{ path("frontend_contacto") }}" id="navbarButton"
+                               style="color:white">{{ 'contacto'| trans }}</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3">
+                    <!--<h6 style="color:white"> Políticas </h6>-->
+                    <ul class="list-inline">
+                        <li>
+                            <a href="{{ path("frontend_politicas") }}" id="navbarButton"
+                               style="color:white">{{ 'terminoss.condiciones'| trans }}</a>
+                        </li>
+                        <li>
+                            <a href="{{ path("frontend_politica_privacidad") }}" id="navbarButton"
+                               style="color:white">{{ 'politicaa.privacidad'| trans }}</a>
+                        </li>
+                        <li>
+                            <a href="{{ path("frontend_cookies") }}" id="navbarButton"
+                               style="color:white">{{ 'politicaa.cookies'| trans }}</a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="col-lg-5">
+                    {% if sfVersion == sfVersionEs %}
+                        {#AQUI CONFIGURAS LO QUE QUIERAS PARA LA VERSION ES#}
+                        <ul class="list-inline">
+                            <li style="color: white">
+                                <span class="fa fa-location-arrow"></span>&nbsp; Polígono Empresarial de Morero, 2
+                                ,Parcela 11, Nave 13, Oficina 5
+                                39611 Guarnizo, Cantabria Spain
+                            </li>
+                            <li style="color: white">
+                                <span class="fa fa-phone"></span>
+                                + 34 910 149 758
+                            </li>
+                            <li style="color: white">
+                                <span class="fa fa-telegram"></span>
+                                <a href="mailto:customerservices@seniorsfirst.co.uk" style="color: white">Info@anayetmayores.com</a>
+                            </li>
+                            <li style="color: white">
+                                <span class="fa fa-internet-explorer"></span>
+                                <a href="http://www.seniorsfirst.co.uk" target="_blank" style="color: white">&nbsp;www.anayetmayores.com</a>
+                            </li>
+                        </ul>
+                    {% elseif sfVersion == sfVersionGb %}
+                        <ul class="list-inline">
+                            <li style="color: white">
+                                <span class="fa fa-location-arrow"></span>&nbsp; 20-22 Wenlock Road, London N1 7GU,
+                                United
+                                Kingdom
+                            </li>
+                            <li style="color: white">
+                                <span class="fa fa-phone"></span>
+                                + 44 (0) 2032905045
+                            </li>
+                            <li style="color: white">
+                                <span class="fa fa-telegram"></span>
+                                <a href="mailto:customerservices@seniorsfirst.co.uk" style="color: white">customerservices@seniorsfirst.co.uk</a>
+                            </li>
+                            <li style="color: white">
+                                <span class="fa fa-internet-explorer"></span>
+                                <a href="http://www.seniorsfirst.co.uk" target="_blank" style="color: white">&nbsp;www.seniorsfirst.co.uk</a>
+                            </li>
+                        </ul>
+                    {% endif %}
+                </div>
+
+                <div class="col-lg-2" style="margin-right: 0px; position: relative">
+                    <h6 style="color:white" style="position: relative"> {{ 'subscribete.a.nuestras.newsletter'| trans }}
+                        : </h6>
+                    <form name="news_form" id="news_form" novalidate method="post"
+                          action="{{ path('frontend_add_newsletter') }}">
+                        <div class="form-group mx-sm-1 mb-10">
+                            <input type="email" class="form-control" id="news_email" name="news_email"
+                                   placeholder="Email" ng-required="true" ng-minlength="4"
+                                   ng-model="news.email"
+                                   ng-pattern="/^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/">
+                        </div>
+                        <ul class="text-white" ng-show="news_form.news_email.$dirty">
+                            <li ng-show="news_form.news_email.$error.required">
+                                <small>{{ 'email.requerido' | trans }}</small>
+                            </li>
+                            <li ng-show="news_form.news_email.$error.minlength">
+                                <small>{{ 'email.4caracteres' | trans }}</small>
+                            </li>
+                            <li ng-show="news_form.news_email.$invalid">
+                                <small>{{ 'email.invalido' | trans }}</small>
+                            </li>
+                        </ul>
+                        <button type="submit" class="btn btn-submit style-button mb-10"
+                                style="margin-right: 0;" ng-disabled="news_form.$invalid">
+                            {{ 'suscribirse'| trans }}
+                        </button>
+                    </form>
+                </div>
+
+                <div class="container-fluid col-lg-12  ">
+                    <div class="row">
+                        <p class="copyright" style="margin-left: 2px;position: absolute;margin-top: 40px">Copyright
+                            &copy;
+                            Seniors First 2018. All Rights Reserved</p>
+                        <div class=".d-lg-none .d-xl-block">
+                            <br>
+                        </div>
+                        <p class="col-lg-7">&nbsp;</p>
+                        <p style="margin-right: 1px; margin-top: 40px">
+                            <!--<a href="https://www.businessinfact.es" id="navbarButton" style="color:white"></a>
+                            <a href="https://www.businessinfact.es" id="navbarButton"
+                               style="color:white;margin-top: 10px"></a>-->
+                            <a href="https://www.businessinfact.es" id="navbarButton" style="color:white">
+                                {{ 'software.desarrollado.y.diseñado.por'| trans }}: BusinessInFact
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+{% endblock %}

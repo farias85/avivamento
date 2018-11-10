@@ -1,0 +1,48 @@
+{% extends ':frontend:frontend.base.html.twig' %}
+
+{% block nav %}
+    <nav class="navbar navbar-expand-xl  navbar-inverse fixed-top ">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <img class="responsive rounded-circle" alt="dropdown" width="32" height="32" src="{{ asset('bundles/frontend/img/iconos/hamburgueza.png') }}">
+            </button>
+            <a class="navbar-brand" href="{{ path("frontend_index") }}">
+                <img class="img-fluid" src="{{ asset('bundles/frontend/img/logo-nav.png') }}" alt="">
+            </a>
+
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                {% block nav_content %}
+                    {% if is_granted('ROLE_CUIDADOR') %}
+                        {% include 'ExtranetBundle:Include:_nav-content.html.twig' %}
+                    {% elseif is_granted('ROLE_EMPRESA') %}
+                        {% include 'EmpresaBundle:Include:_nav-content.html.twig' %}
+                    {% elseif is_granted('ROLE_DEMANDANTE') %}
+                        {% include 'FrontendBundle:Include:_nav-content.html.twig' %}
+                    {% else %}
+                        {% use 'FrontendBundle:Include:_nav-content-anonymous-user.html.twig' %}
+                        {{ block('_nav_content_anonymous_user') }}
+                    {% endif %}
+                {% endblock %}
+            </div>
+        </div>
+    </nav>
+
+    {% include 'ExtranetBundle:Include:_modal-confirm-delete.html.twig' %}
+
+    {% block cookies %}
+        <div style="background-color: #007cae;" ng-controller="CookiesController" ng-cloak ng-init="init()">
+            <div class="col-12" style="margin-top: 70px; min-height: 30px; text-align: center; margin-bottom: -1px;" ng-show="showMessage()">
+                    <p class="text-white p-2 d-inline">{{ 'texto.cookies'| trans }}.
+                        <a href="{{ path("frontend_politica_privacidad") }}" style="color: #fff; text-decoration: none;"><strong>{{ 'mas.informacion'| trans }}</strong></a>
+                        <a style="cursor:pointer; color: white;" data-toggle="tooltip" data-placement="top"
+                           title="{{ 'informacion.cerrar.cookies'| trans }}">
+                            <i class="fa fa-remove responsive rounded-circle" ng-click="aceptar()"></i>
+                        </a>
+                    </p>
+            </div>
+        </div>
+    {% endblock %}
+
+{% endblock %}
+

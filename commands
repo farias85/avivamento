@@ -1,0 +1,138 @@
+cd C:\xampp\htdocs\bitcredit
+cd C:\xampp7.1\htdocs\bitcredit
+php bin/console assets:install web --symlink --relative
+
+php bin/console sf:socket:init
+
+php bin/console doctrine:schema:validate
+
+php bin/console doctrine:schema:update --force --dump-sql --complete
+
+php bin/console generate:doctrine:crud --entity=CommonBundle:CuidadorEstado --route-prefix=cuidador_estado --with-write --format=yml --no-interaction
+
+php bin/console doctrine:mapping:import CommonBundle annotation --filter=Cms
+
+console doctrine:generate:entities CommonBundle:CmsCategoria
+
+php bin/console translation:update --dump-messages --force --clean --output-format=xlf es UserBundle
+
+php bin/console security:encode-password
+
+phpunit -c phpunit.xml
+
+ver esto
+composer require whiteoctober/tcpdf-bundle
+composer require liuggio/ExcelBundle
+composer remove jenssegers/mongodb
+
+phpunit symfony/phpunit-bridge, phpunit/phpunit
+
+composer "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
+
+ASI SI ME PINCHA
+cd C:\xampp\htdocs\senior-first\vendor\bin
+cd C:\xampp7.1\htdocs\senior-first\vendor\bin
+phpunit -c ../../phpunit.xml --testdox-text test.txt
+
+var startTime=moment("12:16:59 am", "HH:mm:ss a");
+var endTime=moment("06:12:07 pm", "HH:mm:ss a");
+var duration = moment.duration(endTime.diff(startTime));
+var hours = parseInt(duration.asHours());
+var minutes = parseInt(duration.asMinutes())-hours*60;
+alert (hours + ' hour and '+ minutes+' minutes.');
+
+
+myModule.controller('ParentCtrl', function ($scope) {
+  $scope.$broadcast('event', args);
+  $scope.$on('event-response', function (result) {
+  });
+});
+
+myModule.controller('ChildCtrl', function ($scope) {
+  $scope.$on('event', function (args) {
+    var result;
+    //body...
+    $scope.$emit('event-response', result);
+  });
+});
+
+Videos en la web
+https://www.lifewire.com/putting-video-online-1082273
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video
+https://www.html5rocks.com/en/tutorials/video/basics/
+
+Date Diff
+<?php
+$date1 = new DateTime("12-1-12");
+$date2 = new DateTime("2011-10-12");
+
+if ($date1 > $date2)
+ echo $date1->format("Y-m-d")." is newer than ".$date2->format("Y-m-d");
+else
+ echo $date1->format("Y-m-d")." is older than ".$date2->format("Y-m-d");
+?>
+
+$today = date('Y-m-d');//Y-m-d H:i:s
+$expireDate = new DateTime($row->expireDate);// From db
+$date1=date_create($today);
+$date2=date_create($expireDate->format('Y-m-d'));
+$diff=date_diff($date1,$date2);
+$timeDiff = $diff->format("%R%a days");
+
+echo $timeDiff;
+if($timeDiff < 0){
+    echo "Expired.";
+}else{
+    echo "Not expired.";
+}
+
+Camara Web Recorder
+https://es.stackoverflow.com/questions/17874/guardar-el-video-de-la-webcam-en-el-servidor-en-directo
+https://github.com/muaz-khan/WebRTC-Experiment/tree/master/RecordRTC/RecordRTC-to-PHP
+
+CRON
+composer require jmose/command-scheduler-bundle
+https://github.com/J-Mose/CommandSchedulerBundle //Este me parece el mejor, hay q instalarlo y ver q tal
+https://github.com/J-Mose/CommandSchedulerBundle/blob/master/Resources/doc/index.md
+
+https://github.com/Cron/Symfony-Bundle
+https://github.com/Rewieer/TaskSchedulerBundle
+https://www.phpclasses.org/package/10052-PHP-Schedule-task-using-cron-with-Symfony.html
+https://stackoverflow.com/questions/16845251/how-to-create-a-cron-task-in-symfony2
+
+EDGE
+MEDIA12598: La composici�n independiente est� deshabilitada para la representaci�n de v�deo. Esto puede afectar negativamente al rendimiento. src: Desconocido
+https://docs.microsoft.com/es-es/previous-versions/visualstudio/visual-studio-2013/dd831853(v=vs.120)
+
+
+var recorder = RecordRTC(mediaStream, {
+    type: 'video',
+    mimeType: 'video/mp4; codecs="mpeg4, aac"'
+});
+
+//PHP exec commands
+exec('php -v', $out); //en $out un array con la salida
+$out2 = shell_exec('php -v'); //en $out2 un string con la salida
+VarDumper::dump($out);
+VarDumper::dump($out2);
+die();
+
+<a href="{{ path(app.request.attributes.get('_route'), {'locale': 'fr'}) }}">fr</a>
+<a href="{{ path(app.request.attributes.get('_route'), {'locale': 'en'}) }}">en</a>
+
+I found the solution.
+
+For work in the dev mode, I had to update the "_main" route in "routing_dev.yml" with "type: be_simple_i18n" like this :
+
+_main:
+    resource: routing.yml
+    type: be_simple_i18n
+
+
+And the solution for the production mode is to add the same line in the "config.yml" where the "routing.yml" is imported like this :
+
+framework:
+    ...
+    router:
+        resource: "%kernel.root_dir%/config/routing.yml"
+        type: be_simple_i18n

@@ -1,0 +1,39 @@
+{% extends 'BackendBundle:Layout:backend.html.twig' %}
+
+{% block wrapper %}
+
+    {% block wrapper_header %} {% endblock %}
+
+    {% if entity.el is defined and entity.el is empty %}
+        <div class="row">
+            <div class="col-lg-6">
+                {% if entity.any is defined and entity.any is not empty and entity.any.nombre is defined and entity.any.nombre is not empty %}
+                    <h5>Ref:
+                        <small>{{ entity.any.nombre }}</small>
+                    </h5>
+                {% endif %}
+            </div>
+            <br>
+        </div>
+    {% endif %}
+
+    <div class="row">
+        <div class="col-lg-6">
+            <form action="{{ path(router['edit'], { 'id': entity.id }) }}" method="post" enctype="multipart/form-data">
+                {{ form_rest(edit_form) }}
+                <input class="btn btn-success mt-10" type="submit" value="{{ 'crud.edit' | trans }}"/>
+            </form>
+        </div>
+    </div>
+
+    {% block wrapper_footer %} {% endblock %}
+
+{% endblock %}
+
+{% block footer %}
+    <ul class="list-inline">
+        <li>
+            <a class="btn btn-primary" href="{{ path(router['index']) }}">{{ 'crud.list' | trans }}</a>
+        </li>
+    </ul>
+{% endblock %}

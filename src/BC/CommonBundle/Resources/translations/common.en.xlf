@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="en" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="Ep4V7C_" resname="nomenclador.id">
+        <source>nomenclador.id</source>
+        <target>Id</target>
+      </trans-unit>
+      <trans-unit id="6f2hCO4" resname="nomenclador.nombre">
+        <source>nomenclador.nombre</source>
+        <target>Name</target>
+      </trans-unit>
+      <trans-unit id="0hWd9SI" resname="nomenclador.descripcion">
+        <source>nomenclador.descripcion</source>
+        <target>Description</target>
+      </trans-unit>
+      <trans-unit id="u7dehdt" resname="operation.fail">
+        <source>operation.fail</source>
+        <target>An error occurred while executing the requested action!</target>
+      </trans-unit>
+      <trans-unit id="6o20p96" resname="operation.success">
+        <source>operation.success</source>
+        <target>Operation Success!</target>
+      </trans-unit>
+      <trans-unit id="k3Gd6PU" resname="operation.delete.fail">
+        <source>operation.delete.fail</source>
+        <target>The element you are trying to eliminate is being used, it can not be removed!</target>
+      </trans-unit>
+      <trans-unit id="_kII9dE" resname="verb.create">
+        <source>verb.create</source>
+        <target>Create</target>
+      </trans-unit>
+      <trans-unit id="bpGpwmW" resname="verb.show">
+        <source>verb.show</source>
+        <target>Show</target>
+      </trans-unit>
+      <trans-unit id="z_tpSIL" resname="verb.list">
+        <source>verb.list</source>
+        <target>List</target>
+      </trans-unit>
+      <trans-unit id="c3WYoxM" resname="verb.edit">
+        <source>verb.edit</source>
+        <target>Edit</target>
+      </trans-unit>
+      <trans-unit id="0Pj9U.2" resname="step.confirmacion.message">
+        <source>step.confirmacion.message</source>
+        <target>Thank you for confirming your email now you can access the caregivers area and complete your information.</target>
+      </trans-unit>
+      <trans-unit id="4iGcVQv" resname="step.confirmacion.error.message">
+        <source>step.confirmacion.error.message</source>
+        <target>Upss!!! One error has occurred, please contact the support team.</target>
+      </trans-unit>
+      <trans-unit id="GgXU100" resname="operation.new.fail.default">
+        <source>operation.new.fail.default</source>
+        <target>Upss!!! El elemento que intenta crear no puede guardarse.</target>
+      </trans-unit>
+      <trans-unit id="xKcH2Vr" resname="operation.new.fail">
+        <source>operation.new.fail</source>
+        <target>Upss!!! Ya existe un elemento de '%clazz%' que contiene un atributo '%attr%' con valor '%value%'. El elemento no puede repetirse.</target>
+      </trans-unit>
+      <trans-unit id="ZzFtFUn" resname="operation.edit.fail.default">
+        <source>operation.edit.fail.default</source>
+        <target>Upss!!! El elemento que intenta editar no puede guardarse.</target>
+      </trans-unit>
+      <trans-unit id="7ajBSh7" resname="operation.edit.fail">
+        <source>operation.edit.fail</source>
+        <target>Upss!!! Ya existe un elemento de '%clazz%' que contiene un atributo '%attr%' con valor '%value%'. El elemento no puede repetirse.</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

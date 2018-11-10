@@ -1,0 +1,20 @@
+backend_homepage:
+    path:     /{_locale}/
+    defaults: { _controller: BackendBundle:Default:index }
+    requirements:
+        _locale: '%locales_app%'
+
+backend_login:
+    path:     /{_locale}/login
+    defaults: { _controller: BackendBundle:Security:login }
+    requirements:
+        _locale: '%locales_app%'
+
+backend_logout:
+    path:     /logout
+
+bdispatch:
+    path:     /dispatch/{template}
+    defaults: { _controller: BackendBundle:Default:dispatch }
+    options:
+        expose: true

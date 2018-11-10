@@ -1,0 +1,90 @@
+# To get started with security, check out the documentation:
+# https://symfony.com/doc/current/security.html
+security:
+    # http://symfony.com/doc/current/book/security.html#encoding-the-user-s-password
+    encoders:
+        Symfony\Component\Security\Core\User\User: plaintext
+        BC\CommonBundle\Entity\Administrador: { algorithm: bcrypt, cost: 4 }
+
+    # http://symfony.com/doc/current/book/security.html#hierarchical-roles
+    role_hierarchy:
+#        ROLE_USER:        [ROLE_DEMANDANTE, ROLE_CUIDADOR, ROLE_EMPRESA]
+        ROLE_ADMIN:       [ROLE_ADMIN]   
+#        ROLE_SUPER_ADMIN: [ROLE_ADMIN, ROLE_ALLOWED_TO_SWITCH]
+
+    # https://symfony.com/doc/current/security.html#b-configuring-how-users-are-loaded
+    providers:
+        administradores:
+            entity: { class: BC\CommonBundle\Entity\Administrador, property: email }
+#        cuidadores:
+#            entity: { class: BC\UserBundle\Entity\Cuidador, property: email }
+#        demandantes:
+#            entity: { class: BC\UserBundle\Entity\Demandante, property: email }
+#        empresas:
+#            entity: { class: BC\EmpresaBundle\Entity\Empresa, property: email }
+#        chain_provider:
+#            chain:
+#                providers: [cuidadores, demandantes, empresas]
+
+    firewalls:
+        # disables authentication for assets and the profiler, adapt it according to your needs
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+            # activate different ways to authenticate
+#
+#            # https://symfony.com/doc/current/security.html#a-configuring-how-your-users-will-authenticate
+#            #http_basic: ~
+#
+#            # https://symfony.com/doc/current/security/form_login_setup.html
+#            #form_login: ~
+        backend:
+            pattern:        ^/backend/*
+            provider:       administradores
+            anonymous:      ~
+            form_login:
+                login_path: backend_login
+                check_path: backend_login
+                default_target_path: backend_homepage
+                always_use_default_target_path: false
+            logout:
+                path:       /backend/logout
+                target:     frontend_homepage
+            remember_me:
+                secret: "%secret%"
+                lifetime:   604800  # 604.800 = 3.600 * 24 * 7 = 1 semana
+            switch_user: { role: ROLE_ADMIN }
+#        frontend:
+#            pattern:        ^/*
+#            provider:       chain_provider
+#            anonymous:      true
+#            form_login:
+#                login_path: frontend_login
+#                check_path: frontend_login
+#                default_target_path: frontend_login_redirect
+#                always_use_default_target_path: true
+#            logout:
+#                path:       /logout
+#                target:     frontend_homepage
+#            remember_me:
+#                secret: "%secret%"
+#                lifetime:   604800  # 604.800 = 3.600 * 24 * 7 = 1 semana
+#            switch_user: { role: ROLE_USER }
+        main:
+            anonymous: true
+            
+    # with these settings you can restrict or allow access for different parts
+    # of your application based on roles, ip, host or methods
+    # http://symfony.com/doc/current/cookbook/security/access_control.html
+    access_control:
+#        - { path: ^/user/(%locales_app%)/security/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+
+#***************************************BACKEND*******************************************************************
+        - { path: ^/backend/(%locales_app%)/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/backend/*, roles: [ROLE_ADMIN] }
+
+#***************************************OTHERS********************************************************************
+        - { path: ^/*, roles: [IS_AUTHENTICATED_FULLY, IS_AUTHENTICATED_ANONYMOUSLY] }
+
+    access_decision_manager:
+        strategy: consensus

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+    <file source-language="es" target-language="es" datatype="plaintext" original="file.ext">
+        <header>
+            <tool tool-id="symfony" tool-name="Symfony"/>
+        </header>
+        <body>
+            <trans-unit id="Y3Aa5f11" resname="ha.confirmado.su.cuenta">
+                <source>ha.confirmado.su.cuenta</source>
+                <target>Ha confirmado su cuenta de correo, por favor continue con el formulario</target>
+            </trans-unit>
+            <trans-unit id="Y3Aa5f1111" resname="confirme.su.cuenta">
+                <source>confirme.su.cuenta</source>
+                <target>Por favor, confirme su cuenta de correo para proseguir con el formulario.</target>
+            </trans-unit>
+            <trans-unit id="Yax3Aa5f1111" resname="registro.cuidador.confirme.su.cuenta">
+                <source>registro.cuidador.confirme.su.cuenta</source>
+                <target>Bienvenida a la gran familia de Seniors First, cientos de familias y empresas empleadoras
+                    esperan por ti. Revisa tu email para continuar el proceso de registro. Revisa la carpeta de No
+                    deseados o promociones, puede que lo recibas en alguna de estas carpetas. Te esperamos!
+                </target>
+            </trans-unit>
+            <trans-unit id="Y3Aaaa5f1111" resname="activacion.expirada">
+                <source>activacion.expirada</source>
+                <target>Su clave de verificación ha expirado</target>
+            </trans-unit>
+            <trans-unit id="aaY3Aaaa5f1111" resname="cuenta.deshabilitada">
+                <source>cuenta.deshabilitada</source>
+                <target>Su cuenta está deshabilitada</target>
+            </trans-unit>
+            <trans-unit id="44aaY3Aaaa5f1111" resname="usuario.no.valido.entorno">
+                <source>usuario.no.valido.entorno</source>
+                <target>Usuario o contraseña inválidos para el entorno seleccionado</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

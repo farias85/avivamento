@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{% block title %}Seniors First!{% endblock %}</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <meta name="autor" content="Equipo desarrollo Nous Allons">
+    <meta name="copyrigth" content="Copyright © Nous allons 2017.">
+
+    {% set locale = app.request.get('_locale') %}
+    {% if locale is defined and locale is not empty %}
+        <script type="text/javascript">
+          window._locale_ = '{{ locale }}';
+          console.log('baseUrl -> ', '{{ app.request.baseUrl }}');
+          console.log('host -> ', '{{ app.request.schemeAndHttpHost }}');
+        </script>
+    {% else %}
+        <script type="text/javascript">
+          window._locale_ = 'es';
+        </script>
+    {% endif %}
+
+    {% block seo %}
+        <meta name="description" content="El mejor sitio para planificar su estancia en Cuba, a su gusto y preferencia">
+        <meta name="keywords"
+              content="excursiones, visitas guiadas, tours, actividades, traslados, transfers, circuitos, guias turísticas, guias de viaje">
+        <link rel="canonical" href="https://mi dominio único para eliminar páginas y contenidos duplicados">
+        <!-- Open Graph protocol -->
+        <meta property="og:locale" content="es">
+        <meta property="og:type" content="website"/>
+        <meta property="og:title" content="Nous allons: Descubir qué hacer en Cuba">
+        <meta property="og:description"
+              content="El mejor sitio para planificar su estancia en Cuba, a su gusto y preferencia">
+        <meta property="og:url" content="mismo dominio canonical">
+        <meta property="og:site_name" content="Nous allons">
+        <meta property="article:publisher" content="perfil de facebook">
+        <meta property="article:author" content="perfil de facebook">
+    {% endblock %}
+
+    {% block stylesheets %}
+        <!-- Hojas de estilo -->
+        <link rel="stylesheet" href="{{ asset('bundles/frontend/css/external/bootstrap.min.css') }}">
+        {#<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"#}
+              {#integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"#}
+              {#crossorigin="anonymous">#}
+        <link rel="stylesheet" href="{{ asset('bundles/frontend/css/external/font-awesome.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('bundles/frontend/css/style.css') }}">
+        <!-- Fin hojas de estilo -->
+    {% endblock %}
+
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}"/>
+</head>
+<body>
+{% block body %}
+
+{% endblock %}
+
+{% block javascripts %}
+    <!--Java Script-->
+    <script src="{{ asset('bundles/frontend/js/external/jquery.min.js') }}"></script>
+
+    {#<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"#}
+            {#integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"#}
+            {#crossorigin="anonymous"></script>#}
+    {#<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"#}
+            {#integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"#}
+            {#crossorigin="anonymous"></script>#}
+
+    <script type="text/javascript"
+            src="{{ asset('bundles/frontend/plugins/popper/http_cdnjs.cloudflare.com_ajax_libs_popper.js_1.12.9_umd_popper.min.js') }}"></script>
+    <script type="text/javascript"
+            src="{{ asset('bundles/frontend/plugins/bootstrap/http_maxcdn.bootstrapcdn.com_bootstrap_4.0.0_js_bootstrap.min.js') }}"></script>
+
+    <!-- FOS JS Routing -->
+    <script src="{{ asset('bundles/fosjsrouting/js/router.js') }}"></script>
+    <script src="{{ path('fos_js_routing_js', { callback: 'fos.Router.setData' }) }}"></script>
+    <!--Java Script-->
+{% endblock %}
+</body>
+</html>

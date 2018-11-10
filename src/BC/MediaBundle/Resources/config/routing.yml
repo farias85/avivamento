@@ -1,0 +1,38 @@
+media_homepage:
+    path:     /
+    defaults: { _controller: MediaBundle:Default:index }
+
+media_file_send:
+    path:     /file-send/{type}/{entityName}/{entityId}/{isActive}
+    defaults: { _controller: MediaBundle:Default:fileSend }
+    methods:  POST
+    options:
+        expose: true
+
+media_file_send_acept_multiple:
+    path:     /file-send-acept-multiple/{type}/{entityName}/{entityId}/{isActive}
+    defaults: { _controller: MediaBundle:Default:fileSendAceptMultiple }
+    methods:  POST
+    options:
+        expose: true
+
+media_file_send_app:
+    path:     /file-send-app/
+    defaults: { _controller: MediaBundle:Default:fileSendApp }
+    methods:  POST
+    options:
+        expose: true
+
+documento_file_send:
+    path:     /doc/file-send/{type}/{entityName}/{entityId}/{isActive}/{toEntityId}/{toEntityName}
+    defaults: { _controller: MediaBundle:Documento:fileSend }
+    methods:  POST
+    options:
+        expose: true
+
+documento_file_send_acept_multiple:
+    path:     /doc/file-send-acept-multiple/{type}/{entityName}/{entityId}/{isActive}/{toEntityId}/{toEntityName}
+    defaults: { _controller: MediaBundle:Documento:fileSendAceptMultiple }
+    methods:  POST
+    options:
+        expose: true

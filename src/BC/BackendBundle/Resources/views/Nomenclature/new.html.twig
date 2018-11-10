@@ -1,0 +1,24 @@
+{% extends 'BackendBundle:Layout:backend.html.twig' %}
+
+{% block wrapper %}
+
+    {% block wrapper_header %} {% endblock %}
+
+    <div class="col-lg-6">
+        <form action="{{ path(router['new']) }}" method="post" enctype="multipart/form-data">
+            {{ form_rest(form) }}
+            <input class="btn btn-success mt-10" type="submit" value="{{ 'crud.create' | trans }}"/>
+        </form>
+    </div>
+
+    {% block wrapper_footer %} {% endblock %}
+
+{% endblock %}
+
+{% block footer %}
+    <ul class="list-inline">
+        <li>
+            <a class="btn btn-primary" href="{{ path(router['index']) }}">{{ 'crud.list' | trans }}</a>
+        </li>
+    </ul>
+{% endblock %}

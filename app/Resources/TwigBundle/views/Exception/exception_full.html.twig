@@ -1,0 +1,5 @@
+{% if bcEnv == 'prod' and app.environment == 'prod' %}
+    {% include 'TwigBundle:Exception:exception-prod.html.twig' %}
+{% else %}
+    {% include 'TwigBundle:Exception:exception-dev.html.twig' %}
+{% endif %}
