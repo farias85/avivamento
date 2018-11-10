@@ -11,6 +11,8 @@ namespace AV\CommonBundle\Traits;
 
 trait UserTrait {
 
+    use RefTrait;
+
     /**
      * @var integer
      *
@@ -96,13 +98,6 @@ trait UserTrait {
      * @ORM\Column(name="is_confirm", type="boolean", nullable=false)
      */
     protected $isConfirm;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="ref", type="string", length=100, nullable=false)
-     */
-    protected $ref;
 
     /**
      * @var string|null
@@ -235,20 +230,6 @@ trait UserTrait {
      */
     public function getIsConfirm() {
         return $this->isConfirm;
-    }
-
-    /**
-     * @return string
-     */
-    public function getRef() {
-        return $this->ref;
-    }
-
-    /**
-     * @param string $ref
-     */
-    public function setRef(string $ref) {
-        $this->ref = $ref;
     }
 
     /**

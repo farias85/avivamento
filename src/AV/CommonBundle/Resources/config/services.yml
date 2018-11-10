@@ -58,3 +58,11 @@ services:
     av.mail.manager:
         class:     AV\CommonBundle\Manager\MailManager
         arguments: ["@mailer", "@twig",'@service_container']
+
+    av.configuracion:
+        parent: av.manager
+        class: AV\CommonBundle\Manager\ConfiguracionManager
+
+    av.conf:
+        parent: av.manager
+        class: AV\CommonBundle\Manager\ConfiguracionManager

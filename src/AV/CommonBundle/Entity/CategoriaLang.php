@@ -1,23 +1,17 @@
 <?php
 
-namespace AV\MediaBundle\Entity;
+namespace AV\CommonBundle\Entity;
 
-use Doctrine\ORM\Mapping as ORM;
 use AV\CommonBundle\Util\Util;
+use Doctrine\ORM\Mapping as ORM;
 
 /**
- * TipoMedia
+ * CategoriaLang
  *
- * @ORM\Table(name="tipo_media")
+ * @ORM\Table(name="categoria_lang")
  * @ORM\Entity
  */
-class TipoMedia {
-
-    const IMAGEN = "imagen";
-    const YOUTUBE_URL = "youtube-url";
-    const GALERIA_EVENTO = "galeria-evento";
-    const GALERIA_FRONTEND = "galeria-frontend";
-
+class CategoriaLang {
     /**
      * @var integer
      *
@@ -48,6 +42,26 @@ class TipoMedia {
      */
     private $descripcion;
 
+    /**
+     * @var Categoria
+     *
+     * @ORM\ManyToOne(targetEntity="Categoria")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="categoria", referencedColumnName="id", nullable=false)
+     * })
+     */
+    private $categoria;
+
+    /**
+     * @var Lang
+     *
+     * @ORM\ManyToOne(targetEntity="Lang")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="lang", referencedColumnName="id", nullable=false)
+     * })
+     */
+    private $lang;
+
 
     /**
      * Get id
@@ -63,12 +77,11 @@ class TipoMedia {
      *
      * @param string $nombre
      *
-     * @return TipoMedia
+     * @return CategoriaLang
      */
     public function setNombre($nombre) {
         $this->nombre = $nombre;
         $this->slug = Util::getSlug($nombre);
-
         return $this;
     }
 
@@ -86,7 +99,7 @@ class TipoMedia {
      *
      * @param string $slug
      *
-     * @return TipoMedia
+     * @return CategoriaLang
      */
     public function setSlug($slug) {
         $this->slug = $slug;
@@ -108,7 +121,7 @@ class TipoMedia {
      *
      * @param string $descripcion
      *
-     * @return TipoMedia
+     * @return CategoriaLang
      */
     public function setDescripcion($descripcion) {
         $this->descripcion = $descripcion;
@@ -123,5 +136,41 @@ class TipoMedia {
      */
     public function getDescripcion() {
         return $this->descripcion;
+    }
+
+    /**
+     * Set lang
+     *
+     * @param \AV\CommonBundle\Entity\Lang $lang
+     *
+     * @return CategoriaLang
+     */
+    public function setLang(\AV\CommonBundle\Entity\Lang $lang = null) {
+        $this->lang = $lang;
+
+        return $this;
+    }
+
+    /**
+     * Get lang
+     *
+     * @return \AV\CommonBundle\Entity\Lang
+     */
+    public function getLang() {
+        return $this->lang;
+    }
+
+    /**
+     * @return \AV\CommonBundle\Entity\Categoria
+     */
+    public function getCategoria(): \AV\CommonBundle\Entity\Categoria {
+        return $this->categoria;
+    }
+
+    /**
+     * @param \AV\CommonBundle\Entity\Categoria $categoria
+     */
+    public function setCategoria(\AV\CommonBundle\Entity\Categoria $categoria) {
+        $this->categoria = $categoria;
     }
 }
