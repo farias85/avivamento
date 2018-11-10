@@ -1,0 +1,60 @@
+services:
+#    common.example:
+#        class: AV\CommonBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]
+
+    av.util:
+        class: AV\CommonBundle\Util\Util
+
+    av.entitysetter:
+        class: AV\CommonBundle\Service\EntitySetter
+        arguments: ['@service_container']
+
+    av.common.entity.lang.setter.listener:
+        class: AV\CommonBundle\EventListener\EntityLangSetterListener
+        arguments: ['@service_container']
+        tags:
+            - { name: doctrine.event_listener, event: postLoad }
+
+    av.common.autor.incidencia.setter.listener:
+        class: AV\CommonBundle\EventListener\AutorIncidenciaSetterListener
+        arguments: ['@service_container']
+        tags:
+            - { name: doctrine.event_listener, event: postLoad }
+
+    av.common.media.setter.listener:
+        class: AV\CommonBundle\EventListener\MediaSetterListener
+        arguments: ['@service_container']
+        tags:
+            - { name: doctrine.event_listener, event: postLoad }
+
+    av.common.translate.setter.listener:
+        class: AV\CommonBundle\EventListener\TranslateSetterListener
+        tags:
+            - { name: doctrine.event_listener, event: postLoad }
+
+#    av.common.cors.listener:
+#        class: AV\CommonBundle\EventListener\CorsListener
+#        tags:
+#           - { name: kernel.event_listener, event: kernel.request, method: onKernelRequest , priority: 100}
+#           - { name: kernel.event_listener, event: kernel.response, method: onKernelResponse, priority: -100}
+
+    av.glr:
+        class: AV\CommonBundle\Service\GenericLangRepository
+        arguments: ['@doctrine.orm.entity_manager', '@service_container']
+
+    av.manager:
+        class: AV\CommonBundle\Manager\Manager
+        arguments: ['@doctrine.orm.entity_manager', '@service_container', "@twig"]
+
+    av.nomenclature.manager:
+        parent: av.manager
+        class: AV\CommonBundle\Manager\NomenclatureManager
+
+    av.base.api.manager:
+        parent: av.manager
+        class: AV\CommonBundle\Manager\BaseApiManager
+
+    av.mail.manager:
+        class:     AV\CommonBundle\Manager\MailManager
+        arguments: ["@mailer", "@twig",'@service_container']

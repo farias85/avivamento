@@ -1,10 +1,10 @@
 <script>
-  bcConfig = {};
-  bcConfig.assets = '{{ asset('bundles/common/sb-admin/vendor/bootstrap/css/bootstrap.min.css') }}';
-  bcConfig.host = '{{ app.request.schemeAndHttpHost }}';
-  bcConfig.baseUrl = '{{ app.request.baseUrl }}';
-  bcConfig.maxFileSize = '{{ maxFileSize }}';
-  bcConfig.maxVideoFileSize = '{{ maxVideoFileSize }}';
+  avConfig = {};
+  avConfig.assets = '{{ asset('bundles/common/sb-admin/vendor/bootstrap/css/bootstrap.min.css') }}';
+  avConfig.host = '{{ app.request.schemeAndHttpHost }}';
+  avConfig.baseUrl = '{{ app.request.baseUrl }}';
+  avConfig.maxFileSize = '{{ maxFileSize }}';
+  avConfig.maxVideoFileSize = '{{ maxVideoFileSize }}';
 </script>
 
 <!-- FOS JS Routing -->
@@ -24,22 +24,21 @@
 <script type="text/javascript"
         src="{{ asset('bundles/common/js/angular/growl-notifications/dist/angular-growl-notifications.js') }}"></script>
 
-<script src="{{ asset('bundles/common/js/bcApp/bcApp.js') }}"></script>
-<script src="{{ asset('bundles/common/js/bcApp/language/en.js') }}"></script>
-<script src="{{ asset('bundles/common/js/bcApp/language/es.js') }}"></script>
-<script src="{{ asset('bundles/common/js/bcApp/config/config.js') }}"></script>
+<script src="{{ asset('bundles/common/js/avApp/avApp.js') }}"></script>
+<script src="{{ asset('bundles/common/js/avApp/language/en.js') }}"></script>
+<script src="{{ asset('bundles/common/js/avApp/language/es.js') }}"></script>
+<script src="{{ asset('bundles/common/js/avApp/config/config.js') }}"></script>
 
 {#Services#}
-<script src="{{ asset('bundles/common/js/bcApp/service/ApiService.js') }}"></script>
-<script src="{{ asset('bundles/common/js/bcApp/service/ToolService.js') }}"></script>
+<script src="{{ asset('bundles/common/js/avApp/service/ApiService.js') }}"></script>
+<script src="{{ asset('bundles/common/js/avApp/service/ToolService.js') }}"></script>
 
 {#Factories#}
-<script src="{{ asset('bundles/common/js/bcApp/factory/ScopeFactory.js') }}"></script>
+<script src="{{ asset('bundles/common/js/avApp/factory/ScopeFactory.js') }}"></script>
 
 {#Filters#}
 
 {#Directives#}
-
 
 {% set locale = app.request.get('_locale') %}
 {% if locale is defined and locale is not empty %}

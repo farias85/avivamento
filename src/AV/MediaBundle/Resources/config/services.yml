@@ -1,0 +1,26 @@
+services:
+#    media.example:
+#        class: AV\MediaBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]
+
+    av.media.file.uploader:
+        class: AV\MediaBundle\Service\FileUploader
+
+    av.media.media.upload.listener:
+        class: AV\MediaBundle\EventListener\MediaUploadListener
+        tags:
+            - { name: doctrine.event_listener, event: prePersist }
+            - { name: doctrine.event_listener, event: preUpdate }
+        arguments: ['@av.media.file.uploader']
+
+    av.media.manager:
+        parent: av.manager
+        class: AV\MediaBundle\Manager\MediaManager
+
+    av.tipo.media.manager:
+        parent: av.manager
+        class: AV\MediaBundle\Manager\TipoMediaManager
+
+    av.documento.manager:
+        parent: av.manager
+        class: AV\MediaBundle\Manager\DocumentoManager

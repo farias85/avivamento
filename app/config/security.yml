@@ -4,7 +4,7 @@ security:
     # http://symfony.com/doc/current/book/security.html#encoding-the-user-s-password
     encoders:
         Symfony\Component\Security\Core\User\User: plaintext
-        BC\CommonBundle\Entity\Administrador: { algorithm: bcrypt, cost: 4 }
+        AV\CommonBundle\Entity\Administrador: { algorithm: bcrypt, cost: 4 }
 
     # http://symfony.com/doc/current/book/security.html#hierarchical-roles
     role_hierarchy:
@@ -15,13 +15,13 @@ security:
     # https://symfony.com/doc/current/security.html#b-configuring-how-users-are-loaded
     providers:
         administradores:
-            entity: { class: BC\CommonBundle\Entity\Administrador, property: email }
+            entity: { class: AV\CommonBundle\Entity\Administrador, property: email }
 #        cuidadores:
-#            entity: { class: BC\UserBundle\Entity\Cuidador, property: email }
+#            entity: { class: AV\UserBundle\Entity\Cuidador, property: email }
 #        demandantes:
-#            entity: { class: BC\UserBundle\Entity\Demandante, property: email }
+#            entity: { class: AV\UserBundle\Entity\Demandante, property: email }
 #        empresas:
-#            entity: { class: BC\EmpresaBundle\Entity\Empresa, property: email }
+#            entity: { class: AV\EmpresaBundle\Entity\Empresa, property: email }
 #        chain_provider:
 #            chain:
 #                providers: [cuidadores, demandantes, empresas]

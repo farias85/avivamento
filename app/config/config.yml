@@ -9,18 +9,18 @@ parameters:
     locale: es
     locales_app: es|en
     locales_app_array: ['es','en']
-    bc.env: 'env'
+    av.env: 'env'
 #   valores identificativos de los mensajes del administrador
-    bc.admin.sms.id: '0'
-    bc.admin.sms.name: 'SMS'
+    av.admin.sms.id: '0'
+    av.admin.sms.name: 'SMS'
 #   valores identificativos de los mensajes de los usuarios desde la pagina de contacto
-    bc.contacto.sms.id: '1'
-    bc.contacto.sms.name: 'CONTACTO'
+    av.contacto.sms.id: '1'
+    av.contacto.sms.name: 'CONTACTO'
 #   dirección de donde están los emails del sistema
-    bc.email.directory: 'CommonBundle:Email'
+    av.email.directory: 'CommonBundle:Email'
 #   configuration files sizes
-    bc.max.file.size: '5' #setear en MB
-    bc.max.video.file.size: '120' #setear en MB
+    av.max.file.size: '5' #setear en MB
+    av.max.video.file.size: '120' #setear en MB
 
 framework:
     #esi: ~
@@ -54,11 +54,11 @@ twig:
     debug: '%kernel.debug%'
     strict_variables: '%kernel.debug%'
     globals:
-        util: '@bc.util'
+        util: '@av.util'
         uploads: 'uploads/'
-        maxFileSize : '%bc.max.file.size%'
-        maxVideoFileSize : '%bc.max.video.file.size%'
-        bcEnv: '%bc.env%'
+        maxFileSize : '%av.max.file.size%'
+        maxVideoFileSize : '%av.max.video.file.size%'
+        avEnv: '%av.env%'
 
 # Doctrine Configuration
 doctrine:

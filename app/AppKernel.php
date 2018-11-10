@@ -15,9 +15,9 @@ class AppKernel extends Kernel
             new Symfony\Bundle\SwiftmailerBundle\SwiftmailerBundle(),
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
-            new BC\CommonBundle\CommonBundle(),
-            new BC\MediaBundle\MediaBundle(),
-            new BC\ApiBundle\ApiBundle(),
+            new AV\CommonBundle\CommonBundle(),
+            new AV\MediaBundle\MediaBundle(),
+            new AV\ApiBundle\ApiBundle(),
             new FOS\JsRoutingBundle\FOSJsRoutingBundle(),
             new FOS\RestBundle\FOSRestBundle(),
             new JMS\SerializerBundle\JMSSerializerBundle(),
@@ -26,8 +26,8 @@ class AppKernel extends Kernel
             new WhiteOctober\TCPDFBundle\WhiteOctoberTCPDFBundle(),
             new Liuggio\ExcelBundle\LiuggioExcelBundle(),
             new BeSimple\I18nRoutingBundle\BeSimpleI18nRoutingBundle(),
-            new BC\FrontendBundle\FrontendBundle(),
-            new BC\BackendBundle\BackendBundle(),
+            new AV\FrontendBundle\FrontendBundle(),
+            new AV\BackendBundle\BackendBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

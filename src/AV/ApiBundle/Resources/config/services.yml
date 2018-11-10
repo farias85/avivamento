@@ -1,0 +1,9 @@
+services:
+#    api.example:
+#        class: AV\ApiBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]
+
+
+    av.api.manager:
+        parent: av.manager
+        class: AV\ApiBundle\Manager\ApiManager

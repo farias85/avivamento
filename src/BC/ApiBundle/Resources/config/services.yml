@@ -1,9 +1,0 @@
-services:
-#    api.example:
-#        class: BC\ApiBundle\Example
-#        arguments: ["@service_id", "plain_value", "%parameter%"]
-
-
-    bc.api.manager:
-        parent: bc.manager
-        class: BC\ApiBundle\Manager\ApiManager

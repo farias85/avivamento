@@ -1,5 +1,5 @@
-cd C:\xampp\htdocs\bitcredit
-cd C:\xampp7.1\htdocs\bitcredit
+cd C:\xampp\htdocs\avivamento
+cd C:\xampp7.1\htdocs\avivamento
 php bin/console assets:install web --symlink --relative
 
 php bin/console sf:socket:init
