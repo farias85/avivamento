@@ -895,6 +895,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #venue {
     padding: 60px 0;
+    /*background-color: #ddd;*/
 }
 
 #venue .container-fluid {
@@ -1289,6 +1290,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #contact {
     padding: 60px 0;
+    background-color: #eee;
 }
 
 #contact .contact-info {

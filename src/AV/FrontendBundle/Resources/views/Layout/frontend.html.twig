@@ -1,11 +1,8 @@
-{% extends ':frontend:frontend.html.twig' %}
+{% extends 'FrontendBundle:Layout:frontend-jumbotron.html.twig' %}
 
-{% block content %}
-    <main id="main" {% if isIndex is not defined %} class="main-page" {% endif %}>
-        {% block wrapper %}
+{% block header %}
 
-        {% endblock %}
-    </main>
 {% endblock %}
+
 
 

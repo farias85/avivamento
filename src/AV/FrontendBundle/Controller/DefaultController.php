@@ -3,6 +3,7 @@
 namespace AV\FrontendBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\Request;
 
 class DefaultController extends Controller {
 
@@ -11,4 +12,12 @@ class DefaultController extends Controller {
             'isIndex' => true,
         ]);
     }
+
+    public function eventDetailsAction(Request $request) {
+        return $this->render('FrontendBundle:Default:event-details.html.twig', [
+
+        ]);
+    }
+
+
 }

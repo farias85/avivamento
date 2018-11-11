@@ -1,0 +1,11 @@
+{% extends ':frontend:frontend.html.twig' %}
+
+{% block content %}
+    <main id="main" {% if isIndex is not defined %} class="main-page" {% endif %}>
+        {% block wrapper %}
+
+        {% endblock %}
+    </main>
+{% endblock %}
+
+

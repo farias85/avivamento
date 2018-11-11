@@ -6,157 +6,68 @@
         </header>
         <body>
             <trans-unit id="5aa00007897e80c9b46379028b01c90dc" resname="si">
-                <source>si</source> 
-                <target>Yes</target> 
-            </trans-unit> 
-            <trans-unit id="5aa000071897e80c9b46379028b01c90dc" resname="no"> 
-                <source>no</source> 
-                <target>No</target> 
-            </trans-unit> 
-            <trans-unit id="5aa000071897e80c19b46379028b01c90dc" resname="cuidador"> 
-                <source>cuidador</source> 
-                <target>Carergiver</target>
-            </trans-unit> 
-            <trans-unit id="5a3000071897e80c19b46379028b01c90dc" resname="empresa"> 
-                <source>empresa</source> 
-                <target>Company</target>
-            </trans-unit> 
-            <trans-unit id="51a000071897e80c19b46379028b01c90dc" resname="familia"> 
-                <source>familia</source> 
-                <target>Family</target> 
-            </trans-unit> 
-            <trans-unit id="51a000071897e80c19b46379128b01c90dc" resname="inicio"> 
-                <source>inicio</source> 
-                <target>Index</target> 
-            </trans-unit> 
-            <trans-unit id="51a000071897e80c19b146379128b01c90dc" resname="mas.informacion"> 
-                <source>mas.informacion</source> 
-                <target>More info</target> 
-            </trans-unit> 
-            <trans-unit id="52a000071897e80c19b146379128b01c90dc" resname="contacto"> 
-                <source>contacto</source> 
-                <target>Contact</target> 
-            </trans-unit> 
-            <trans-unit id="53a000071897e80c19b146379128b01c90dc" resname="sobre.nosotros"> 
-                <source>sobre.nosotros</source> 
-                <target>About us</target> 
-            </trans-unit> 
-            <trans-unit id="54a000071897e80c19b146379128b01c90dc" resname="subscribete.a.nuestras.newsletter"> 
-                <source>subscribete.a.nuestras.newsletter</source> 
-                <target>Subscribe to our newsletter</target> 
-            </trans-unit> 
-            <trans-unit id="55a000071897e80c19b146379128b01c90dc" resname="suscribirse"> 
-                <source>suscribirse</source> 
-                <target>Subscribe</target> 
-            </trans-unit> 
-            <trans-unit id="56a000071897e80c19b146379128b01c90dc" resname="software.desarrollado.y.diseñado.por"> 
-                <source>software.desarrollado.y.diseñado.por</source> 
-                <target>Powered by</target> 
+                <source>si</source>
+                <target>Yes</target>
             </trans-unit>
-            <trans-unit id="57a000071897e80c19b146379128b01c90dc" resname="nueva.entrevista">  
-                <source>nueva.entrevista</source>  
-                <target>New interview</target>  
+            <trans-unit id="5aa000071897e80c9b46379028b01c90dc" resname="no">
+                <source>no</source>
+                <target>No</target>
             </trans-unit>
-            <trans-unit id="58a000071897e80c19b146379128b01c90dc" resname="aceptadas">  
-                <source>aceptadas</source>  
-                <target>Accepted</target>  
+            <trans-unit id="51a000071897e80c19b46379128b01c90dc" resname="inicio">
+                <source>inicio</source>
+                <target>Home</target>
             </trans-unit>
-            <trans-unit id="59a000071897e80c19b146379128b01c90dc" resname="terminadas">  
-                <source>terminadas</source>  
-                <target>Finished</target>  
+            <trans-unit id="51a000071897e80c19b146379128b01c90dc" resname="mas.informacion">
+                <source>mas.informacion</source>
+                <target>More info</target>
             </trans-unit>
-            <trans-unit id="60a000071897e80c19b146379128b01c90dc" resname="enproceso.decreacion">  
-                <source>enproceso.decreacion</source>  
-                <target>In the process of creation</target>  
+            <trans-unit id="52a000071897e80c19b146379128b01c90dc" resname="contacto">
+                <source>contacto</source>
+                <target>Contact</target>
             </trans-unit>
-            <trans-unit id="61a000071897e80c19b146379128b01c90dc" resname="no.realizadas">  
-                <source>no.realizadas</source>  
-                <target>Unrealized</target>  
+            <trans-unit id="53a000071897e80c19b146379128b01c90dc" resname="sobre.nosotros">
+                <source>sobre.nosotros</source>
+                <target>About us</target>
             </trans-unit>
-            <trans-unit id="62a000071897e80c19b146379128b01c90dc" resname="nuevo.servicio">  
-                <source>nuevo.servicio</source>  
-                <target>New service</target>  
+            <trans-unit id="54a000071897e80c19b146379128b01c90dc" resname="subscribete.a.nuestras.newsletter">
+                <source>subscribete.a.nuestras.newsletter</source>
+                <target>Subscribe to our newsletter</target>
             </trans-unit>
-            <trans-unit id="63a000071897e80c19b146379128b01c90dc" resname="nuevas.peticiones">  
-                <source>nuevas.peticiones</source>  
-                <target>New requests</target>  
+            <trans-unit id="55a000071897e80c19b146379128b01c90dc" resname="suscribirse">
+                <source>suscribirse</source>
+                <target>Subscribe</target>
             </trans-unit>
-            <trans-unit id="64a000071897e80c19b146379128b01c90dc" resname="denegados">  
-                <source>denegados</source>  
-                <target>Denied</target>  
+            <trans-unit id="56a000071897e80c19b146379128b01c90dc" resname="software.desarrollado.y.diseñado.por">
+                <source>software.desarrollado.y.diseñado.por</source>
+                <target>Powered by</target>
             </trans-unit>
-            <trans-unit id="65a000071897e80c19b146379128b01c90dc" resname="finalizados">  
-                <source>finalizados</source>  
-                <target>Finished</target>  
+            <trans-unit id="71a000071897e80c19b146379128b01c90dc" resname="descargar">
+                <source>descargar</source>
+                <target>Download</target>
             </trans-unit>
-            <trans-unit id="66a000071897e80c19b146379128b01c90dc" resname="variables">  
-                <source>variables</source>  
-                <target>Variables</target>  
+            <trans-unit id="73a000071897e80c19b146379128b01c90dc" resname="texto.cookies">
+                <source>texto.cookies</source>
+                <target>This website uses cookies to obtain statistical data on the navigation of its users. If you
+                    continue browsing we consider that you accept its use
+                </target>
             </trans-unit>
-            <trans-unit id="67a000071897e80c19b146379128b01c90dc" resname="paginascms">  
-                <source>paginascms</source>  
-                <target>Pages cms</target>  
+            <trans-unit id="74a000071897e80c19b146379128b01c90dc" resname="mas.informacion">
+                <source>mas.informacion</source>
+                <target>More information</target>
             </trans-unit>
-            <trans-unit id="68a000071897e80c19b146379128b01c90dc" resname="categoriascms">  
-                <source>categoriascms</source>  
-                <target>Categories cms</target>  
+            <trans-unit id="75a000071897e80c19b146379128b01c90dc" resname="informacion.cerrar.cookies">
+                <source>informacion.cerrar.cookies</source>
+                <target>We use cookies to improve services and ensure they work for you. Read our cookie policy</target>
             </trans-unit>
-            <trans-unit id="69a000071897e80c19b146379128b01c90dc" resname="probar.correo">  
-                <source>probar.correo</source>  
-                <target>Test mail</target>  
-            </trans-unit>
-            <trans-unit id="70a000071897e80c19b146379128b01c90dc" resname="informes">  
-                <source>informes</source>  
-                <target>Reports</target>  
-            </trans-unit>
-            <trans-unit id="71a000071897e80c19b146379128b01c90dc" resname="descargar">  
-                <source>descargar</source>  
-                <target>Download</target>  
-            </trans-unit>
-            <trans-unit id="72a000071897e80c19b146379128b01c90dc" resname="experiencia.profesional">  
-                <source>experiencia.profesional</source>  
-                <target>Professional experience</target>  
-            </trans-unit>
-            <trans-unit id="73a000071897e80c19b146379128b01c90dc" resname="texto.cookies">  
-                <source>texto.cookies</source>  
-                <target>This website uses cookies to obtain statistical data on the navigation of its users. If you continue browsing we consider that you accept its use</target>  
-            </trans-unit>
-            <trans-unit id="74a000071897e80c19b146379128b01c90dc" resname="mas.informacion">  
-                <source>mas.informacion</source>  
-                <target>More information</target>  
-            </trans-unit> 
-            <trans-unit id="75a000071897e80c19b146379128b01c90dc" resname="informacion.cerrar.cookies">  
-                <source>informacion.cerrar.cookies</source>  
-                <target>We use cookies to improve services and ensure they work for you. Read our cookie policy</target>  
-            </trans-unit>
-            <trans-unit id="1" resname="meta.description">
+            <trans-unit id="asdasdasd1" resname="meta.description">
                 <source>meta.description</source>
-                <target>SeniorsFirst, the most comfortable and direct way to find your caregivers. Find the best company for your most precious.</target>
+                <target>meta.description.
+                </target>
             </trans-unit>
-            <trans-unit id="2" resname="meta.keywords">
+            <trans-unit id="2ffggdfgdfgdfg" resname="meta.keywords">
                 <source>meta.keywords</source>
-                <target>seniorsfirst, care for the elderly, look for domestic employees, household employees</target>
+                <target>meta.keywords</target>
             </trans-unit>
-            <trans-unit id="OYmRAJ212" resname="entrevistass">
-        <source>entrevistass</source>
-        <target>Interviews</target>
-      </trans-unit>
-      <trans-unit id="OYmRAJ213" resname="servicioss">
-        <source>servicioss</source>
-        <target>Services</target>
-      </trans-unit>
-      <trans-unit id="OYmRAJ214" resname="activoss">
-        <source>activoss</source>
-        <target>Actives</target>
-      </trans-unit>
-      <trans-unit id="Odvuj2i321" resname="mensajess">
-        <source>mensajess</source>
-        <target>Messages</target>
-      </trans-unit>
-      <trans-unit id="h_gmfu934" resname="incidencias.pendientes">
-        <source>incidencias.pendientes</source>
-        <target>Pending issues</target>
-      </trans-unit>
         </body>
     </file>
 </xliff>

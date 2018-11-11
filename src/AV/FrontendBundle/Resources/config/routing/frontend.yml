@@ -1,0 +1,9 @@
+frontend_event_details:
+    path:     /event-details/
+    locales:  { es: '/evento/', en: '/event-details/' }
+    defaults: { _controller: 'FrontendBundle:Default:eventDetails' }
+
+frontend_event_details_ref:
+    path:     /event-details/{ref}/
+    locales:  { es: '/evento/{ref}/', en: '/event-details/{ref}/' }
+    defaults: { _controller: 'FrontendBundle:Default:eventDetails' }

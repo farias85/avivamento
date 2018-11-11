@@ -8,3 +8,11 @@ frontend_homepage:
     defaults: { _locale: '%locale%' }
     requirements:
         _locale: '%locales_app%'
+
+frontend_routes:
+    resource: "@FrontendBundle/Resources/config/routing/frontend.yml"
+    type: 'be_simple_i18n'
+    prefix:   /{_locale}/
+    defaults: { _locale: '%locale%'}
+    requirements:
+        _locale: '%locales_app%'
