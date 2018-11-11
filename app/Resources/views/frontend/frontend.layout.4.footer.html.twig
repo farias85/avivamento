@@ -10,8 +10,8 @@
         <div class="container">
 
             <div class="section-header">
-                <h2>Contact Us</h2>
-                <p>Nihil officia ut sint molestiae tenetur.</p>
+                <h2>{{ 'contactanos' | trans }}</h2>
+                <p>{{ 'contactanos_sub' | trans }}</p>
             </div>
 
             <div class="row contact-info">
@@ -19,16 +19,16 @@
                 <div class="col-md-4">
                     <div class="contact-address">
                         <i class="ion-ios-location-outline"></i>
-                        <h3>Address</h3>
-                        <address>A108 Adam Street, NY 535022, USA</address>
+                        <h3>{{ 'direccion' | trans }}</h3>
+                        <address> {{ conf['av_direccion'] }}</address>
                     </div>
                 </div>
 
                 <div class="col-md-4">
                     <div class="contact-phone">
                         <i class="ion-ios-telephone-outline"></i>
-                        <h3>Phone Number</h3>
-                        <p><a href="tel:+155895548855">+1 5589 55488 55</a></p>
+                        <h3>{{ 'telefono' | trans }}</h3>
+                        <p>{{ conf['av_telefono'] }}</p>
                     </div>
                 </div>
 
@@ -36,7 +36,7 @@
                     <div class="contact-email">
                         <i class="ion-ios-email-outline"></i>
                         <h3>Email</h3>
-                        <p><a href="mailto:info@example.com">info@example.com</a></p>
+                        <p><a href="mailto:{{ conf['av_email'] }}">{{ conf['av_email'] }}</a></p>
                     </div>
                 </div>
 
@@ -85,10 +85,7 @@
 
                     <div class="col-lg-3 col-md-6 footer-info">
                         <img src="{{ asset('bundles/frontend/event/img/logo.png') }}" alt="TheEvenet">
-                        <p>In alias aperiam. Placeat tempore facere. Officiis voluptate ipsam vel eveniet est dolor et
-                            totam porro. Perspiciatis ad omnis fugit molestiae recusandae possimus. Aut consectetur id
-                            quis. In inventore consequatur ad voluptate cupiditate debitis accusamus repellat
-                            cumque.</p>
+                        <p>{{ conf['av_intro_' ~ app.request.locale] }}</p>
                     </div>
 
                     <div class="col-lg-3 col-md-6 footer-links">
@@ -114,21 +111,15 @@
                     </div>
 
                     <div class="col-lg-3 col-md-6 footer-contact">
-                        <h4>Contact Us</h4>
-                        <p>
-                            A108 Adam Street <br>
-                            New York, NY 535022<br>
-                            United States <br>
-                            <strong>Phone:</strong> +1 5589 55488 55<br>
-                            <strong>Email:</strong> info@example.com<br>
+                        <h4>{{ 'contactanos' | trans }}</h4>
+                        <p> {{ conf['av_direccion'] }}<br>
+                            <strong>{{ 'telefono' | trans }}:</strong> {{ conf['av_telefono'] }}<br>
+                            <strong>Email:</strong> {{ conf['av_email'] }}<br>
                         </p>
 
                         <div class="social-links">
-                            <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-                            <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-                            <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
-                            <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
-                            <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+                            <a href="{{ conf['av_facebook'] }}" class="facebook"><i class="fa fa-facebook"></i></a>
+                            <a href="{{ conf['av_youtube'] }}" class="youtube"><i class="fa fa-youtube"></i></a>
                         </div>
 
                     </div>
@@ -139,7 +130,7 @@
 
         <div class="container">
             <div class="copyright">
-                &copy; Copyright <strong>TheEvent</strong>. All Rights Reserved
+                &copy; Copyright <strong>{{ conf['av_powered_by_' ~ app.request.locale] }}</strong>
             </div>
             <div class="credits">
                 <!--

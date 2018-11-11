@@ -24,9 +24,16 @@
         </script>
     {% endif %}
 
-    {#<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>#}
-    {#<meta http-equiv="Pragma" content="no-cache"/>#}
-    {#<meta http-equiv="Expires" content="0"/>#}
+    {% set conf = getConf([
+    'av_telefono',
+    'av_whatsapp',
+    'av_email',
+    'av_facebook',
+    'av_youtube',
+    'av_powered_by_' ~ app.request.locale,
+    'av_intro_' ~ app.request.locale,
+    'av_direccion'
+    ]) %}
 
     {% block seo %}
         <meta name="description" content="{{ 'meta.description'|trans }}">
@@ -104,8 +111,8 @@
     <script src="{{ asset('bundles/frontend/event/js/main.js') }}"></script>
 
     <script language="JavaScript" type="text/javascript">
-      $('#intro').css("background", "url({{ asset('bundles/frontend/event/img/intro-bg.jpg') }}) top center");
-      $('#about').css("background", "url({{ asset('bundles/frontend/event/img/about-bg.jpg') }})");
+      $('#intro').css('background', "url({{ asset('bundles/frontend/event/img/intro-bg.jpg') }}) top center");
+      $('#about').css('background', "url({{ asset('bundles/frontend/event/img/about-bg.jpg') }})");
       {#$('#venue .venue-info').css("background", "url({{ asset('bundles/frontend/event/img/venue-info-bg.jpg') }}) top center no-repeat");#}
       {#$('#subscribe').css("background", "url({{ asset('bundles/frontend/event/img/subscribe-bg.jpg') }}) center center no-repeat");#}
       {#$('#preloader').css("background", "#fff url({{ asset('preloader.svg') }}) center center no-repeat");#}

@@ -25,6 +25,22 @@
                 <source>contacto</source>
                 <target>Contacto</target>
             </trans-unit>
+            <trans-unit id="52a0071897e80c19b146379128b01c90dc" resname="contactanos">
+                <source>contactanos</source>
+                <target>Contáctanos</target>
+            </trans-unit>
+            <trans-unit id="a0071897e80c19b146379128b01c90dc" resname="contactanos_sub">
+                <source>contactanos_sub</source>
+                <target>Le responderemos cuanto antes</target>
+            </trans-unit>
+            <trans-unit id="0071897e80c19b146379128b01c90dc" resname="direccion">
+                <source>direccion</source>
+                <target>Dirección</target>
+            </trans-unit>
+            <trans-unit id="007187e80c19b146379128b01c90dc" resname="telefono">
+                <source>telefono</source>
+                <target>Teléfono</target>
+            </trans-unit>
             <trans-unit id="53a000071897e80c19b146379128b01c90dc" resname="sobre.nosotros">
                 <source>sobre.nosotros</source>
                 <target>Sobre nosotros</target>

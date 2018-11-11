@@ -6,6 +6,12 @@ services:
     av.util:
         class: AV\CommonBundle\Util\Util
 
+    av.twig.app.extension:
+         class: AV\CommonBundle\Extension\AppExtension
+         arguments: ["@doctrine.orm.entity_manager"]
+         tags:
+             - { name: twig.extension }
+
     av.entitysetter:
         class: AV\CommonBundle\Service\EntitySetter
         arguments: ['@service_container']
