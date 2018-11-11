@@ -9,6 +9,8 @@
 namespace AV\CommonBundle\Controller;
 
 
+use Symfony\Component\VarDumper\VarDumper;
+
 abstract class UniqueNomenclatureController extends NomenclatureController {
 
     /**
@@ -70,10 +72,10 @@ abstract class UniqueNomenclatureController extends NomenclatureController {
             $getMethod = 'get' . $aux;
 
             if (method_exists($entity, $setMethod)) {
-                $exist = $em->getRepository($this->getEntityName())->findBy([$attr => $entity->$getMethod()]);
-                if (!empty($exist)) {
-                    foreach ($exist as $item) {
-                        if ($item->getId() != $entity->getId() and $entity->$getMethod() == $item->$getMethod()) {
+                $objs = $em->getRepository($this->getEntityName())->findBy([$attr => $entity->$getMethod()]);
+                if (!empty($objs)) {
+                    foreach ($objs as $item) {
+                        if ($item->getId() != $entity->getId() && $entity->$getMethod() == $item->$getMethod()) {
                             $exist = true;
                             break;
                         }
@@ -85,9 +87,9 @@ abstract class UniqueNomenclatureController extends NomenclatureController {
                 $el = $entity->getEl();
                 if (!empty($el) and method_exists($el, $setMethod)) {
                     $lang = $this->get('av.manager')->getRequestLang();
-                    $exist = $em->getRepository($this->getEntityName() . 'Lang')->findBy([$attr => $el->$getMethod(), 'lang' => $lang]);
-                    if (!empty($exist)) {
-                        foreach ($exist as $item) {
+                    $objs = $em->getRepository($this->getEntityName() . 'Lang')->findBy([$attr => $el->$getMethod(), 'lang' => $lang]);
+                    if (!empty($objs)) {
+                        foreach ($objs as $item) {
                             if ($item->getId() != $el->getId() and $el->$getMethod() == $item->$getMethod()) {
                                 $exist = true;
                                 break;

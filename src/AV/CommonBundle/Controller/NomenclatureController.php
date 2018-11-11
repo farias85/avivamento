@@ -92,21 +92,13 @@ abstract class NomenclatureController extends CommonController implements Entity
     }
 
     public function defaultKeysFilter() {
-//        return array('id' => 'text', 'nombre' => 'text', 'descripcion' => 'text',);
-        return [
-            'id' => 'text',
-            'nombre' => 'text'
-        ];
+        return ['id' => 'text', 'nombre' => 'text', 'descripcion' => 'text'];
     }
 
     public function defaultKeysI18n() {
-//        return array('id' => $this->get('translator')->trans('nomenclador.id', [], 'common'),
-//            'nombre' => $this->get('translator')->trans('nomenclador.nombre', [], 'common'),
-//            'descripcion' => $this->get('translator')->trans('nomenclador.descripcion', [], 'common')
-//        );
-        return [
-            'id' => $this->get('translator')->trans('nomenclador.id', [], 'common'),
+        return ['id' => $this->get('translator')->trans('nomenclador.id', [], 'common'),
             'nombre' => $this->get('translator')->trans('nomenclador.nombre', [], 'common'),
+            'descripcion' => $this->get('translator')->trans('nomenclador.descripcion', [], 'common')
         ];
     }
 
@@ -128,6 +120,14 @@ abstract class NomenclatureController extends CommonController implements Entity
 
     public function keysI18nOnFormType() {
         return $this->keysI18nOnIndex();
+    }
+
+    /**
+     * Valores opcionales para su utilizacion en los formularios
+     * @return array
+     */
+    public function optsValues() {
+        return [];
     }
 
     private function display(array $keysFilter, array $keysI18n) {
@@ -274,11 +274,17 @@ abstract class NomenclatureController extends CommonController implements Entity
         $form->handleRequest($request);
         $data = $form->getData();
 
+//        if($request->isMethod('POST')){
+//            VarDumper::dump($form);
+//            VarDumper::dump($form->getErrors(true, false)); die();
+//        }
+
         if ($form->isSubmitted() && $form->isValid()) {
             $fullEntityName = $this->getFullEntityName();
             $data['sfFullEntityName'] = $fullEntityName;
 
             $isValid = $this->newActionIsFormValid($fullEntityName, $data);
+
             if (empty($isValid['valid'])) {
                 return $this->newViewForInvalidData($data, $isValid);
             }
@@ -313,7 +319,8 @@ abstract class NomenclatureController extends CommonController implements Entity
 
         $form = $this->createForm($this->getFormTypeClass(), array(
             'entity' => $entity,
-            'display' => $this->keysI18nOnFormType()
+            'display' => $this->keysI18nOnFormType(),
+            'values' => $this->optsValues(),
         ));
 
         return $this->render($this->getResourceViewPath() . ':new.html.twig', array(
@@ -382,7 +389,8 @@ abstract class NomenclatureController extends CommonController implements Entity
 
         $editForm = $this->createForm($this->getEditFormTypeClass(), array(
             'entity' => $entity,
-            'display' => $this->keysI18nOnFormType()
+            'display' => $this->keysI18nOnFormType(),
+            'values' => $this->optsValues()
         ));
         $editForm->handleRequest($request);
 

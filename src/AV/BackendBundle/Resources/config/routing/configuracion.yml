@@ -1,0 +1,24 @@
+backend_configuracion_index:
+    path:     /
+    defaults: { _controller: "BackendBundle:Configuracion:index" }
+    methods:  GET
+
+backend_configuracion_show:
+    path:     /{id}/show
+    defaults: { _controller: "BackendBundle:Configuracion:show" }
+    methods:  GET
+
+backend_configuracion_new:
+    path:     /new
+    defaults: { _controller: "BackendBundle:Configuracion:new" }
+    methods:  [GET, POST]
+
+backend_configuracion_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "BackendBundle:Configuracion:edit" }
+    methods:  [GET, POST]
+
+backend_configuracion_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "BackendBundle:Configuracion:delete" }
+    methods:  [GET]

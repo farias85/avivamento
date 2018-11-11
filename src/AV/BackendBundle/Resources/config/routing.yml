@@ -18,3 +18,10 @@ bdispatch:
     defaults: { _controller: BackendBundle:Default:dispatch }
     options:
         expose: true
+
+backend_configuracion:
+    resource: "@BackendBundle/Resources/config/routing/configuracion.yml"
+    prefix:   /{_locale}/configuracion/
+    defaults: { _locale: '%locale%' }
+    requirements:
+        _locale: '%locales_app%'

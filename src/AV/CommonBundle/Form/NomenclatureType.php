@@ -24,21 +24,21 @@ class NomenclatureType extends EntityGetterType {
                         'value' => $this->get('nombre')
                     ]
                 ]
+            )
+            ->add('descripcion', TextareaType::class,
+                [
+                    'label' => $this->display('descripcion'),
+                    'data' => $this->get('descripcion'),
+                    'required' => false,
+                    'attr' => [
+                        'class' => 'form-control',
+                        'rows' => 4,
+                    ]
+                ]
             );
-//            ->add('descripcion', TextareaType::class,
-//                [
-//                    'label' => $this->display('descripcion'),
-//                    'data' => $this->get('descripcion'),
-//                    'required' => false,
-//                    'attr' => [
-//                        'class' => 'form-control',
-//                        'rows' => 4,
-//                    ]
-//                ]
-//            )
     }
 
     public function getBlockPrefix() {
-        return 'sf_commonbundle_nomenclature';
+        return 'av_commonbundle_nomenclature';
     }
 }

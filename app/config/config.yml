@@ -31,9 +31,9 @@ framework:
         resource: '%kernel.project_dir%/app/config/routing.yml'
         strict_requirements: ~
     form: ~
-    csrf_protection: ~
+    csrf_protection:
+        enabled: false #Ver como habilitar esto y que los formularios tengan CSRF y el $form->isValid() sea = true
     validation: { enable_annotations: true }
-    #serializer: { enable_annotations: true }
     serializer: { enabled: true }
     templating:
         engines: ['twig']

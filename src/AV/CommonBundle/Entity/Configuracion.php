@@ -39,6 +39,17 @@ class Configuracion {
     private $valor;
 
     /**
+     * @var boolean
+     *
+     * @ORM\Column(name="requerido", type="boolean", nullable=false)
+     */
+    protected $requerido;
+
+    function __construct() {
+        $this->ref = md5(uniqid(null, true));
+    }
+
+    /**
      * Get id
      *
      * @return integer
@@ -55,10 +66,12 @@ class Configuracion {
     }
 
     /**
-     * @param string $clave
+     * @param string || null $clave
      */
-    public function setClave(string $clave) {
-        $this->clave = $clave;
+    public function setClave($clave) {
+        if (is_string($clave)) { //El valor es null cuando el input clave está disabled en formulario del backend
+            $this->clave = $clave;
+        }
     }
 
     /**
@@ -73,5 +86,26 @@ class Configuracion {
      */
     public function setValor(string $valor) {
         $this->valor = $valor;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isRequerido(): bool {
+        return $this->requerido;
+    }
+
+    /**
+     * @return bool
+     */
+    public function getRequerido(): bool {
+        return $this->isRequerido();
+    }
+
+    /**
+     * @param bool $requerido
+     */
+    public function setRequerido(bool $requerido) {
+        $this->requerido = $requerido;
     }
 }
