@@ -440,10 +440,10 @@ trait UserTrait {
      */
     public function serialize() {
         return serialize(array(
-            $this->getId(),
-            $this->getEmail(),
-            $this->getPassword(),
-            $this->isActive(),
+            $this->id,
+            $this->email,
+            $this->password,
+            $this->isActive,
             // see section on salt below
             // $this->salt,
         ));
