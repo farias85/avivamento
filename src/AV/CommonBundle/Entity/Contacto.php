@@ -88,6 +88,8 @@ class Contacto implements EntityNameExtension {
         $this->activo = false;
         $this->asunto = '';
         $this->opts = '';
+        $this->ref = md5(uniqid(null, true));
+        $this->createdAt = new \DateTime('now');
     }
 
     /**

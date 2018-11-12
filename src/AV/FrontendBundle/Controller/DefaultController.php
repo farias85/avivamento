@@ -2,6 +2,7 @@
 
 namespace AV\FrontendBundle\Controller;
 
+use AV\CommonBundle\Entity\Contacto;
 use AV\CommonBundle\Entity\Newsletter;
 use AV\CommonBundle\Util\Entity;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -29,7 +30,7 @@ class DefaultController extends Controller {
         $em = $this->getDoctrine()->getManager();
 
         if ($request->isMethod('POST')) {
-            $email = $request->get('news_email');
+            $email = $request->get('news-email');
             $exist = $em->getRepository(Entity::NEWSLETTER)->findOneBy(['email' => $email]);
 
             if (empty($exist)) {
@@ -39,6 +40,28 @@ class DefaultController extends Controller {
                 $em->persist($news);
                 $em->flush();
             }
+        }
+
+        return $this->redirectToRoute('frontend_homepage', ['_locale' => $request->getLocale()]);
+    }
+
+    public function contactUsAction(Request $request) {
+        $em = $this->getDoctrine()->getManager();
+
+        if ($request->isMethod('POST')) {
+            $email = $request->get('contact-email');
+            $nombre = $request->get('contact-nombre');
+            $asunto = $request->get('contact-asunto');
+            $texto = $request->get('contact-texto');
+
+            $contact = new Contacto();
+            $contact->setEmail($email);
+            $contact->setNombre($nombre);
+            $contact->setAsunto($asunto);
+            $contact->setTexto($texto);
+
+            $em->persist($contact);
+            $em->flush();
         }
 
         return $this->redirectToRoute('frontend_homepage', ['_locale' => $request->getLocale()]);

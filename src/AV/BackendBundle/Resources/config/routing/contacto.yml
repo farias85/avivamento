@@ -1,0 +1,24 @@
+backend_contacto_index:
+    path:     /
+    defaults: { _controller: "BackendBundle:Contacto:index" }
+    methods:  GET
+
+backend_contacto_show:
+    path:     /{id}/show
+    defaults: { _controller: "BackendBundle:Contacto:show" }
+    methods:  GET
+
+backend_contacto_new:
+    path:     /new
+    defaults: { _controller: "BackendBundle:Contacto:new" }
+    methods:  [GET, POST]
+
+backend_contacto_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "BackendBundle:Contacto:edit" }
+    methods:  [GET, POST]
+
+backend_contacto_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "BackendBundle:Contacto:delete" }
+    methods:  [GET]

@@ -13,3 +13,9 @@ frontend_subscribe:
     locales:  { es: '/subscribe/', en: '/subscribe/' }
     defaults: { _controller: 'FrontendBundle:Default:subscribe' }
     methods:  [POST]
+
+frontend_contact_us:
+    path:     /contact-us/
+    locales:  { es: '/contact-us/', en: '/contact-us/' }
+    defaults: { _controller: 'FrontendBundle:Default:contactUs' }
+    methods:  [POST]
