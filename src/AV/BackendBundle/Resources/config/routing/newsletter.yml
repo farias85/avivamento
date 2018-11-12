@@ -1,0 +1,24 @@
+backend_newsletter_index:
+    path:     /
+    defaults: { _controller: "BackendBundle:Newsletter:index" }
+    methods:  GET
+
+backend_newsletter_show:
+    path:     /{id}/show
+    defaults: { _controller: "BackendBundle:Newsletter:show" }
+    methods:  GET
+
+backend_newsletter_new:
+    path:     /new
+    defaults: { _controller: "BackendBundle:Newsletter:new" }
+    methods:  [GET, POST]
+
+backend_newsletter_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "BackendBundle:Newsletter:edit" }
+    methods:  [GET, POST]
+
+backend_newsletter_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "BackendBundle:Newsletter:delete" }
+    methods:  [GET]
