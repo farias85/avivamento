@@ -39,7 +39,7 @@ class ConfiguracionController extends UniqueNomenclatureController {
     }
 
     public function defaultKeysFilter() {
-        return ['clave' => 'text', 'valor' => 'text', 'requerido' => 'bool'];
+        return ['id' => 'text', 'clave' => 'text', 'valor' => 'text', 'requerido' => 'bool'];
     }
 
     public function getResourceViewPath() {

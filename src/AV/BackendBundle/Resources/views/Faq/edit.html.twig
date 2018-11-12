@@ -1,0 +1,24 @@
+{% extends 'BackendBundle:Nomenclature:edit.html.twig' %}
+
+{% block wrapper_header %}
+
+    {% if entity.el is empty %}
+        <div class="row">
+            <div class="col-lg-6">
+                <h5>Ref Pregunta:
+                    <small>{{ entity.any.pregunta }}</small>
+                </h5>
+            </div>
+            <br>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <h5>Ref Respuesta:
+                    <small>{{ entity.any.respuesta }}</small>
+                </h5>
+            </div>
+            <br>
+        </div>
+    {% endif %}
+
+{% endblock %}

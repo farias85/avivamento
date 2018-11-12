@@ -7,7 +7,6 @@
     <table class="table table-striped table-bordered dtable" cellspacing="0" width="100%">
         <thead>
         <tr>
-
             {% for key, filter in viewParams.entityKeys %}
                 <th>{{ attribute(attribute(display, key), 'trans') }}</th>
             {% endfor %}
@@ -26,6 +25,7 @@
         </tr>
         </thead>
         <tbody>
+        {% set maxLength = 60 %}
         {% for entity in entities %}
             {% if viewParams.hasEl %}
                 {% set entityAny = entity.any %}
@@ -41,7 +41,14 @@
                     {% elseif util.equals(filter, 'bool') %}
                         <td>{% if attribute(entity, key) %} {{ 'si' | trans }} {% else %} {{ 'no' | trans }} {% endif %}</td>
                     {% else %}
-                        <td>{{ attribute(entity, key) | default('Empty') }}</td>
+                        <td>
+                            {% if attribute(entity, key) | length > maxLength %}
+                                {{ attribute(entity, key) [: maxLength] | default('Empty') }}
+                                <a href="{{ path(router['show'], { 'id': attribute(entity, 'id') }) }}">...</a>
+                            {% else %}
+                                {{ attribute(entity, key) | default('Empty') }}
+                            {% endif %}
+                        </td>
                     {% endif %}
                 {% endfor %}
 
@@ -55,7 +62,14 @@
                     {% elseif util.equals(filter, 'bool') %}
                         <td>{% if attribute(entityAny, key) %} {{ 'si' | trans }} {% else %} {{ 'no' | trans }} {% endif %}</td>
                     {% else %}
-                        <td>{{ attribute(entityAny, key) | default('Empty') }}</td>
+                        <td>
+                            {% if attribute(entityAny, key) | length > maxLength %}
+                                {{ attribute(entityAny, key) [: maxLength] | default('Empty') }}
+                                <a href="{{ path(router['show'], { 'id': attribute(entity, 'id') }) }}">...</a>
+                            {% else %}
+                                {{ attribute(entityAny, key) | default('Empty') }}
+                            {% endif %}
+                        </td>
                     {% endif %}
                 {% endfor %}
 

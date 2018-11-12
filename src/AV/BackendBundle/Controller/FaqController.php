@@ -31,4 +31,8 @@ class FaqController extends NomenclatureController {
     public function defaultKeysFilter() {
         return ['id'=> 'text', 'pregunta' => 'text', 'respuesta' => 'text', 'activo' => 'bool'];
     }
+
+    public function getResourceViewPath() {
+        return 'BackendBundle:Faq';
+    }
 }
