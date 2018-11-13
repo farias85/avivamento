@@ -25,3 +25,10 @@ backend_configuracion:
     defaults: { _locale: '%locale%' }
     requirements:
         _locale: '%locales_app%'
+
+backend_faq:
+    resource: "@BackendBundle/Resources/config/routing/faq.yml"
+    prefix:   /{_locale}/faq/
+    defaults: { _locale: '%locale%' }
+    requirements:
+        _locale: '%locales_app%'

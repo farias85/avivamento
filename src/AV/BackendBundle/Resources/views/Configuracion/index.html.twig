@@ -1,0 +1,29 @@
+{% extends 'BackendBundle:Nomenclature:index.html.twig' %}
+
+{% block index_all_options %}
+    {% block index_first_option %} {% endblock %}
+    <li>
+        <a href="{{ path(router['show'], { 'id': attribute(entity, 'id') }) }}"
+           title="{{ 'crud.info' | trans }}">
+            <i class="glyphicon glyphicon-search"></i>
+        </a>
+    </li>
+    <li>
+        <a href="{{ path(router['edit'], { 'id': entity.id }) }}"
+           title="{{ 'crud.edit' | trans }}">
+            <i class="glyphicon glyphicon-edit"></i>
+        </a>
+    </li>
+
+    {% if entity.requerido == false %}
+        <li>
+            <a href="{{ path(router['delete'], { 'id': entity.id }) }}"
+               title="{{ 'crud.delete' | trans }}"
+               onclick="return confirm('¿{{ 'crud.delete' | trans }}?');">
+                <i class="glyphicon glyphicon-remove-circle"></i>
+            </a>
+        </li>
+    {% endif %}
+
+{% endblock %}
+

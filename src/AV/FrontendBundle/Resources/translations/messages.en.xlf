@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="en" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="Yaaaaaaa3Aa5f1" resname="f.preguntas.respuestas.frecuentes">
+        <source>f.preguntas.respuestas.frecuentes</source>
+        <target>Frequently asked questions and answers</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

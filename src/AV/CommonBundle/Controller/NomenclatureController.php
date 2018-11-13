@@ -447,7 +447,9 @@ abstract class NomenclatureController extends CommonController implements Entity
     }
 
     /**
-     * Devuelve un array de id que no pueden ser eliminados debido a la configuracion básico del sistema
+     * Devuelve un array clave => valor con los elementos q no pueden ser eliminados debido a la configuracion básico del sistema
+     * Ejemplo ['nombre' => ['felipe'], 'id' => [48, 34]] Dice que no se pueden eliminar los elementos que tengan
+     * atributo nombre  = felipe, y atributo id = 48 y 34
      * @return array
      */
     public function deleteForbiden() {
@@ -456,12 +458,30 @@ abstract class NomenclatureController extends CommonController implements Entity
 
     public function deleteAction($id) {
         $em = $this->getDoctrine()->getManager();
+        $entity = $em->getRepository($this->getEntityName())->find($id);
 
         $forbiden = $this->deleteForbiden();
         $delete = true;
-        foreach ($forbiden as $item) {
-            if ($item == $id) {
-                $delete = false;
+        foreach ($forbiden as $attr => $array) {
+            $aux = ucfirst($attr);
+            $getMethod = 'get' . $aux;
+            $hasEl = method_exists($entity, 'getEl') && method_exists($entity, 'setEl');
+
+            foreach ($array as $value) {
+                if ($entity->$getMethod() == $value) {
+                    $delete = false;
+                    break;
+                }
+
+                if ($hasEl && method_exists($entity->getEl(), $getMethod)) {
+                    if ($entity->getEl()->$getMethod() == $value) {
+                        $delete = false;
+                        break;
+                    }
+                }
+            }
+
+            if ($delete == false) {
                 break;
             }
         }
@@ -471,7 +491,6 @@ abstract class NomenclatureController extends CommonController implements Entity
             return $this->redirectToRoute($this->getRouteIndex());
         }
 
-        $entity = $em->getRepository($this->getEntityName())->find($id);
         if (!empty($entity)) {
             $this->remove(function () use ($entity) {
                 $beforeFlush = function ($entity) {

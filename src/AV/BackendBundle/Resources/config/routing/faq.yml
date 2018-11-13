@@ -1,0 +1,24 @@
+backend_faq_index:
+    path:     /
+    defaults: { _controller: "BackendBundle:Faq:index" }
+    methods:  GET
+
+backend_faq_show:
+    path:     /{id}/show
+    defaults: { _controller: "BackendBundle:Faq:show" }
+    methods:  GET
+
+backend_faq_new:
+    path:     /new
+    defaults: { _controller: "BackendBundle:Faq:new" }
+    methods:  [GET, POST]
+
+backend_faq_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "BackendBundle:Faq:edit" }
+    methods:  [GET, POST]
+
+backend_faq_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "BackendBundle:Faq:delete" }
+    methods:  [GET]

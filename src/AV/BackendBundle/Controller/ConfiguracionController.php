@@ -29,13 +29,22 @@ class ConfiguracionController extends UniqueNomenclatureController {
         return ConfiguracionType::class;
     }
 
+    public function deleteForbiden() {
+        return [
+            'clave' => [
+                'av_telefono', 'av_whatsapp', 'av_email', 'av_facebook', 'av_youtube', 'av_powered_by_es',
+                'av_direccion', 'av_powered_by_en', 'av_intro_es', 'av_intro_en'
+            ],
+        ];
+    }
+
     public function defaultKeysFilter() {
         return ['clave' => 'text', 'valor' => 'text', 'requerido' => 'bool'];
     }
 
-//    public function getResourceViewPath() {
-//        return 'BackendBundle:Configuration';
-//    }
+    public function getResourceViewPath() {
+        return 'BackendBundle:Configuracion';
+    }
 
     public function keysUnique() {
         return ['clave'];
