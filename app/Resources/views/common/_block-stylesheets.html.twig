@@ -41,8 +41,9 @@
 {#Directives#}
 
 {#Controllers#}
-<script src="{{ asset('bundles/common/js/avApp/controller/CookiesController.js') }}"></script>
 <script src="{{ asset('bundles/common/js/avApp/controller/BaseController.js') }}"></script>
+<script src="{{ asset('bundles/common/js/avApp/controller/CookiesController.js') }}"></script>
+<script src="{{ asset('bundles/frontend/js/avApp/controller/IndexController.js') }}"></script>
 
 {% set locale = app.request.get('_locale') %}
 {% if locale is defined and locale is not empty %}

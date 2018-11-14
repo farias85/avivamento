@@ -136,3 +136,6 @@ framework:
     router:
         resource: "%kernel.root_dir%/config/routing.yml"
         type: be_simple_i18n
+
+Locations GMAPS
+http://www.whatsmygps.com/
