@@ -4,6 +4,7 @@ namespace AV\CommonBundle\Entity;
 
 use AV\CommonBundle\Traits\LangTrait;
 use AV\CommonBundle\Traits\RefTrait;
+use AV\CommonBundle\Traits\TranslatesTrait;
 use Doctrine\ORM\Mapping as ORM;
 use AV\CommonBundle\Extension\EntityNameExtension;
 use AV\CommonBundle\Util\Entity;
@@ -18,6 +19,7 @@ class Categoria implements EntityNameExtension {
 
     use LangTrait;
     use RefTrait;
+    use TranslatesTrait;
 
     /**
      * @var integer
@@ -28,6 +30,9 @@ class Categoria implements EntityNameExtension {
      */
     private $id;
 
+    public function __construct() {
+        $this->ref = md5(uniqid(null, true));
+    }
 
     /**
      * Get id

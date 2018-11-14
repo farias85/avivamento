@@ -14,6 +14,8 @@
                     <td>{{ attribute(entity, key) | date('Y-m-d') }}</td>
                 {% elseif util.equals(filter, 'bool') %}
                     <td>{% if attribute(entity, key) %} {{ 'si' | trans }} {% else %} {{ 'no' | trans }} {% endif %}</td>
+                {% elseif util.equals(filter, 'raw') %}
+                    <td>{{ attribute(entity, key) | raw }}</td>
                 {% else %}
                     <td>{{ attribute(entity, key) }}</td>
                 {% endif %}
@@ -33,6 +35,8 @@
                     <td>{% if ine %} {{ attribute(entityEl, key) | date('Y-m-d') }} {% endif %}</td>
                 {% elseif util.equals(filter, 'bool') %}
                     <td>{% if ine %} {% if attribute(entityEl, key) %} {{ 'si' | trans }} {% else %} {{ 'no' | trans }} {% endif %} {% endif %}</td>
+                {% elseif util.equals(filter, 'raw') %}
+                    <td>{{ attribute(entityEl, key) | raw }}</td>
                 {% else %}
                     <td>{% if ine %} {{ attribute(entityEl, key) }}{% endif %}</td>
                 {% endif %}
@@ -61,7 +65,7 @@
         <li>
             <a class="btn btn-danger"
                href="{{ path(router['delete'], { 'id': entity.id }) }}"
-               onclick="return confirm('¿{{ 'crud.delete' | trans }}?')">
+               onclick="return confirm('¿{{ 'crud.delete' | trans }}?');">
                 {{ 'crud.delete' | trans }}
             </a>
         </li>

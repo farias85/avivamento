@@ -277,7 +277,7 @@
                                     <i class="fa fa-minus-circle"></i></a>
                                 <div id="faq{{ loop.index }}" class="collapse" data-parent="#faq-list">
                                     <p>
-                                        {{ faq.any.respuesta }}
+                                        {{ faq.any.respuesta | raw }}
                                     </p>
                                 </div>
                             </li>

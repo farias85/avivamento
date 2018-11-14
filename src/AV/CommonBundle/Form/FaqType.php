@@ -28,7 +28,7 @@ class FaqType extends EntityGetterType {
                     'label' => $this->display('respuesta'),
                     'data' => $this->get('respuesta'),
                     'attr' => [
-                        'class' => 'form-control',
+//                        'class' => 'form-control',
                         'rows' => 4,
                     ]
                 ]

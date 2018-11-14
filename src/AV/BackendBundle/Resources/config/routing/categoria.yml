@@ -1,0 +1,24 @@
+backend_categoria_index:
+    path:     /
+    defaults: { _controller: "BackendBundle:Categoria:index" }
+    methods:  GET
+
+backend_categoria_show:
+    path:     /{id}/show
+    defaults: { _controller: "BackendBundle:Categoria:show" }
+    methods:  GET
+
+backend_categoria_new:
+    path:     /new
+    defaults: { _controller: "BackendBundle:Categoria:new" }
+    methods:  [GET, POST]
+
+backend_categoria_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "BackendBundle:Categoria:edit" }
+    methods:  [GET, POST]
+
+backend_categoria_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "BackendBundle:Categoria:delete" }
+    methods:  [GET]

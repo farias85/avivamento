@@ -29,7 +29,7 @@ class FaqController extends NomenclatureController {
     }
 
     public function defaultKeysFilter() {
-        return ['id'=> 'text', 'pregunta' => 'text', 'respuesta' => 'text', 'activo' => 'bool'];
+        return ['id'=> 'text', 'pregunta' => 'text', 'respuesta' => 'raw', 'activo' => 'bool'];
     }
 
     public function getResourceViewPath() {

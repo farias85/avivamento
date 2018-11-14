@@ -46,3 +46,10 @@ backend_contacto:
     defaults: { _locale: '%locale%' }
     requirements:
         _locale: '%locales_app%'
+
+backend_categoria:
+    resource: "@BackendBundle/Resources/config/routing/categoria.yml"
+    prefix:   /{_locale}/categoria/
+    defaults: { _locale: '%locale%' }
+    requirements:
+        _locale: '%locales_app%'

@@ -40,6 +40,15 @@
                         </td>
                     {% elseif util.equals(filter, 'bool') %}
                         <td>{% if attribute(entity, key) %} {{ 'si' | trans }} {% else %} {{ 'no' | trans }} {% endif %}</td>
+                    {% elseif util.equals(filter, 'raw') %}
+                        <td>
+                            {% if attribute(entity, key) | length > maxLength %}
+                                {{ attribute(entity, key) [: maxLength] | default('Empty') | raw }}
+                                <a href="{{ path(router['show'], { 'id': attribute(entity, 'id') }) }}">...</a>
+                            {% else %}
+                                {{ attribute(entity, key) | default('Empty') | raw }}
+                            {% endif %}
+                        </td>
                     {% else %}
                         <td>
                             {% if attribute(entity, key) | length > maxLength %}
@@ -61,6 +70,15 @@
                         </td>
                     {% elseif util.equals(filter, 'bool') %}
                         <td>{% if attribute(entityAny, key) %} {{ 'si' | trans }} {% else %} {{ 'no' | trans }} {% endif %}</td>
+                    {% elseif util.equals(filter, 'raw') %}
+                        <td>
+                            {% if attribute(entityAny, key) | length > maxLength %}
+                                {{ attribute(entityAny, key) [: maxLength] | default('Empty') | raw }}
+                                <a href="{{ path(router['show'], { 'id': attribute(entity, 'id') }) }}">...</a>
+                            {% else %}
+                                {{ attribute(entityAny, key) | default('Empty') | raw }}
+                            {% endif %}
+                        </td>
                     {% else %}
                         <td>
                             {% if attribute(entityAny, key) | length > maxLength %}
