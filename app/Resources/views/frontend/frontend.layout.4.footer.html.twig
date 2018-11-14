@@ -49,30 +49,31 @@
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <input type="text" name="contact-nombre" class="form-control" id="contact-nombre"
-                                   placeholder="Your Name" data-rule="minlen:4"
-                                   data-msg="Please enter at least 4 chars"/>
+                                   placeholder="{{ 'contact.tu.nombre' | trans }}" data-rule="minlen:4"
+                                   data-msg="{{ 'contact.ingrese.4.catacteres' | trans }}"/>
                             <div class="validation"></div>
                         </div>
                         <div class="form-group col-md-6">
                             <input type="email" class="form-control" name="contact-email" id="contact-email"
-                                   placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email"/>
+                                   placeholder="{{ 'contact.tu.email' | trans }}" data-rule="email"
+                                   data-msg="{{ 'contact.entra.un.email.valido' | trans }}"/>
                             <div class="validation"></div>
                         </div>
                     </div>
                     <div class="form-group">
                         <input type="text" class="form-control" name="contact-asunto" id="contact-asunto"
-                               placeholder="Subject" data-rule="minlen:4"
-                               data-msg="Please enter at least 8 chars of subject"/>
+                               placeholder="{{ 'contact.asunto' | trans }}" data-rule="minlen:4"
+                               data-msg="{{ 'contact.asunto.ingrese.8.caracteres' | trans }}"/>
                         <div class="validation"></div>
                     </div>
                     <div class="form-group">
                             <textarea class="form-control" name="contact-texto" id="contact-texto" rows="5"
-                                      data-rule="required" data-msg="Please write something for us"
-                                      placeholder="Message"></textarea>
+                                      data-rule="required" data-msg="{{ 'contact.escriba.algo.para.nosotros' | trans }}"
+                                      placeholder="{{ 'contact.mensaje.texto' | trans }}"></textarea>
                         <div class="validation"></div>
                     </div>
                     <div class="text-center">
-                        <button type="submit">Send Message</button>
+                        <button type="submit">{{ 'contact.enviar.mensaje' | trans }}</button>
                     </div>
                 </form>
             </div>

@@ -83,6 +83,42 @@
                 <source>meta.keywords</source>
                 <target>meta.keywords</target>
             </trans-unit>
+            <trans-unit id="2ffggs5a7f8ds9g3hj4cv1z5afg" resname="contact.tu.nombre">
+                <source>contact.tu.nombre</source>
+                <target>Tu Nombre</target>
+            </trans-unit>
+            <trans-unit id="ffggs5a7f8ds9g3hj4cv1z5afg" resname="contact.ingrese.4.catacteres">
+                <source>contact.ingrese.4.catacteres</source>
+                <target>Por favor ingrese al menos 4 caracteres</target>
+            </trans-unit>
+            <trans-unit id="fxxdvfggs5a7f8ds9g3hj4cv1z5afg" resname="contact.tu.email">
+                <source>contact.tu.email</source>
+                <target>Tu Email</target>
+            </trans-unit>
+            <trans-unit id="xxdvfggs5a7f8ds9g3hj4cv1z5afg" resname="contact.entra.un.email.valido">
+                <source>contact.entra.un.email.valido</source>
+                <target>Por favor, entre un email válido</target>
+            </trans-unit>
+            <trans-unit id="xsdvfggs5a7f8ds9g3hj4cv1z5afg" resname="contact.asunto">
+                <source>contact.asunto</source>
+                <target>Asunto</target>
+            </trans-unit>
+            <trans-unit id="x1vfggs5a7f8ds9g3hj4cv1z5afg" resname="contact.asunto.ingrese.8.caracteres">
+                <source>contact.asunto.ingrese.8.caracteres</source>
+                <target>Por favor ingrese al menos 8 caracteres en el asunto</target>
+            </trans-unit>
+            <trans-unit id="x1dfggs5a7f8ds9g3hj4cv1z5afg" resname="contact.mensaje.texto">
+                <source>contact.mensaje.texto</source>
+                <target>Mensaje</target>
+            </trans-unit>
+            <trans-unit id="x1gfggs5a7f8ds9g3hj4cv1z5afg" resname="contact.escriba.algo.para.nosotros">
+                <source>contact.escriba.algo.para.nosotros</source>
+                <target>Por favor escribe algo para nosotros</target>
+            </trans-unit>
+            <trans-unit id="x1gfggs5anf8ds9g3hj4cv1z5afg" resname="contact.enviar.mensaje">
+                <source>contact.enviar.mensaje</source>
+                <target>Enviar Mensaje</target>
+            </trans-unit>
         </body>
     </file>
 

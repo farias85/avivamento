@@ -9,6 +9,18 @@
         <source>f.preguntas.respuestas.frecuentes</source>
         <target>Frequently asked questions and answers</target>
       </trans-unit>
+      <trans-unit id="Yaaaaava3Aa5f1" resname="f.introduce.tu.correo">
+        <source>f.introduce.tu.correo</source>
+        <target>Enter your Email</target>
+      </trans-unit>
+      <trans-unit id="Yaxaaava3Aa5f1" resname="f.suscribirse">
+        <source>f.suscribirse</source>
+        <target>Suscribe</target>
+      </trans-unit>
+      <trans-unit id="Ya8s5a47dfg15a6q2va3Aa5f1" resname="f.suscribirse.subtitulo">
+        <source>f.suscribirse.subtitulo</source>
+        <target>Subscribe to our news list</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

@@ -34,7 +34,7 @@
                         <img src="{{ asset('bundles/frontend/event/img/speakers/2.jpg') }}" alt="Speaker 2"
                              class="img-fluid">
                         <div class="details">
-                            <h3><a href="speaker-details.html">Hubert Hirthe</a></h3>
+                            <h3><a href="{{ path('frontend_event_details') }}">Hubert Hirthe</a></h3>
                             <p>Consequuntur odio aut</p>
                             <div class="social">
                                 <a href=""><i class="fa fa-twitter"></i></a>
@@ -50,7 +50,7 @@
                         <img src="{{ asset('bundles/frontend/event/img/speakers/3.jpg') }}" alt="Speaker 3"
                              class="img-fluid">
                         <div class="details">
-                            <h3><a href="speaker-details.html">Cole Emmerich</a></h3>
+                            <h3><a href="{{ path('frontend_event_details') }}">Cole Emmerich</a></h3>
                             <p>Fugiat laborum et</p>
                             <div class="social">
                                 <a href=""><i class="fa fa-twitter"></i></a>
@@ -66,7 +66,7 @@
                         <img src="{{ asset('bundles/frontend/event/img/speakers/4.jpg') }}" alt="Speaker 4"
                              class="img-fluid">
                         <div class="details">
-                            <h3><a href="speaker-details.html">Jack Christiansen</a></h3>
+                            <h3><a href="{{ path('frontend_event_details') }}">Jack Christiansen</a></h3>
                             <p>Debitis iure vero</p>
                             <div class="social">
                                 <a href=""><i class="fa fa-twitter"></i></a>
@@ -82,7 +82,7 @@
                         <img src="{{ asset('bundles/frontend/event/img/speakers/5.jpg') }}" alt="Speaker 5"
                              class="img-fluid">
                         <div class="details">
-                            <h3><a href="speaker-details.html">Alejandrin Littel</a></h3>
+                            <h3><a href="{{ path('frontend_event_details') }}">Alejandrin Littel</a></h3>
                             <p>Qui molestiae natus</p>
                             <div class="social">
                                 <a href=""><i class="fa fa-twitter"></i></a>
@@ -98,7 +98,7 @@
                         <img src="{{ asset('bundles/frontend/event/img/speakers/6.jpg') }}" alt="Speaker 6"
                              class="img-fluid">
                         <div class="details">
-                            <h3><a href="#">Willow Trantow</a></h3>
+                            <h3><a href="{{ path('frontend_event_details') }}">Willow Trantow</a></h3>
                             <p>Non autem dicta</p>
                             <div class="social">
                                 <a href=""><i class="fa fa-twitter"></i></a>
@@ -296,17 +296,17 @@
         <div class="container wow fadeInUp">
             <div class="section-header">
                 <h2>Newsletter</h2>
-                <p>Rerum numquam illum recusandae quia mollitia consequatur.</p>
+                <p>{{ 'f.suscribirse.subtitulo' | trans }}</p>
             </div>
 
             <form method="POST" action="{{ path('frontend_subscribe') }}">
                 <div class="form-row justify-content-center">
                     <div class="col-auto">
-                        <input type="email" class="form-control" placeholder="Enter your Email" name="news-email"
-                               id="news-email">
+                        <input type="email" class="form-control" placeholder="{{ 'f.introduce.tu.correo' | trans }}"
+                               name="news-email" id="news-email">
                     </div>
                     <div class="col-auto">
-                        <button type="submit">Subscribe</button>
+                        <button type="submit">{{ 'suscribirse' | trans }}</button>
                     </div>
                 </div>
             </form>
