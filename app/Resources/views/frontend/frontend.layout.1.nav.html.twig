@@ -21,16 +21,31 @@
                 <ul class="nav-menu">
                     <li class="menu-active"><a href="{{ home }}">{{ 'inicio' | trans }}</a></li>
                     <li><a href="#">{{ 'nav.ministerio' | trans }}</a></li>
-                    <li><a href="#">{{ 'nav.adoracion.y.alabanzas' | trans }}</a></li>
-                    <li><a href="#">{{ 'nav.momentos.supernaturales' | trans }}</a></li>
-                    <li><a href="#">{{ 'nav.ensenanzas' | trans }}</a></li>
-                    <li><a href="#">{{ 'nav.trabajo.comunitario' | trans }}</a></li>
                     <li><a href="#">{{ 'nav.eventos' | trans }}</a></li>
-                    <li><a href="#">Donaciones </a></li>
+                    <li><a href="#">{{ 'nav.donaciones' | trans }} </a></li>
+                    <li>
+                        <a href="#">{{ 'nav.servicios' | trans }}</a>
+                        <ul class="nav-menu">
+                            <li><a href="#">{{ 'nav.adoracion.y.alabanzas' | trans }}</a></li>
+                            <li><a href="#">{{ 'nav.momentos.supernaturales' | trans }}</a></li>
+                            <li><a href="#">{{ 'nav.ensenanzas' | trans }}</a></li>
+                            <li><a href="#">{{ 'nav.trabajo.comunitario' | trans }}</a></li>
+                        </ul>
+                    </li>
                     {#<li><a href="#">Donations</a></li>#}
                     {#<li><a href="#sponsors">Sponsors</a></li>#}
                     {#<li><a href="#contact">Contact</a></li>#}
-                    {#<li class="buy-tickets"><a href="#buy-tickets">Buy Tickets</a></li>#}
+                    {% set language = '#' %}
+                    {% if app.request.locale == 'es' %}
+                        {% set i18nPath = path('frontend_homepage', {'_locale' : 'en'}) %}
+                        {% set language = 'English' %}
+                    {% elseif app.request.locale == 'en' %}
+                        {% set i18nPath = path('frontend_homepage', {'_locale' : 'es'}) %}
+                        {% set language = 'Español' %}
+                    {% else %}
+                        {% set i18nPath = '#' %}
+                    {% endif %}
+                    <li class="buy-tickets"><a href="{{ i18nPath }}">{{ language }}</a></li>
                 </ul>
             </nav><!-- #nav-menu-container -->
         </div>

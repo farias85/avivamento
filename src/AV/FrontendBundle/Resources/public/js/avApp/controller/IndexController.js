@@ -7,7 +7,11 @@ avApp.controller('IndexController',
     function ($scope) {
 
       $scope.init = () => {
-        $scope.initReadOnlyMap('av_map', [['Misión de Avivamiento', 20.010968, -75.832289, 0]]);
+        try {
+          $scope.initReadOnlyMap('av_map', [['Misión de Avivamiento', 20.010968, -75.832289, 0]]);
+        } catch (e) {
+          console.error('exception -> $scope.initReadOnlyMap');
+        }
       };
     }
   ]

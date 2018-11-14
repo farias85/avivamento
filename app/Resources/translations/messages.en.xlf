@@ -148,6 +148,14 @@
                 <source>nav.eventos</source>
                 <target>Events</target>
             </trans-unit>
+            <trans-unit id="xjd5f854cv1z5afg" resname="nav.servicios">
+                <source>nav.servicios</source>
+                <target>Services</target>
+            </trans-unit>
+            <trans-unit id="xjrd5f854cv1z5afg" resname="nav.donaciones">
+                <source>nav.donaciones</source>
+                <target>Donations</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>
