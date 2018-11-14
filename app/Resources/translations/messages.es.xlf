@@ -119,6 +119,34 @@
                 <source>contact.enviar.mensaje</source>
                 <target>Enviar Mensaje</target>
             </trans-unit>
+            <trans-unit id="x1gfgjd5f8ds9g3hj4cv1z5afg" resname="nav.ministerio">
+                <source>nav.ministerio</source>
+                <target>Ministerio</target>
+            </trans-unit>
+            <trans-unit id="x1gfgjd5f8ds9g4cv1z5afg" resname="nav.adoracion.y.alabanzas">
+                <source>nav.adoracion.y.alabanzas</source>
+                <target>Adoración y Alabanzas</target>
+            </trans-unit>
+            <trans-unit id="x1jd5f8ds9g4cv1z5afg" resname="nav.momentos.supernaturales">
+                <source>nav.momentos.supernaturales</source>
+                <target>Momentos supernaturales</target>
+            </trans-unit>
+            <trans-unit id="x1jd5fss8ds9g4cv1z5afg" resname="nav.momentos.supernaturales.y.testimonios">
+                <source>nav.momentos.supernaturales.y.testimonios</source>
+                <target>Momentos supernaturales y testimonios</target>
+            </trans-unit>
+            <trans-unit id="xjd5f8ds9g4cv1z5afg" resname="nav.ensenanzas">
+                <source>nav.ensenanzas</source>
+                <target>Enseñanzas</target>
+            </trans-unit>
+            <trans-unit id="xjd5f8g4cv1z5afg" resname="nav.trabajo.comunitario">
+                <source>nav.trabajo.comunitario</source>
+                <target>Trabajo Comunitario</target>
+            </trans-unit>
+            <trans-unit id="xjd5f84cv1z5afg" resname="nav.eventos">
+                <source>nav.eventos</source>
+                <target>Eventos</target>
+            </trans-unit>
         </body>
     </file>
 
