@@ -16,7 +16,6 @@ class TipoMedia {
     const IMAGEN = "imagen";
     const YOUTUBE_URL = "youtube-url";
     const GALERIA_EVENTO = "galeria-evento";
-    const GALERIA_FRONTEND = "galeria-frontend";
 
     /**
      * @var integer

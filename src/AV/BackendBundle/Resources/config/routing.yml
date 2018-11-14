@@ -53,3 +53,10 @@ backend_categoria:
     defaults: { _locale: '%locale%' }
     requirements:
         _locale: '%locales_app%'
+
+backend_gallery_item:
+    resource: "@BackendBundle/Resources/config/routing/gallery_item.yml"
+    prefix:   /{_locale}/gallery-item/
+    defaults: { _locale: '%locale%' }
+    requirements:
+        _locale: '%locales_app%'

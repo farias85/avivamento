@@ -7,6 +7,7 @@ use Doctrine\ORM\Event\LifecycleEventArgs;
 use Doctrine\ORM\Event\PreUpdateEventArgs;
 use AV\MediaBundle\Entity\Media;
 use AV\MediaBundle\Service\FileUploader;
+use Symfony\Component\VarDumper\VarDumper;
 
 class MediaUploadListener {
     private $uploader;
@@ -28,6 +29,7 @@ class MediaUploadListener {
     }
 
     private function uploadFile($entity) {
+
         // upload only works for Media entities
         if (!$entity instanceof Media) {
             return;
@@ -42,5 +44,7 @@ class MediaUploadListener {
 
         $fileName = $this->uploader->upload($file);
         $entity->setPath($fileName);
+
+//        VarDumper::dump($entity); die();
     }
 }

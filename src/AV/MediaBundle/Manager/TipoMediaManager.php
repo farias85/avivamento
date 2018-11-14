@@ -18,16 +18,8 @@ class TipoMediaManager extends Manager {
     public function getBasic($slug) {
         $em = $this->getEntityManager();
         if ($slug == TipoMedia::IMAGEN ||
-            $slug == TipoMedia::CERTIFICADO_PENALES ||
-            $slug == TipoMedia::DOCUMENTO_ESTUDIO ||
-            $slug == TipoMedia::VIDEO_PERFIL ||
-            $slug == TipoMedia::NOMINA ||
-            $slug == TipoMedia::FACTURA ||
-            $slug == TipoMedia::CONTRATO ||
-            $slug == TipoMedia::PROTOCOLO ||
-            $slug == TipoMedia::DOCUMENTO ||
-            $slug == TipoMedia::CURRICULUM ||
-            $slug == TipoMedia::CERTIFICADO_MEDICO
+            $slug == TipoMedia::YOUTUBE_URL ||
+            $slug == TipoMedia::GALERIA_EVENTO
         ) {
             $tipo = $em->getRepository(Entity::TIPO_MEDIA)->findOneBy(['slug' => $slug]);
             if (empty($tipo)) {

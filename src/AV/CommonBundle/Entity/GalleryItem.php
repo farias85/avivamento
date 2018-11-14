@@ -3,23 +3,21 @@
 namespace AV\CommonBundle\Entity;
 
 use AV\CommonBundle\Extension\EntityNameExtension;
-use AV\CommonBundle\Traits\LangTrait;
+use AV\CommonBundle\Traits\ImageTrait;
 use AV\CommonBundle\Traits\RefTrait;
-use AV\CommonBundle\Traits\TranslatesTrait;
 use AV\CommonBundle\Util\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Faq
+ * Categoria
  *
- * @ORM\Table(name="faq")
+ * @ORM\Table(name="gallery_item")
  * @ORM\Entity
  */
-class Faq implements EntityNameExtension {
+class GalleryItem implements EntityNameExtension {
 
-    use LangTrait;
-    use TranslatesTrait;
     use RefTrait;
+    use ImageTrait;
 
     /**
      * @var integer
@@ -50,6 +48,7 @@ class Faq implements EntityNameExtension {
         return $this->id;
     }
 
+
     /**
      * @return bool
      */
@@ -72,15 +71,6 @@ class Faq implements EntityNameExtension {
     }
 
     public function getEntityName() {
-        return Entity::FAQ;
-    }
-
-    function __toString() {
-        if (!empty($this->getEl())) {
-            return $this->getEl()->getNombre();
-        } elseif (!empty($this->getAny())) {
-            return $this->getAny()->getNombre();
-        }
-        return $this->getId() . '';
+        return Entity::GALLERY_ITEM;
     }
 }

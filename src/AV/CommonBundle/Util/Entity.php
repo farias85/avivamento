@@ -20,7 +20,7 @@ class Entity {
     const EVENTO_LANG = "CommonBundle:EventoLang";
     const FAQ = "CommonBundle:Faq";
     const FAQ_LANG = "CommonBundle:FaqLang";
-
+    const GALLERY_ITEM = "CommonBundle:GalleryItem";
     const LANG = "CommonBundle:Lang";
     const NEWSLETTER = "CommonBundle:Newsletter";
 

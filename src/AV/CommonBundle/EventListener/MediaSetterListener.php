@@ -35,7 +35,7 @@ class MediaSetterListener {
             $tipoMedia = $mediaManager->getBasicTipoMedia(TipoMedia::IMAGEN);
             $media = $mediaManager->findOne($entity, $tipoMedia);
 
-            if ($media instanceof Media and $media->getName() != $media->getPath()) {
+            if ($media instanceof Media && $media->getName() != $media->getPath()) {
                 $media->setName($media->getPath());
                 $em = $this->container->get('av.manager')->getEntityManager();
                 $em->flush();

@@ -1,0 +1,24 @@
+backend_gallery_item_index:
+    path:     /
+    defaults: { _controller: "BackendBundle:GalleryItem:index" }
+    methods:  GET
+
+backend_gallery_item_show:
+    path:     /{id}/show
+    defaults: { _controller: "BackendBundle:GalleryItem:show" }
+    methods:  GET
+
+backend_gallery_item_new:
+    path:     /new
+    defaults: { _controller: "BackendBundle:GalleryItem:new" }
+    methods:  [GET, POST]
+
+backend_gallery_item_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "BackendBundle:GalleryItem:edit" }
+    methods:  [GET, POST]
+
+backend_gallery_item_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "BackendBundle:GalleryItem:delete" }
+    methods:  [GET]
