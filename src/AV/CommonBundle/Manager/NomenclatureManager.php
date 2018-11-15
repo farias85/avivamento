@@ -14,7 +14,7 @@ use Symfony\Component\VarDumper\VarDumper;
 
 class NomenclatureManager extends Manager {
 
-    public function save($data, \Closure $beforeFlush = null) {
+    public function save($data, \Closure $beforeFlush = null, \Closure $afterFlush = null) {
 
         if (!empty($data['sfFullEntityName'])) {
             $fullEntityName = $data['sfFullEntityName'];
@@ -24,7 +24,7 @@ class NomenclatureManager extends Manager {
 
         $entity = new $fullEntityName();
 
-        $this->getConnection()->transactional(function () use ($entity, $data, $beforeFlush) {
+        $this->getConnection()->transactional(function () use ($entity, $data, $beforeFlush, $afterFlush) {
             $em = $this->getEntityManager();
 
             $exist = $this->get('av.entitysetter')->fromData($entity, $data);
@@ -40,14 +40,18 @@ class NomenclatureManager extends Manager {
                 $em->persist($entity->getEl());
             }
             $em->flush();
+
+            if (!empty($afterFlush)) {
+                $afterFlush($entity, $data);
+            }
         });
 
         return $entity;
     }
 
 
-    public function edit($entity, $data, $existe = null, \Closure $beforeFlush = null) {
-        $this->getConnection()->transactional(function () use ($entity, $data, $existe, $beforeFlush) {
+    public function edit($entity, $data, $existe = null, \Closure $beforeFlush = null, \Closure $afterFlush = null) {
+        $this->getConnection()->transactional(function () use ($entity, $data, $existe, $beforeFlush, $afterFlush) {
 
             $em = $this->getEntityManager();
             $existe = !is_null($existe) ? $existe : $this->get('av.entitysetter')->fromData($entity, $data);
@@ -61,11 +65,15 @@ class NomenclatureManager extends Manager {
             }
 
             $em->flush();
+
+            if (!empty($afterFlush)) {
+                $afterFlush($entity, $data);
+            }
         });
     }
 
-    public function remove($entity, \Closure $beforeFlush = null) {
-        $this->getConnection()->transactional(function () use ($entity, $beforeFlush) {
+    public function remove($entity, \Closure $beforeFlush = null, \Closure $afterFlush = null) {
+        $this->getConnection()->transactional(function () use ($entity, $beforeFlush, $afterFlush) {
             $em = $this->getEntityManager();
 
             $hasEl = method_exists($entity, 'getEl') && method_exists($entity, 'setEl');
@@ -99,6 +107,10 @@ class NomenclatureManager extends Manager {
 
             $em->remove($entity);
             $em->flush($entity);
+
+            if (!empty($afterFlush)) {
+                $afterFlush();
+            }
         });
     }
 }

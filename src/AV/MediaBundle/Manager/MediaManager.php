@@ -32,21 +32,21 @@ class MediaManager extends Manager {
 
     /**
      * @param $alt string
-     * @param $path string
+     * @param $filename string
      * @param $entity mixed
      * @param $tipoMedia string|TipoMedia El slug o el objeto del tipo de media que es el file
      * @throws \Exception
      * @return Media
      */
-    public function save($alt, $path, $entity, $tipoMedia = null) {
+    public function save($alt, $filename, $entity, $tipoMedia = null) {
         $em = $this->getEntityManager();
         $entityName = $this->getEntityName($entity);
 
         $media = new Media();
         $media->setCreatedAt(new \DateTime('now'));
         $media->setUpdatedAt(new \DateTime('now'));
-        $media->setName($path);
-        $media->setPath($path);
+        $media->setName($filename);
+        $media->setPath($filename);
         $media->setAlt($alt);
         $media->setEntityId($entity->getId());
         $media->setEntityName($entityName);

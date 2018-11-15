@@ -2,12 +2,10 @@
 
 namespace AV\MediaBundle\EventListener;
 
-use Symfony\Component\HttpFoundation\File\UploadedFile;
+use AV\MediaBundle\Service\FileUploader;
 use Doctrine\ORM\Event\LifecycleEventArgs;
 use Doctrine\ORM\Event\PreUpdateEventArgs;
-use AV\MediaBundle\Entity\Media;
-use AV\MediaBundle\Service\FileUploader;
-use Symfony\Component\VarDumper\VarDumper;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
 
 class MediaUploadListener {
     private $uploader;
@@ -30,8 +28,7 @@ class MediaUploadListener {
 
     private function uploadFile($entity) {
 
-        // upload only works for Media entities
-        if (!$entity instanceof Media) {
+        if (!method_exists($entity, 'getPath')) {
             return;
         }
 
@@ -43,8 +40,15 @@ class MediaUploadListener {
         }
 
         $fileName = $this->uploader->upload($file);
-        $entity->setPath($fileName);
 
-//        VarDumper::dump($entity); die();
+        if (method_exists($entity, 'setFilename')) {
+            $entity->setFilename($fileName);
+        }
+
+        try {
+            $entity->setPath($fileName); //Aqui explota si se usa el PathTrait en la entidad,
+            // funciona bien si se utiliza el CRUD normal de Symfony con los FormType originales
+        } catch (\Exception $e) {
+        }
     }
 }

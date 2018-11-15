@@ -4,6 +4,7 @@ namespace AV\CommonBundle\Entity;
 
 use AV\CommonBundle\Extension\EntityNameExtension;
 use AV\CommonBundle\Traits\ImageTrait;
+use AV\CommonBundle\Traits\PathTrait;
 use AV\CommonBundle\Traits\RefTrait;
 use AV\CommonBundle\Util\Entity;
 use Doctrine\ORM\Mapping as ORM;
@@ -18,6 +19,7 @@ class GalleryItem implements EntityNameExtension {
 
     use RefTrait;
     use ImageTrait;
+    use PathTrait;
 
     /**
      * @var integer

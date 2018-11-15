@@ -279,6 +279,10 @@ abstract class NomenclatureController extends CommonController implements Entity
 //            VarDumper::dump($form->getErrors(true, false)); die();
 //        }
 
+//        if($request->isMethod('POST')){
+//            VarDumper::dump($data);die;
+//        }
+
         if ($form->isSubmitted() && $form->isValid()) {
             $fullEntityName = $this->getFullEntityName();
             $data['sfFullEntityName'] = $fullEntityName;
@@ -292,9 +296,12 @@ abstract class NomenclatureController extends CommonController implements Entity
             $beforeFlush = function ($entity, $data) {
                 $this->newActionBeforeFlush($entity, $data);
             };
-            $entity = $this->getManager()->save($data, $beforeFlush);
-            $this->newActionAfterFlush($entity, $data);
 
+            $afterFlush = function ($entity, $data) {
+                $this->newActionAfterFlush($entity, $data);
+            };
+
+            $entity = $this->getManager()->save($data, $beforeFlush, $afterFlush);
             return $this->successRedirect($entity->getId());
         }
 
@@ -407,10 +414,13 @@ abstract class NomenclatureController extends CommonController implements Entity
                 $this->editActionBeforeFlush($entity, $data);
             };
 
-            $entity = $em->getRepository($this->getEntityName())->find($id);
-            $this->getManager()->edit($entity, $data, $existe, $beforeFlush);
+            $afterFlush = function ($entity, $data) {
+                $this->editActionafterFlush($entity, $data);
+            };
 
-            $this->editActionAfterFlush($entity, $data);
+            $entity = $em->getRepository($this->getEntityName())->find($id);
+            $this->getManager()->edit($entity, $data, $existe, $beforeFlush, $afterFlush);
+
             return $this->successRedirect($entity->getId());
         }
 
@@ -444,6 +454,9 @@ abstract class NomenclatureController extends CommonController implements Entity
     }
 
     public function deleteActionBeforeFlush($entity) {
+    }
+
+    public function deleteActionAfterFlush() {
     }
 
     /**
@@ -496,7 +509,10 @@ abstract class NomenclatureController extends CommonController implements Entity
                 $beforeFlush = function ($entity) {
                     $this->deleteActionBeforeFlush($entity);
                 };
-                $this->getManager()->remove($entity, $beforeFlush);
+                $afterFlush = function ($entity) {
+                    $this->deleteActionAfterFlush($entity);
+                };
+                $this->getManager()->remove($entity, $beforeFlush, $afterFlush);
             });
         }
         return $this->redirectToRoute($this->getRouteIndex());
