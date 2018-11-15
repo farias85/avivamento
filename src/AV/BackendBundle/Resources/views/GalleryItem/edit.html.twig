@@ -1,3 +1,23 @@
 {% extends 'BackendBundle:Nomenclature:edit.html.twig' %}
 
+{% block wrapper_header %}
+    <h4>Por favor, subir una imagen de 800px de ancho por 600px de alto. En caso de la imagen tener otras dimensiones se
+        hará una redimensión automática a estas medidas.</h4>
+    <hr>
+{% endblock %}
+
+{% block wrapper_footer %}
+    <hr>
+    <div class="row">
+        <div class="col-lg-6">
+            {% set image = attribute(entity, 'image') %}
+            {% if image %}
+                <img alt="{{ image.alt }}" class="img-responsive img-thumbnail"
+                     style="width: 100px; height: 100px;"
+                     src="{{ asset (uploads ~ image.path) }}"/>
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}
+
 

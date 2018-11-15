@@ -13,10 +13,17 @@ class DefaultController extends Controller {
     public function indexAction() {
         $em = $this->getDoctrine()->getManager();
         $faqs = $em->getRepository(Entity::FAQ)->findBy(['activo' => true]);
+        $gallery = $em->getRepository(Entity::GALLERY_ITEM)->findBy(['activo' => true]);
+
+        if (count($gallery) > 8) {
+            shuffle($gallery);
+            $gallery = array_slice($gallery, 0, 8);
+        }
 
         return $this->render('FrontendBundle:Default:index.html.twig', [
             'isIndex' => true,
             'faqs' => $faqs,
+            'gallery' => $gallery,
         ]);
     }
 
