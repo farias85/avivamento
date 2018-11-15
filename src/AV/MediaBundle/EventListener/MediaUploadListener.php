@@ -6,6 +6,7 @@ use AV\MediaBundle\Service\FileUploader;
 use Doctrine\ORM\Event\LifecycleEventArgs;
 use Doctrine\ORM\Event\PreUpdateEventArgs;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
+use Symfony\Component\VarDumper\VarDumper;
 
 class MediaUploadListener {
     private $uploader;
@@ -50,5 +51,8 @@ class MediaUploadListener {
             // funciona bien si se utiliza el CRUD normal de Symfony con los FormType originales
         } catch (\Exception $e) {
         }
+
+//        VarDumper::dump($entity);
+//        die;
     }
 }

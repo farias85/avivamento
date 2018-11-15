@@ -16,6 +16,15 @@
                     <td>{% if attribute(entity, key) %} {{ 'si' | trans }} {% else %} {{ 'no' | trans }} {% endif %}</td>
                 {% elseif util.equals(filter, 'raw') %}
                     <td>{{ attribute(entity, key) | raw }}</td>
+                {% elseif util.equals(filter, 'image') %}
+                    <td>
+                        {% set image = attribute(entity, key) %}
+                        {% if image %}
+                            <img alt="{{ image.alt }}" class="img-responsive img-thumbnail"
+                                 style="width: 200px; height: 200px;"
+                                 src="{{ asset (uploads ~ image.path) }}"/>
+                        {% endif %}
+                    </td>
                 {% else %}
                     <td>{{ attribute(entity, key) }}</td>
                 {% endif %}

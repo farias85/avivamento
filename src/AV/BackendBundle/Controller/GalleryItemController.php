@@ -32,7 +32,7 @@ class GalleryItemController extends NomenclatureController {
     }
 
     public function defaultKeysFilter() {
-        return ['id' => 'text', 'activo' => 'bool'];
+        return ['id' => 'text', 'activo' => 'bool', 'image' => 'image'];
     }
 
     public function getResourceViewPath() {
@@ -41,10 +41,28 @@ class GalleryItemController extends NomenclatureController {
 
     /**
      * @param $entity GalleryItem
-     * @param $data
+     * @param $data mixed
      */
     public function newActionAfterFlush($entity, $data) {
         $uploadedFile = $data['path'];
         $this->get('av.media.manager')->save($uploadedFile->getClientOriginalName(), $entity->getFilename(), $entity);
+    }
+
+    /**
+     * @param $entity GalleryItem
+     * @param $data  mixed
+     */
+    public function editActionAfterFlush($entity, $data) {
+        $uploadedFile = $data['path'];
+        if (!empty($uploadedFile)) {
+            $media = $entity->getImage();
+            if (!empty($media)) {
+                $this->get('av.media.manager')->remove($media);
+            }
+            $filename = $this->get('av.media.file.uploader')->upload($uploadedFile);
+            $entity->setFilename($filename);
+            $this->newActionAfterFlush($entity, $data);
+        }
+        parent::editActionBeforeFlush($entity, $data);
     }
 }

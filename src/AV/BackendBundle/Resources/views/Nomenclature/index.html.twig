@@ -49,6 +49,15 @@
                                 {{ attribute(entity, key) | default('Empty') | raw }}
                             {% endif %}
                         </td>
+                    {% elseif util.equals(filter, 'image') %}
+                        <td>
+                            {% set image = attribute(entity, key) %}
+                            {% if image %}
+                                <img alt="{{ image.alt }}" class="img-responsive img-thumbnail"
+                                     style="width: 60px; height: 60px;"
+                                     src="{{ asset (uploads ~ image.path) }}"/>
+                            {% endif %}
+                        </td>
                     {% else %}
                         <td>
                             {% if attribute(entity, key) | length > maxLength %}
@@ -77,6 +86,15 @@
                                 <a href="{{ path(router['show'], { 'id': attribute(entity, 'id') }) }}">...</a>
                             {% else %}
                                 {{ attribute(entityAny, key) | default('Empty') | raw }}
+                            {% endif %}
+                        </td>
+                    {% elseif util.equals(filter, 'image') %}
+                        <td>
+                            {% set image = attribute(entityAny, key) %}
+                            {% if image %}
+                                <img alt="{{ image.alt }}" class="img-responsive img-thumbnail"
+                                     style="width: 60px; height: 60px;"
+                                     src="{{ asset (uploads ~ image.path) }}"/>
                             {% endif %}
                         </td>
                     {% else %}

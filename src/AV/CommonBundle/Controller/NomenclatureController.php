@@ -509,8 +509,8 @@ abstract class NomenclatureController extends CommonController implements Entity
                 $beforeFlush = function ($entity) {
                     $this->deleteActionBeforeFlush($entity);
                 };
-                $afterFlush = function ($entity) {
-                    $this->deleteActionAfterFlush($entity);
+                $afterFlush = function () {
+                    $this->deleteActionAfterFlush();
                 };
                 $this->getManager()->remove($entity, $beforeFlush, $afterFlush);
             });
