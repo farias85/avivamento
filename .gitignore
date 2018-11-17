@@ -62,3 +62,4 @@
 # JetBrains PhpStorm
 /.idea
 /.scannerwork
+/node_modules

@@ -1,0 +1,26 @@
+{
+  "name": "seniorfirst",
+  "version": "1.0.0",
+  "description": "seniorfirst\r ===========",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs",
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jariasf1/SeniorFirst.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jariasf1/SeniorFirst/issues"
+  },
+  "homepage": "https://github.com/jariasf1/SeniorFirst#readme",
+  "devDependencies": {
+    "@symfony/webpack-encore": "^0.20.1"
+  }
+}
