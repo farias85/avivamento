@@ -2,11 +2,13 @@
 
 namespace AV\CommonBundle\Entity;
 
-use AV\CommonBundle\Traits\LangTrait;
-use AV\CommonBundle\Traits\RefTrait;
-use Doctrine\ORM\Mapping as ORM;
 use AV\CommonBundle\Extension\EntityNameExtension;
+use AV\CommonBundle\Traits\ImagePathTrait;
+use AV\CommonBundle\Traits\LangTrait;
+use AV\CommonBundle\Traits\RefORMTrait;
+use AV\CommonBundle\Traits\TranslatesTrait;
 use AV\CommonBundle\Util\Entity;
+use Doctrine\ORM\Mapping as ORM;
 
 /**
  * Evento
@@ -17,7 +19,9 @@ use AV\CommonBundle\Util\Entity;
 class Evento implements EntityNameExtension {
 
     use LangTrait;
-    use RefTrait;
+    use RefORMTrait;
+    use ImagePathTrait;
+    use TranslatesTrait;
 
     /**
      * @var integer
@@ -38,16 +42,23 @@ class Evento implements EntityNameExtension {
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="when", type="datetime", nullable=false)
+     * @ORM\Column(name="when_start", type="datetime", nullable=false)
      */
-    private $when;
+    private $whenStart;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="when_end", type="datetime", nullable=false)
+     */
+    private $whenEnd;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="where", type="text", length=65535, nullable=false)
+     * @ORM\Column(name="where_place", type="text", length=65535, nullable=false)
      */
-    private $where;
+    private $wherePlace;
 
     /**
      * @var boolean
@@ -55,6 +66,13 @@ class Evento implements EntityNameExtension {
      * @ORM\Column(name="activo", type="boolean", nullable=false)
      */
     protected $activo;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="youtube_url", type="string", length=250, nullable=false)
+     */
+    private $youtubeUrl;
 
     /**
      * @var string
@@ -74,7 +92,9 @@ class Evento implements EntityNameExtension {
     private $categoria;
 
     function __construct() {
+        $this->ref = md5(uniqid(null, true));
         $this->activo = false;
+        $this->createdAt = new \DateTime('now');
         $this->opts = '';
     }
 
@@ -159,31 +179,59 @@ class Evento implements EntityNameExtension {
     }
 
     /**
-     * @return \DateTime
+     * @return string
      */
-    public function getWhen(): \DateTime {
-        return $this->when;
+    public function getWherePlace(): string {
+        return $this->wherePlace;
     }
 
     /**
-     * @param \DateTime $when
+     * @param string $wherePlace
      */
-    public function setWhen(\DateTime $when) {
-        $this->when = $when;
+    public function setWherePlace(string $wherePlace) {
+        $this->wherePlace = $wherePlace;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getWhenStart(): \DateTime {
+        return $this->whenStart;
+    }
+
+    /**
+     * @param \DateTime $whenStart
+     */
+    public function setWhenStart(\DateTime $whenStart) {
+        $this->whenStart = $whenStart;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getWhenEnd(): \DateTime {
+        return $this->whenEnd;
+    }
+
+    /**
+     * @param \DateTime $whenEnd
+     */
+    public function setWhenEnd(\DateTime $whenEnd) {
+        $this->whenEnd = $whenEnd;
     }
 
     /**
      * @return string
      */
-    public function getWhere(): string {
-        return $this->where;
+    public function getYoutubeUrl(): string {
+        return $this->youtubeUrl;
     }
 
     /**
-     * @param string $where
+     * @param string $youtubeUrl
      */
-    public function setWhere(string $where) {
-        $this->where = $where;
+    public function setYoutubeUrl(string $youtubeUrl) {
+        $this->youtubeUrl = $youtubeUrl;
     }
 
     public function getEntityName() {

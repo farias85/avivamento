@@ -8,11 +8,9 @@
 
 namespace AV\CommonBundle\EventListener;
 
-use Doctrine\ORM\EntityManager;
-use Doctrine\ORM\Event\LifecycleEventArgs;
-use AV\CommonBundle\Util\Util;
 use AV\MediaBundle\Entity\Media;
 use AV\MediaBundle\Entity\TipoMedia;
+use Doctrine\ORM\Event\LifecycleEventArgs;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 class MediaSetterListener {

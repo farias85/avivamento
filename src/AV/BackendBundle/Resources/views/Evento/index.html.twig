@@ -1,0 +1,18 @@
+{% extends 'BackendBundle:Nomenclature:index.html.twig' %}
+
+{% block blkI18nPath %}
+    {#{% include 'CommonBundle:Include:_nlocale.html.twig' %}#}
+
+    {#{% use 'CommonBundle:Include:_nlocale.html.twig' %}#}
+    {#{{ block('_nlocale') }}#}
+
+    {% if app.request.locale == 'es' %}
+        {% set nlocale = 'en' %}
+    {% endif %}
+    {% if app.request.locale == 'en' %}
+        {% set nlocale = 'es' %}
+    {% endif %}
+
+    {{ path('backend_evento_index', {'_locale' : nlocale }) }}
+{% endblock %}
+

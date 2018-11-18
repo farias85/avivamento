@@ -1,0 +1,9 @@
+{% block _nlocale %}
+    {% if app.request.locale == 'es' %}
+        {% set nlocale = 'en' %}
+    {% endif %}
+    {% if app.request.locale == 'en' %}
+        {% set nlocale = 'es' %}
+    {% endif %}
+{% endblock %}
+

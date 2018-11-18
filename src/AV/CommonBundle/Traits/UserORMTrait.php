@@ -9,9 +9,9 @@
 namespace AV\CommonBundle\Traits;
 
 
-trait UserTrait {
+trait UserORMTrait {
 
-    use RefTrait;
+    use RefORMTrait;
 
     /**
      * @var integer

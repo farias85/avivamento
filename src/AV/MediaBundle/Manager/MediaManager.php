@@ -30,6 +30,18 @@ class MediaManager extends Manager {
         return empty($media) ? [] : $media;
     }
 
+    public function findMany($entity, $tipoMedia, $isActive = true) {
+        $em = $this->getEntityManager();
+        $entityName = $this->getEntityName($entity);
+        if (is_string($tipoMedia)) {
+            $tipoMedia = $this->getBasicTipoMedia($tipoMedia);
+        }
+        $medias = $em->getRepository(Entity::MEDIA)
+            ->findBy(['entityId' => $entity->getId(), 'entityName' => $entityName,
+                'tipoMedia' => $tipoMedia, 'isActive' => $isActive]);
+        return empty($medias) ? [] : $medias;
+    }
+
     /**
      * @param $alt string
      * @param $filename string

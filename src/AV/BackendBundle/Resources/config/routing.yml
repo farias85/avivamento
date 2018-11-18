@@ -60,3 +60,10 @@ backend_gallery_item:
     defaults: { _locale: '%locale%' }
     requirements:
         _locale: '%locales_app%'
+
+backend_evento:
+    resource: "@BackendBundle/Resources/config/routing/evento.yml"
+    prefix:   /{_locale}/evento/
+    defaults: { _locale: '%locale%' }
+    requirements:
+        _locale: '%locales_app%'

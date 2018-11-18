@@ -22,14 +22,14 @@ services:
         tags:
             - { name: doctrine.event_listener, event: postLoad }
 
-    av.common.autor.incidencia.setter.listener:
-        class: AV\CommonBundle\EventListener\AutorIncidenciaSetterListener
+    av.common.media.setter.listener:
+        class: AV\CommonBundle\EventListener\MediaSetterListener
         arguments: ['@service_container']
         tags:
             - { name: doctrine.event_listener, event: postLoad }
 
-    av.common.media.setter.listener:
-        class: AV\CommonBundle\EventListener\MediaSetterListener
+    av.common.youtube.url.setter.listener:
+        class: AV\CommonBundle\EventListener\YoutubeUrlsSetterListener
         arguments: ['@service_container']
         tags:
             - { name: doctrine.event_listener, event: postLoad }

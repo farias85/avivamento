@@ -16,8 +16,8 @@
             </div>
             <!-- /.navbar-header -->
 
-            {% include ':backend:_backend.layout.navbar-top-links.html.twig' %}
-            <!-- /.navbar-top-links -->
+            {% use 'backend/_backend.layout.navbar-top-links.html.twig' %}
+            {{ block('_backend_navbar_top_links') }}
 
             {% include ':backend:_backend.layout.navbar-default-sidebar.html.twig' %}
             <!-- /.navbar-static-side -->

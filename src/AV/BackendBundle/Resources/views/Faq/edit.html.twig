@@ -25,22 +25,12 @@
 
 {% block stylesheets %}
     {{ parent() }}
-
-    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css">
-    <link rel="stylesheet" href="{{ asset('bundles/common/plugins/medium-editor/dist/css/medium-editor.css') }}">
-
+    {#<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css">#}
 {% endblock %}
 
 {% block javascripts %}
     {{ parent() }}
-    <script src="{{ asset('bundles/common/plugins/medium-editor/dist/js/medium-editor.js') }}"></script>
     <script>
-      let editor = new MediumEditor('#av_backendbundle_faq_respuesta', {
-        toolbar: {
-          buttons: ['bold', 'italic', 'underline', 'strikethrough', 'quote', 'anchor', 'justifyLeft', 'justifyCenter', 'justifyRight', 'justifyFull', 'superscript', 'subscript', 'orderedlist', 'unorderedlist', 'pre', 'removeFormat', 'outdent', 'indent', 'h2', 'h3', 'html'],
-        },
-        buttonLabels: 'fontawesome'
-      });
+      wysiwyg_editor('av_backendbundle_faq_respuesta');
     </script>
-
 {% endblock %}

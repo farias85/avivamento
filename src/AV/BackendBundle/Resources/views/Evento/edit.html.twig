@@ -1,0 +1,28 @@
+{% extends 'BackendBundle:Nomenclature:edit.html.twig' %}
+
+{% block javascripts %}
+    {{ parent() }}
+
+    <script type="text/javascript">
+      $(function () {
+
+        wysiwyg_editor('av_backendbundle_evento_texto');
+
+        $('#av_backendbundle_evento_whenStart').datepicker({
+          startDate: "dateToday",
+          format: 'yyyy-mm-dd',
+          autoclose: true
+        }).on('changeDate', function (e) {
+        });
+
+        $('#av_backendbundle_evento_whenEnd').datepicker({
+          startDate: "dateToday",
+          format: 'yyyy-mm-dd',
+          autoclose: true
+        }).on('changeDate', function (e) {
+        });
+
+      })
+
+    </script>
+{% endblock %}

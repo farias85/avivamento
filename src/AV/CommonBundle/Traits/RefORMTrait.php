@@ -9,7 +9,7 @@
 namespace AV\CommonBundle\Traits;
 
 
-trait RefTrait {
+trait RefORMTrait {
 
     /**
      * @var string
