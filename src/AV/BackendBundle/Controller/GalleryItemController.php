@@ -44,8 +44,7 @@ class GalleryItemController extends NomenclatureController {
      * @param $data mixed
      */
     public function newActionAfterFlush($entity, $data) {
-        $uploadedFile = $data['path'];
-        $this->get('av.media.manager')->save($uploadedFile->getClientOriginalName(), $entity->getFilename(), $entity);
+        $this->get('av.media.manager')->saveUploadedFile($entity, $data);
     }
 
     /**
@@ -53,16 +52,6 @@ class GalleryItemController extends NomenclatureController {
      * @param $data  mixed
      */
     public function editActionAfterFlush($entity, $data) {
-        $uploadedFile = $data['path'];
-        if (!empty($uploadedFile)) {
-            $media = $entity->getImage();
-            if (!empty($media)) {
-                $this->get('av.media.manager')->remove($media);
-            }
-            $filename = $this->get('av.media.file.uploader')->upload($uploadedFile);
-            $entity->setFilename($filename);
-            $this->newActionAfterFlush($entity, $data);
-        }
-        parent::editActionBeforeFlush($entity, $data);
+        $this->get('av.media.manager')->editUploadedFile($entity, $data);
     }
 }

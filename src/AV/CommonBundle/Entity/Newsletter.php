@@ -2,7 +2,7 @@
 
 namespace AV\CommonBundle\Entity;
 
-use AV\CommonBundle\Traits\RefORMTrait;
+use AV\CommonBundle\Traits\ORM\RefTrait;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -13,7 +13,7 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Newsletter {
 
-    use RefORMTrait;
+    use RefTrait;
 
     /**
      * @var integer

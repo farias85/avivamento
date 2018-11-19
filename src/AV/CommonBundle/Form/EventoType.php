@@ -115,7 +115,9 @@ class EventoType extends EntityGetterType {
                 ]
             );
 
-        MediaType::getFileType($builder, empty($this->entity));
+        if (empty($this->entity)) {
+            MediaType::getFileType($builder, empty($this->entity));
+        }
     }
 
     /**

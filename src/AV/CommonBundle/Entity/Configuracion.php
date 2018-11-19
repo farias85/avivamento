@@ -2,7 +2,8 @@
 
 namespace AV\CommonBundle\Entity;
 
-use AV\CommonBundle\Traits\RefORMTrait;
+
+use AV\CommonBundle\Traits\ORM\RefTrait;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -13,7 +14,7 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Configuracion {
 
-    use RefORMTrait;
+    use RefTrait;
 
     /**
      * @var integer

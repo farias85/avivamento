@@ -4,14 +4,9 @@ namespace AV\BackendBundle\Controller;
 
 use AV\CommonBundle\Controller\NomenclatureController;
 use AV\CommonBundle\Entity\Evento;
-use AV\CommonBundle\Entity\GalleryItem;
 use AV\CommonBundle\Form\EventoType;
-use AV\CommonBundle\Form\GalleryItemType;
 use AV\CommonBundle\Util\Entity;
 use AV\CommonBundle\Util\Validate;
-use AV\MediaBundle\Entity\Media;
-use AV\MediaBundle\Entity\TipoMedia;
-use Symfony\Component\VarDumper\VarDumper;
 
 class EventoController extends NomenclatureController {
 
@@ -47,7 +42,7 @@ class EventoController extends NomenclatureController {
             'activo' => 'bool', 'image' => 'image'];
     }
 
-    private function isValidYoutubeUrl($youtubeUrl){
+    private function isValidYoutubeUrl($youtubeUrl) {
         if (!empty($youtubeUrl)) {
             $result = Validate::isAbsoluteUrl($youtubeUrl);
             if (empty($result)) {
@@ -70,9 +65,7 @@ class EventoController extends NomenclatureController {
     }
 
     public function newActionAfterFlush($entity, $data) {
-        $man = $this->get('av.media.manager');
-        $uploadedFile = $data['path'];
-        $man->save($uploadedFile->getClientOriginalName(), $entity->getFilename(), $entity);
+        $this->get('av.media.manager')->saveUploadedFile($entity, $data);
     }
 
     public function getResourceViewPath() {

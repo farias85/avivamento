@@ -3,10 +3,12 @@
 namespace AV\MediaBundle\Manager;
 
 use AV\CommonBundle\Manager\Manager;
+use AV\CommonBundle\Traits\ImagePathTrait;
 use AV\CommonBundle\Util\Entity;
 use AV\MediaBundle\Entity\Media;
 use AV\MediaBundle\Entity\TipoMedia;
 use Symfony\Component\HttpFoundation\File\MimeType\ExtensionGuesser;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Symfony\Component\VarDumper\VarDumper;
 
 class MediaManager extends Manager {
@@ -72,6 +74,47 @@ class MediaManager extends Manager {
         $em->flush();
 
         return $media;
+    }
+
+    /**
+     * @param $entity ImagePathTrait
+     * @param $data
+     */
+    public function saveUploadedFile($entity, $data) {
+        $uploadedFile = $data['path'];
+        if (empty($uploadedFile) && !($uploadedFile instanceof UploadedFile)) {
+            throw new \InvalidArgumentException('El array data debe contener una llave path de tipo UploadedFile');
+        }
+        $this->save($uploadedFile->getClientOriginalName(), $entity->getFilename(), $entity);
+    }
+
+    /**
+     * @param $entity ImagePathTrait
+     * @param $data array
+     */
+    public function editUploadedFile($entity, $data) {
+        $uploadedFile = $data['path'];
+
+        if (empty($uploadedFile) && !($uploadedFile instanceof UploadedFile)) {
+            throw new \InvalidArgumentException('El array data debe contener una llave path de tipo UploadedFile');
+        }
+
+        if (!method_exists($entity, 'getImage') &&
+            !method_exists($entity, 'getFilename') &&
+            !method_exists($entity, 'setFilename')) {
+            throw new \InvalidArgumentException('El objeto debe contener los siguientes métodos...');
+        }
+
+        $media = $entity->getImage();
+        if (!empty($media)) {
+            $this->remove($media);
+        }
+
+//        VarDumper::dump($uploadedFile); die;
+
+        $filename = $this->get('av.media.file.uploader')->upload($uploadedFile);
+        $entity->setFilename($filename);
+        $this->save($uploadedFile->getClientOriginalName(), $entity->getFilename(), $entity);
     }
 
     public function remove(Media $media) {
