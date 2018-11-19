@@ -175,6 +175,10 @@
                 <source>f.termina</source>
                 <target>Termina</target>
             </trans-unit>
+            <trans-unit id="Yadfa6q23Aa5f1" resname="f.otros.enalces">
+                <source>f.otros.enalces</source>
+                <target>Otros enlaces</target>
+            </trans-unit>
         </body>
     </file>
 
