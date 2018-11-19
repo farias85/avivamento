@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+    <file source-language="en" target-language="en" datatype="plaintext" original="file.ext">
+        <header>
+            <tool tool-id="symfony" tool-name="Symfony"/>
+        </header>
+        <body>
+            <trans-unit id="Yasad5a82a3Aa5f1" resname="f.la.historia.p1">
+                <source>f.la.historia.p1</source>
+                <target>Mi nombre es David Arguelles Figueredo, de Nacionalidad Cubana, donde resido hasta hoy en la
+                    Ciudad de Santiago de Cuba, nací en el seno de una familia cristiana, fundadora de los Pentecostales
+                    en Cuba junto a Luis Magín Ortiz y su esposa Rebeca que viven en Puerto Rico desde el año 1956.
+                </target>
+            </trans-unit>
+            <trans-unit id="Yasad51212a3Aa5f1" resname="f.la.historia.p2">
+                <source>f.la.historia.p2</source>
+                <target>En el año 1993 fundo varias iglesias como Misionero en diferentes campos de la parte oriental de
+                    Cuba. Pertenecí a la Iglesia Cristiana Pentecostal donde ejercí como evangelista y Misionero durante
+                    varios años hasta que fui ungido como Pastor de la misma después de haber pasado el Seminario
+                    pastoral ELIM y un Seminario evangelístico internacional. Ejercí en la misma como Pastor durante 4
+                    años y luego me independicé llegando a fundar 14 iglesias, las cuales entraron bajo mi cobertura
+                    siendo Pentecostal independiente hasta que un día después de graduarme en Bachiller por segunda vez
+                    y licenciarme en Teología con título de Oro fui llamado al apostolado a través de una experiencia
+                    con el Espíritu Santo porque yo no quería ser Apóstol a causa de la persecución de las iglesias
+                    tradicionales y denominacionales de mi país y del espíritu de religión que había en mí, pero el
+                    Espíritu Santo me habló y me mandó a ungir en el año 2009.
+                </target>
+            </trans-unit>
+            <trans-unit id="Yad51212a3Aa5f1" resname="f.la.historia.p3">
+                <source>f.la.historia.p3</source>
+                <target>A partir de ahí, recibí la REVELACIÓN DE LOS NOMBRES y a través de ella comencé a transicionar
+                    mi congregación la cual fundé en Santiago de Cuba siendo Pastor y lo logré con la ayuda de Dios y
+                    del Espíritu Santo, siendo ahora ésta la casa paternal de todas las demás iglesias que están bajo
+                    nuestra cobertura. Nuestro Ministerio el cual fundamos mi esposa Isabel Solórzano Pérez y yo radica
+                    en esta ciudad de Santiago de Cuba, en Carretera del Morro No. 309 entre Camino Viejo del Morro y
+                    calle 17 Reparto Veguita de Galo, se llama Ministerio Apostólico y Profético “Se pudre el Yugo a
+                    causa de la Unción “, Isaías 10:27 en el cual nos movemos y ministramos en lo sobrenatural desde su
+                    fundación donde han sucedido milagros, señales y prodigios que lo caracterizan en nuestro país como
+                    uno de los ministerios cabecera.
+                </target>
+            </trans-unit>
+            <trans-unit id="Yasa212a3Aa5f1" resname="f.la.historia.p4">
+                <source>f.la.historia.p4</source>
+                <target>Es un ministerio de guerra y liberación pactados con el Ministerio Centro de Avivamiento “ Jesús
+                    Rey de Reyes” del Apóstol Jesús Zepeda al cual honramos y amamos juntamente con su esposa. El
+                    Ministerio “Se pudre el Yugo” se mueve en lo sobrenatural, luego pasaremos algunos videos y
+                    testimonios sobre éste particular y otros. Pertenecemos al gobierno apostólico de nuestra ciudad, el
+                    cual fue fundado y establecido hace poco ya que luchamos unidos junto a otros Apóstoles por un
+                    AVIVAMIENTO.
+                </target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

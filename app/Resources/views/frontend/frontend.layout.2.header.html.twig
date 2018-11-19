@@ -16,7 +16,7 @@
                        data-autoplay="true"></a>
                 {% endif %}
 
-                <a href="#about" class="about-btn scrollto">About The Event</a>
+                <a href="#about" class="about-btn scrollto">{{ 'f.acerca.del.evento' | trans }}</a>
             </div>
         </section>
 
@@ -28,18 +28,18 @@
                 <div class="row">
                     <div class="col-lg-6">
                         <h2>
-                            <a href="{{ path('frontend_event_details_ref', {'ref' : defEv.ref}) }}">About The Event</a>
+                            <a href="{{ path('frontend_event_details_ref', {'ref' : defEv.ref}) }}">{{ 'f.acerca.del.evento' | trans }}</a>
                         </h2>
                         {{ defEv.any.texto | raw }}
                     </div>
                     <div class="col-lg-3">
-                        <h3>Where</h3>
+                        <h3>{{ 'f.donde' | trans }}</h3>
                         <p>{{ defEv.wherePlace }}</p>
                     </div>
                     <div class="col-lg-3">
-                        <h3>When</h3>
-                        <p>Empieza: {{ defEv.whenStart | date }}</p>
-                        <p>Termina: {{ defEv.whenEnd | date }}</p>
+                        <h3>{{ 'f.cuando' | trans }}</h3>
+                        <p>{{ 'f.inicia' | trans }}: {{ defEv.whenStart | date }}</p>
+                        <p>{{ 'f.termina' | trans }}: {{ defEv.whenEnd | date }}</p>
                     </div>
                 </div>
             </div>

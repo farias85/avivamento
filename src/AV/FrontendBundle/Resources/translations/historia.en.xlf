@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+    <file source-language="en" target-language="en" datatype="plaintext" original="file.ext">
+        <header>
+            <tool tool-id="symfony" tool-name="Symfony"/>
+        </header>
+        <body>
+            <trans-unit id="Yasad5a82a3Aa5f1" resname="f.la.historia.p1">
+                <source>f.la.historia.p1</source>
+                <target>My name is David Arguelles Figueredo, of Cuban Nationality, where I live until today in the city
+                    of Santiago de Cuba, I was born in a Christian family, founder of the Pentecostals in Cuba with Luis
+                    Magín Ortiz and his wife Rebeca who live in Puerto Rico since 1956.
+                </target>
+            </trans-unit>
+            <trans-unit id="Yasad51212a3Aa5f1" resname="f.la.historia.p2">
+                <source>f.la.historia.p2</source>
+                <target>In 1993, he founded several churches as a Missionary in different fields in the eastern part of
+                    Cuba. I belonged to the Pentecostal Christian Church where I served as evangelist and missionary for
+                    several years until I was anointed as Pastor of the same after having passed the ELIM pastoral
+                    seminary and an international evangelistic seminar. I practiced it as a Pastor for 4 years and then
+                    I became independent, coming to found 14 churches, which came under my coverage as an independent
+                    Pentecostal until one day after I graduated in Bachelor for the second time and graduated in
+                    Theology with a Gold title. to the apostolate through an experience with the Holy Spirit because I
+                    did not want to be an Apostle because of the persecution of the traditional and denominational
+                    churches of my country and the spirit of religion that was in me, but the Holy Spirit spoke to me
+                    and sent me to anoint in the year 2009.
+                </target>
+            </trans-unit>
+            <trans-unit id="Yad51212a3Aa5f1" resname="f.la.historia.p3">
+                <source>f.la.historia.p3</source>
+                <target>From there, I received the REVELATION OF NAMES and through it I began to transition my
+                    congregation which I founded in Santiago de Cuba as a Pastor and I achieved it with the help of God
+                    and the Holy Spirit, being this now the paternal house of all the other churches that are under our
+                    coverage. Our Ministry founded by my wife Isabel Solórzano Pérez and I reside in this city of
+                    Santiago de Cuba, in Carretera del Morro No. 309 between Camino Viejo del Morro and Calle 17 Reparto
+                    Veguita de Galo, it is called Apostolic and Prophetic Ministry "Rots the Yoke because of the
+                    Anointing ", Isaiah 10:27 in which we move and minister in the supernatural since its foundation
+                    where miracles, signs and wonders have taken place that characterize it in our country as one of the
+                    head ministries.
+                </target>
+            </trans-unit>
+            <trans-unit id="Yasa212a3Aa5f1" resname="f.la.historia.p4">
+                <source>f.la.historia.p4</source>
+                <target>It is a ministry of war and liberation agreed with the Ministry Revival Center "Jesus King of
+                    Kings" of the Apostle Jesus Zepeda which we honor and love together with his wife. The Ministry
+                    "Rots the Yugo" moves in the supernatural, then we will pass some videos and testimonies about this
+                    particular and others. We belong to the apostolic government of our city, which was founded and
+                    established recently because we fought together with other Apostles for a REVIVAL.
+                </target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

@@ -33,6 +33,18 @@
         <source>f.imagenes.direccion</source>
         <target>Imágenes y dirección de la residencia de nuestro ministerio</target>
       </trans-unit>
+      <trans-unit id="Ya588s47dfa6q2va3Aa5f1" resname="f.eventos">
+        <source>f.eventos</source>
+        <target>Eventos</target>
+      </trans-unit>
+      <trans-unit id="Ya58847dfa6q2va3Aa5f1" resname="f.eventos.subtitulo">
+        <source>f.eventos.subtitulo</source>
+        <target>Dale una ojeada a nuestros eventos</target>
+      </trans-unit>
+      <trans-unit id="Y58847dfa6q2va3Aa5f1" resname="f.un.poco.de.historia">
+        <source>f.un.poco.de.historia</source>
+        <target>Un poco de historia</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>
