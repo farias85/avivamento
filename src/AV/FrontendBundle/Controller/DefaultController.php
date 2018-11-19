@@ -20,10 +20,17 @@ class DefaultController extends Controller {
             $gallery = array_slice($gallery, 0, 8);
         }
 
+        $events = $em->getRepository(Entity::EVENTO)->findBy(['activo' => true]);
+        if (count($events) > 6) {
+            shuffle($events);
+            $events = array_slice($events, 0, 6);
+        }
+
         return $this->render('FrontendBundle:Default:index.html.twig', [
             'isIndex' => true,
             'faqs' => $faqs,
             'gallery' => $gallery,
+            'events' => $events,
         ]);
     }
 

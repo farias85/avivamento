@@ -481,9 +481,11 @@ abstract class NomenclatureController extends CommonController implements Entity
             $hasEl = method_exists($entity, 'getEl') && method_exists($entity, 'setEl');
 
             foreach ($array as $value) {
-                if ($entity->$getMethod() == $value) {
-                    $delete = false;
-                    break;
+                if (method_exists($entity, $getMethod)) {
+                    if ($entity->$getMethod() == $value) {
+                        $delete = false;
+                        break;
+                    }
                 }
 
                 if ($hasEl && method_exists($entity->getEl(), $getMethod)) {

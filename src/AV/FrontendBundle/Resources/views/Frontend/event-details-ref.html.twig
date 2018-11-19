@@ -1,0 +1,39 @@
+{% extends 'FrontendBundle:Layout:frontend.html.twig' %}
+
+{% block wrapper %}
+
+    <!--==========================
+      Speaker Details Section
+    ============================-->
+    <section id="speakers-details" class="wow fadeIn">
+        <div class="container">
+            <div class="section-header">
+                <h2>{{ event.any.titulo }}</h2>
+                <p>Lugar: {{ event.any.subtitulo }}</p>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="{{ asset (uploads ~ event.image.path) }}" alt="{{ event.any.titulo }}" class="img-fluid">
+                </div>
+
+                <div class="col-md-6">
+                    <div class="details">
+                        <h5>Lugar: {{ event.wherePlace }}</h5>
+                        <h5>Empieza: {{ event.whenStart | date }}</h5>
+                        <h5>Termina: {{ event.whenEnd | date }}</h5>
+                        {% if event.youtubeUrl is not empty %}
+                            <div class="social">
+                                <a href="{{ event.youtubeUrl }}" target="_blank"><i class="fa fa-youtube"></i></a>
+                            </div>
+                        {% endif %}
+                        {{ event.any.texto | raw }}
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+{% endblock %}

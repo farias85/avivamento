@@ -85,6 +85,7 @@ class EventoType extends EntityGetterType {
                     'label' => $this->display('youtubeUrl'),
                     'attr' => [
                         'class' => 'form-control',
+                        'placeholder' => 'Ej. https://youtu.be/w6iEQB1wIKQ',
                         'value' => $this->get('youtubeUrl'),
                     ]
                 ]

@@ -1,0 +1,46 @@
+{% extends 'FrontendBundle:Layout:frontend.html.twig' %}
+
+{% block wrapper %}
+
+    <section id="speakers" class="wow fadeInUp">
+        <div class="container">
+            <div class="section-header">
+                <h2>Event Speakers</h2>
+                <p>Here are some of our speakers</p>
+            </div>
+
+            <div class="row">
+                {% for ev in events %}
+                    <div class="col-lg-4 col-md-6">
+                        <div class="speaker">
+                            <img src="{{ asset (uploads ~ ev.image.path) }}" alt="{{ ev.any.titulo }}"
+                                 class="img-fluid">
+                            <div class="details">
+                                <h3>
+                                    <a href="{{ path('frontend_event_details_ref', {'ref' : ev.ref}) }}">{{ ev.any.titulo }}</a>
+                                </h3>
+                                {% set plength = 85 %}
+                                {% if ev.any.texto | length > plength %}
+                                    <p>{{ ev.any.texto [:plength] | raw }}
+                                        <a href="{{ path('frontend_event_details_ref', {'ref' : ev.ref}) }}">...</a>
+                                    </p>
+                                {% else %}
+                                    <p>{{ ev.any.texto | raw }} </p>
+                                {% endif %}
+
+                                {#<div class="social">#}
+                                {#<a href=""><i class="fa fa-twitter"></i></a>#}
+                                {#<a href=""><i class="fa fa-facebook"></i></a>#}
+                                {#<a href=""><i class="fa fa-google-plus"></i></a>#}
+                                {#<a href=""><i class="fa fa-linkedin"></i></a>#}
+                                {#</div>#}
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+
+    </section>
+
+{% endblock %}

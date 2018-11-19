@@ -2,13 +2,18 @@
 
 {% block header %}
 
+    {% set defEv = getDefaultEvent() %}
+
     <section id="intro">
         <div class="intro-container wow fadeIn">
-            <h1 class="mb-4 pb-0">The Annual<br><span>Marketing</span> Conference</h1>
-            <p class="mb-4 pb-0">10-12 December, Downtown Conference Center, New York</p>
+            <h1 class="mb-4 pb-0">{{ defEv.any.titulo }}</h1>
+            <p class="mb-4 pb-0">{{ defEv.wherePlace }}</p>
             {#<a href="#" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>#}
-            <a href="https://youtu.be/w6iEQB1wIKQ" class="venobox play-btn mb-4" data-vbtype="video"
-            data-autoplay="true"></a>
+            {% if defEv.youtubeUrl is not empty %}
+                <a href="{{ defEv.youtubeUrl }}" class="venobox play-btn mb-4" data-vbtype="video"
+                   data-autoplay="true"></a>
+            {% endif %}
+
             <a href="#about" class="about-btn scrollto">About The Event</a>
         </div>
     </section>
@@ -20,20 +25,19 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
-                    <h2>About The Event</h2>
-                    <p>Sed nam ut dolor qui repellendus iusto odit. Possimus inventore eveniet accusamus error amet
-                        eius aut
-                        accusantium et. Non odit consequatur repudiandae sequi ea odio molestiae. Enim possimus sunt
-                        inventore in
-                        est ut optio sequi unde.</p>
+                    <h2>
+                        <a href="{{ path('frontend_event_details_ref', {'ref' : defEv.ref}) }}">About The Event</a>
+                    </h2>
+                    {{ defEv.any.texto | raw }}
                 </div>
                 <div class="col-lg-3">
                     <h3>Where</h3>
-                    <p>Downtown Conference Center, New York</p>
+                    <p>{{ defEv.wherePlace }}</p>
                 </div>
                 <div class="col-lg-3">
                     <h3>When</h3>
-                    <p>Monday to Wednesday<br>10-12 December</p>
+                    <p>Empieza: {{ defEv.whenStart | date }}</p>
+                    <p>Termina: {{ defEv.whenEnd | date }}</p>
                 </div>
             </div>
         </div>

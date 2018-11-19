@@ -68,6 +68,13 @@ class Evento implements EntityNameExtension {
     protected $activo;
 
     /**
+     * @var boolean
+     *
+     * @ORM\Column(name="principal", type="boolean", nullable=false)
+     */
+    protected $principal;
+
+    /**
      * @var string
      *
      * @ORM\Column(name="youtube_url", type="string", length=250, nullable=false)
@@ -94,6 +101,7 @@ class Evento implements EntityNameExtension {
     function __construct() {
         $this->ref = md5(uniqid(null, true));
         $this->activo = false;
+        $this->principal = false;
         $this->createdAt = new \DateTime('now');
         $this->opts = '';
     }
@@ -234,15 +242,36 @@ class Evento implements EntityNameExtension {
         $this->youtubeUrl = $youtubeUrl;
     }
 
+    /**
+     * @return bool
+     */
+    public function isPrincipal(): bool {
+        return $this->principal;
+    }
+
+    /**
+     * @return bool
+     */
+    public function getPrincipal(): bool {
+        return $this->isPrincipal();
+    }
+
+    /**
+     * @param bool $principal
+     */
+    public function setPrincipal(bool $principal) {
+        $this->principal = $principal;
+    }
+
     public function getEntityName() {
         return Entity::EVENTO;
     }
 
     function __toString() {
         if (!empty($this->getEl())) {
-            return $this->getEl()->getNombre();
+            return $this->getEl()->getTitulo();
         } elseif (!empty($this->getAny())) {
-            return $this->getAny()->getNombre();
+            return $this->getAny()->getTitulo();
         }
         return $this->getId() . '';
     }

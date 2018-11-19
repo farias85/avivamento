@@ -38,4 +38,27 @@ class CategoriaController extends UniqueNomenclatureController {
         return ['nombre'];
     }
 
+    public function deleteForbiden() {
+        return [
+            'slug' => [
+                'adoracion-y-alabanzas',
+                'momentos-sobrenaturales-y-testimonios',
+                'ensenanzas',
+                'trabajo-comunitario',
+                'eventos',
+                'supernatural-moments-and-testimonies',
+                'worship-and-praise',
+                'teachings',
+                'community-work',
+                'events'
+            ],
+            'id' => [
+                $this->getParameter('av.cat.adoracion.alabanzas'),
+                $this->getParameter('av.cat.momentos.sobrenaturales'),
+                $this->getParameter('av.cat.ensenanzas'),
+                $this->getParameter('av.cat.trabajo.comunitario'),
+                $this->getParameter('av.cat.eventos')
+            ]
+        ];
+    }
 }

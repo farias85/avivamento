@@ -3,11 +3,6 @@ frontend_event_details:
     locales:  { es: '/evento/', en: '/event-details/' }
     defaults: { _controller: 'FrontendBundle:Default:eventDetails' }
 
-frontend_event_details_ref:
-    path:     /event-details/{ref}/
-    locales:  { es: '/evento/{ref}/', en: '/event-details/{ref}/' }
-    defaults: { _controller: 'FrontendBundle:Default:eventDetails' }
-
 frontend_subscribe:
     path:     /subscribe/
     locales:  { es: '/subscribe/', en: '/subscribe/' }
@@ -19,3 +14,13 @@ frontend_contact_us:
     locales:  { es: '/contact-us/', en: '/contact-us/' }
     defaults: { _controller: 'FrontendBundle:Default:contactUs' }
     methods:  [POST]
+
+frontend_events:
+    path:     /events/
+    locales:  { es: '/eventos/', en: '/events/' }
+    defaults: { _controller: 'FrontendBundle:Frontend:events' }
+
+frontend_event_details_ref:
+    path:     /event-details/{ref}/
+    locales:  { es: '/evento/{ref}/', en: '/event-details/{ref}/' }
+    defaults: { _controller: 'FrontendBundle:Frontend:eventDetailsRef' }

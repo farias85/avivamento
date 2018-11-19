@@ -21,6 +21,12 @@ parameters:
 #   configuration files sizes
     av.max.file.size: '5' #setear en MB
     av.max.video.file.size: '120' #setear en MB
+#    Categorias por defecto
+    av.cat.adoracion.alabanzas: 1
+    av.cat.momentos.sobrenaturales: 2
+    av.cat.ensenanzas: 3
+    av.cat.trabajo.comunitario: 4
+    av.cat.eventos: 5
 
 framework:
     #esi: ~
