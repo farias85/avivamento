@@ -103,6 +103,7 @@ class Evento implements EntityNameExtension {
         $this->activo = false;
         $this->principal = false;
         $this->createdAt = new \DateTime('now');
+        $this->youtubeUrl = '';
         $this->opts = '';
     }
 

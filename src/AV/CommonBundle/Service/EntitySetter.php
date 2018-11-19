@@ -49,12 +49,12 @@ class EntitySetter {
         foreach ($data as $key => $value) {
             $attr = ucfirst($key);
             $method = 'set' . $attr;
-            if (method_exists($entity, $method)) {
+            if (method_exists($entity, $method) && !is_null($value)) {
                 $entity->$method($value);
                 continue;
             }
 
-            if ($hasEl && method_exists($entity->getEl(), $method)) {
+            if ($hasEl && method_exists($entity->getEl(), $method) && !is_null($value)) {
                 $entity->getEl()->$method($value);
             }
         }

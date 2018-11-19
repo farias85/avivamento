@@ -4,46 +4,52 @@
 
     {% set defEv = getDefaultEvent() %}
 
-    <section id="intro">
-        <div class="intro-container wow fadeIn">
-            <h1 class="mb-4 pb-0">{{ defEv.any.titulo }}</h1>
-            <p class="mb-4 pb-0">{{ defEv.wherePlace }}</p>
-            {#<a href="#" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>#}
-            {% if defEv.youtubeUrl is not empty %}
-                <a href="{{ defEv.youtubeUrl }}" class="venobox play-btn mb-4" data-vbtype="video"
-                   data-autoplay="true"></a>
-            {% endif %}
+    {% if defEv %}
 
-            <a href="#about" class="about-btn scrollto">About The Event</a>
-        </div>
-    </section>
+        <section id="intro">
+            <div class="intro-container wow fadeIn">
+                <h1 class="mb-4 pb-0">{{ defEv.any.titulo }}</h1>
+                <p class="mb-4 pb-0">{{ defEv.wherePlace }}</p>
+                {#<a href="#" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>#}
+                {% if defEv.youtubeUrl is not empty %}
+                    <a href="{{ defEv.youtubeUrl }}" class="venobox play-btn mb-4" data-vbtype="video"
+                       data-autoplay="true"></a>
+                {% endif %}
 
-    <!--==========================
-       About Section
-    ============================-->
-    <section id="about">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <h2>
-                        <a href="{{ path('frontend_event_details_ref', {'ref' : defEv.ref}) }}">About The Event</a>
-                    </h2>
-                    {{ defEv.any.texto | raw }}
-                </div>
-                <div class="col-lg-3">
-                    <h3>Where</h3>
-                    <p>{{ defEv.wherePlace }}</p>
-                </div>
-                <div class="col-lg-3">
-                    <h3>When</h3>
-                    <p>Empieza: {{ defEv.whenStart | date }}</p>
-                    <p>Termina: {{ defEv.whenEnd | date }}</p>
+                <a href="#about" class="about-btn scrollto">About The Event</a>
+            </div>
+        </section>
+
+        <!--==========================
+           About Section
+        ============================-->
+        <section id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <h2>
+                            <a href="{{ path('frontend_event_details_ref', {'ref' : defEv.ref}) }}">About The Event</a>
+                        </h2>
+                        {{ defEv.any.texto | raw }}
+                    </div>
+                    <div class="col-lg-3">
+                        <h3>Where</h3>
+                        <p>{{ defEv.wherePlace }}</p>
+                    </div>
+                    <div class="col-lg-3">
+                        <h3>When</h3>
+                        <p>Empieza: {{ defEv.whenStart | date }}</p>
+                        <p>Termina: {{ defEv.whenEnd | date }}</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+    {% endif %}
     <br>
     <br>
     <br>
+
+
 
 {% endblock %}
