@@ -4,9 +4,7 @@ namespace AV\CommonBundle\Controller;
 
 use AV\CommonBundle\Extension\EntityNameExtension;
 use AV\CommonBundle\Form\NomenclatureType;
-use AV\CommonBundle\Manager\Manager;
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\VarDumper\VarDumper;
 
 abstract class NomenclatureController extends CommonController implements EntityNameExtension {
 
