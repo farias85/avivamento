@@ -20,16 +20,16 @@
             <nav id="nav-menu-container">
                 <ul class="nav-menu">
                     <li class="menu-active"><a href="{{ home }}">{{ 'inicio' | trans }}</a></li>
-                    <li><a href="#">{{ 'nav.ministerio' | trans }}</a></li>
+                    <li><a href="{{ path('frontend_ministerio') }}">{{ 'nav.ministerio' | trans }}</a></li>
                     <li><a href="{{ path('frontend_events') }}">{{ 'nav.eventos' | trans }}</a></li>
                     <li><a href="#">{{ 'nav.donaciones' | trans }} </a></li>
                     <li>
                         <a href="#">{{ 'nav.servicios' | trans }}</a>
                         <ul class="nav-menu">
-                            <li><a href="#">{{ 'nav.adoracion.y.alabanzas' | trans }}</a></li>
-                            <li><a href="#">{{ 'nav.momentos.supernaturales' | trans }}</a></li>
-                            <li><a href="#">{{ 'nav.ensenanzas' | trans }}</a></li>
-                            <li><a href="#">{{ 'nav.trabajo.comunitario' | trans }}</a></li>
+                            <li><a href="{{ path('frontend_adoraciones') }}">{{ 'nav.adoracion.y.alabanzas' | trans }}</a></li>
+                            <li><a href="{{ path('frontend_momentos') }}">{{ 'nav.momentos.supernaturales' | trans }}</a></li>
+                            <li><a href="{{ path('frontend_ensenanzas') }}">{{ 'nav.ensenanzas' | trans }}</a></li>
+                            <li><a href="{{ path('frontend_trabajo_comunitario') }}">{{ 'nav.trabajo.comunitario' | trans }}</a></li>
                         </ul>
                     </li>
                     {#<li><a href="#">Donations</a></li>#}

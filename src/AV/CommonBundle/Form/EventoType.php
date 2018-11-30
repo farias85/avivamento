@@ -83,6 +83,7 @@ class EventoType extends EntityGetterType {
             ->add('youtubeUrl', TextType::class,
                 [
                     'label' => $this->display('youtubeUrl'),
+                    'required' => false,
                     'attr' => [
                         'class' => 'form-control',
                         'placeholder' => 'Ej. https://youtu.be/w6iEQB1wIKQ',
@@ -114,7 +115,9 @@ class EventoType extends EntityGetterType {
                 ]
             );
 
-        MediaType::getFileType($builder, empty($this->entity));
+        if (empty($this->entity)) {
+            MediaType::getFileType($builder, empty($this->entity));
+        }
     }
 
     /**

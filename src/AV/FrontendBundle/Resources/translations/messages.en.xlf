@@ -21,6 +21,30 @@
         <source>f.suscribirse.subtitulo</source>
         <target>Subscribe to our news list</target>
       </trans-unit>
+      <trans-unit id="Ya8s47dfg15a6q2va3Aa5f1" resname="f.newsletter">
+        <source>f.newsletter</source>
+        <target>Newsletter</target>
+      </trans-unit>
+      <trans-unit id="Ya5878s47dfg15a6q2va3Aa5f1" resname="f.nuestro.ministerio">
+        <source>f.nuestro.ministerio</source>
+        <target>Our ministry</target>
+      </trans-unit>
+      <trans-unit id="Ya5878s47dfa6q2va3Aa5f1" resname="f.imagenes.direccion">
+        <source>f.imagenes.direccion</source>
+        <target>Images and address of the residence of our ministry</target>
+      </trans-unit>
+      <trans-unit id="Ya588s47dfa6q2va3Aa5f1" resname="f.eventos">
+        <source>f.eventos</source>
+        <target>Events</target>
+      </trans-unit>
+      <trans-unit id="Ya58847dfa6q2va3Aa5f1" resname="f.eventos.subtitulo">
+        <source>f.eventos.subtitulo</source>
+        <target>Take a look at our events</target>
+      </trans-unit>
+      <trans-unit id="Y58847dfa6q2va3Aa5f1" resname="f.un.poco.de.historia">
+        <source>f.un.poco.de.historia</source>
+        <target>A little history</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

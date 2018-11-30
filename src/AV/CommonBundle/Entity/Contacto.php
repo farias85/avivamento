@@ -2,7 +2,7 @@
 
 namespace AV\CommonBundle\Entity;
 
-use AV\CommonBundle\Traits\RefORMTrait;
+use AV\CommonBundle\Traits\ORM\RefTrait;
 use Doctrine\ORM\Mapping as ORM;
 use AV\CommonBundle\Extension\EntityNameExtension;
 use AV\CommonBundle\Util\Entity;
@@ -15,7 +15,7 @@ use AV\CommonBundle\Util\Entity;
  */
 class Contacto implements EntityNameExtension {
 
-    use RefORMTrait;
+    use RefTrait;
 
     /**
      * @var integer

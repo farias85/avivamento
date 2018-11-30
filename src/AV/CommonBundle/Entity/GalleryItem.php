@@ -4,9 +4,7 @@ namespace AV\CommonBundle\Entity;
 
 use AV\CommonBundle\Extension\EntityNameExtension;
 use AV\CommonBundle\Traits\ImagePathTrait;
-use AV\CommonBundle\Traits\ImageTrait;
-use AV\CommonBundle\Traits\PathTrait;
-use AV\CommonBundle\Traits\RefORMTrait;
+use AV\CommonBundle\Traits\ORM\RefTrait;
 use AV\CommonBundle\Util\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
@@ -18,7 +16,7 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class GalleryItem implements EntityNameExtension {
 
-    use RefORMTrait;
+    use RefTrait;
     use ImagePathTrait;
 
     /**

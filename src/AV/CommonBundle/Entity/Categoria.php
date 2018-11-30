@@ -2,12 +2,12 @@
 
 namespace AV\CommonBundle\Entity;
 
-use AV\CommonBundle\Traits\LangTrait;
-use AV\CommonBundle\Traits\RefORMTrait;
-use AV\CommonBundle\Traits\TranslatesTrait;
-use Doctrine\ORM\Mapping as ORM;
 use AV\CommonBundle\Extension\EntityNameExtension;
+use AV\CommonBundle\Traits\LangTrait;
+use AV\CommonBundle\Traits\ORM\RefTrait;
+use AV\CommonBundle\Traits\TranslatesTrait;
 use AV\CommonBundle\Util\Entity;
+use Doctrine\ORM\Mapping as ORM;
 
 /**
  * Categoria
@@ -18,7 +18,7 @@ use AV\CommonBundle\Util\Entity;
 class Categoria implements EntityNameExtension {
 
     use LangTrait;
-    use RefORMTrait;
+    use RefTrait;
     use TranslatesTrait;
 
     /**

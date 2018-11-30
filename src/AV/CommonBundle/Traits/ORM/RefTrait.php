@@ -6,10 +6,10 @@
  * Time: 10:08
  */
 
-namespace AV\CommonBundle\Traits;
+namespace AV\CommonBundle\Traits\ORM;
 
 
-trait RefORMTrait {
+trait RefTrait {
 
     /**
      * @var string

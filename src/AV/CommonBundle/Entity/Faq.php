@@ -4,7 +4,7 @@ namespace AV\CommonBundle\Entity;
 
 use AV\CommonBundle\Extension\EntityNameExtension;
 use AV\CommonBundle\Traits\LangTrait;
-use AV\CommonBundle\Traits\RefORMTrait;
+use AV\CommonBundle\Traits\ORM\RefTrait;
 use AV\CommonBundle\Traits\TranslatesTrait;
 use AV\CommonBundle\Util\Entity;
 use Doctrine\ORM\Mapping as ORM;
@@ -19,7 +19,7 @@ class Faq implements EntityNameExtension {
 
     use LangTrait;
     use TranslatesTrait;
-    use RefORMTrait;
+    use RefTrait;
 
     /**
      * @var integer

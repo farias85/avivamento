@@ -4,7 +4,7 @@ namespace AV\CommonBundle\Entity;
 
 use AV\CommonBundle\Extension\EntityNameExtension;
 use AV\CommonBundle\Traits\ImageTrait;
-use AV\CommonBundle\Traits\UserORMTrait;
+use AV\CommonBundle\Traits\ORM\UserTrait;
 use AV\CommonBundle\Util\Entity;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\AdvancedUserInterface;
@@ -18,7 +18,7 @@ use Symfony\Component\Security\Core\User\AdvancedUserInterface;
 class Administrador implements EntityNameExtension, AdvancedUserInterface, \Serializable {
 
     use ImageTrait;
-    use UserORMTrait;
+    use UserTrait;
 
     const ROLE_DEFAULT = 'ROLE_ADMIN';
 

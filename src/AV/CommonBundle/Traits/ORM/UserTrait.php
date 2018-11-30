@@ -6,12 +6,12 @@
  * Time: 11:57
  */
 
-namespace AV\CommonBundle\Traits;
+namespace AV\CommonBundle\Traits\ORM;
 
 
-trait UserORMTrait {
+trait UserTrait {
 
-    use RefORMTrait;
+    use RefTrait;
 
     /**
      * @var integer

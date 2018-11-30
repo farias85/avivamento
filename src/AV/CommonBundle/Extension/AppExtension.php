@@ -54,11 +54,14 @@ class AppExtension extends \Twig_Extension {
     }
 
     public function getDefaultEvent() {
-        $event = $this->em->getRepository(Entity::EVENTO)->findOneBy(['principal' => true]);
-        if (empty($event)) {
-            $event = $this->em->getRepository(Entity::EVENTO)->findOneBy([]);
+        $events = $this->em->getRepository(Entity::EVENTO)->findBy(['principal' => true]);
+        if (empty($events)) {
+            $result = $this->em->getRepository(Entity::EVENTO)->findOneBy([]);
+        } else {
+            shuffle($events);
+            $result = $events[0];
         }
-        return $event;
+        return $result;
     }
 
     /**

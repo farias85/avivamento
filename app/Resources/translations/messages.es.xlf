@@ -155,6 +155,30 @@
                 <source>nav.donaciones</source>
                 <target>Donaciones</target>
             </trans-unit>
+            <trans-unit id="Ya5847dfa6q2va3Aa5f1" resname="f.acerca.del.evento">
+                <source>f.acerca.del.evento</source>
+                <target>Acerca Del Evento</target>
+            </trans-unit>
+            <trans-unit id="Ya547dfa6q2va3Aa5f1" resname="f.donde">
+                <source>f.donde</source>
+                <target>Donde?</target>
+            </trans-unit>
+            <trans-unit id="Ya7dfa6q2va3Aa5f1" resname="f.cuando">
+                <source>f.cuando</source>
+                <target>Cuando?</target>
+            </trans-unit>
+            <trans-unit id="Ya7dfa6q2a3Aa5f1" resname="f.inicia">
+                <source>f.inicia</source>
+                <target>Inicia</target>
+            </trans-unit>
+            <trans-unit id="Ya7dfa6q23Aa5f1" resname="f.termina">
+                <source>f.termina</source>
+                <target>Termina</target>
+            </trans-unit>
+            <trans-unit id="Yadfa6q23Aa5f1" resname="f.otros.enalces">
+                <source>f.otros.enalces</source>
+                <target>Otros enlaces</target>
+            </trans-unit>
         </body>
     </file>
 
